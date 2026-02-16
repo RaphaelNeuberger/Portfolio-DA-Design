@@ -1,0 +1,115 @@
+/* =============================================
+   COMPONENTS - BUTTONS
+   ============================================= */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 100ms ease;
+  border: none;
+}
+
+.btn-outline {
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 12px;
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(89, 136, 255, 0.35);
+}
+
+.btn-primary-small {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 100ms ease;
+}
+
+.btn-primary-small:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(89, 136, 255, 0.35);
+}
+
+/* Outline button for project cards */
+.btn-outline-dark {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid var(--blue);
+  border-radius: 30px;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 100ms ease;
+}
+
+.btn-outline-dark:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+/* =============================================
+   COMPONENTS - TO-TOP-ARROW
+   ============================================= */
+.to-top-arrow {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 1200;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(89, 136, 255, 0.12);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 100ms,
+    background 100ms,
+    box-shadow 100ms;
+}
+
+.to-top-arrow.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.to-top-arrow:hover {
+  background: var(--blue);
+  box-shadow: 0 8px 24px rgba(89, 136, 255, 0.18);
+}
+
+.to-top-arrow svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}

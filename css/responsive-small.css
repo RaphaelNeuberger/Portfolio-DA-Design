@@ -1,0 +1,163 @@
+/* =============================================
+   RESPONSIVE - SMALL MOBILE DEVICES
+   ============================================= */
+
+/* ===== SMALL MOBILE (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .hero-hello {
+    font-size: 18px;
+  }
+
+  .hero-image-wrapper {
+    width: 240px;
+    height: 320px;
+  }
+
+  .section-title-large,
+  .section-title {
+    font-size: 32px;
+  }
+
+  #skills .section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .testimonials-container .section-title {
+    font-size: 28px;
+  }
+
+  .contact-left .section-title {
+    font-size: 32px;
+  }
+
+  #header {
+    padding: 12px 16px;
+  }
+
+  .logo svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  #about,
+  #skills,
+  #work,
+  #testimonials,
+  #contact {
+    padding: 40px 16px;
+  }
+
+  .iam-label {
+    font-size: 20px;
+  }
+
+  .about-right p,
+  .work-header p {
+    font-size: 16px;
+  }
+
+  .testimonial-card h4 {
+    font-size: 18px;
+  }
+
+  .testimonial-role {
+    font-size: 16px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+  }
+
+  .project-info h3 {
+    font-size: 24px;
+  }
+
+  .project-tech {
+    font-size: 16px;
+  }
+
+  .project-desc,
+  .contact-left p {
+    font-size: 16px;
+  }
+
+  .contact-left h3 {
+    font-size: 20px;
+  }
+
+  .legal-title,
+  .privacy-container h1 {
+    font-size: 28px;
+  }
+
+  .legal-section h2 {
+    font-size: 20px;
+  }
+
+  .legal-section h3 {
+    font-size: 16px;
+  }
+
+  .privacy-container,
+  .legal-content-container {
+    padding: 80px 16px 40px;
+  }
+
+  footer {
+    padding: 24px 16px 16px;
+  }
+
+  .footer-copy {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .btn-primary {
+    padding: 14px 28px;
+  }
+}
+
+/* ===== EXTRA SMALL (max-width: 360px) ===== */
+@media (max-width: 360px) {
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .section-title-large,
+  .section-title,
+  #skills .section-title,
+  .contact-left .section-title {
+    font-size: 28px;
+  }
+
+  .testimonials-container .section-title {
+    font-size: 24px;
+  }
+
+  .project-info h3 {
+    font-size: 20px;
+  }
+
+  .contact-left h3 {
+    font-size: 18px;
+  }
+
+  .testimonial-card h4 {
+    font-size: 16px;
+  }
+
+  .hero-image-wrapper {
+    width: 200px;
+    height: 280px;
+  }
+}

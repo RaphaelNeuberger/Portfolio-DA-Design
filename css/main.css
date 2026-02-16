@@ -1,0 +1,28 @@
+/* =============================================
+   MAIN CSS - Import all modules
+   ============================================= */
+
+/* Base styles (Variables, Reset, General) */
+@import url('base.css');
+
+/* Layout Components */
+@import url('header.css');
+@import url('hero.css');
+@import url('about.css');
+@import url('skills.css');
+@import url('work.css');
+@import url('testimonials.css');
+@import url('contact.css');
+@import url('footer.css');
+
+/* UI Components */
+@import url('components.css');
+
+/* Animations */
+@import url('animations.css');
+
+/* Page-specific styles */
+@import url('legal.css');
+
+/* Responsive Design */
+@import url('responsive.css');

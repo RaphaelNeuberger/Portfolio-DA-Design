@@ -1,0 +1,62 @@
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: var(--dark);
+  padding: 40px 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-logo svg text {
+  fill: var(--white) !important;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-imprint {
+  margin: 0;
+}
+
+.footer-imprint a {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  transition: color 100ms ease;
+}
+
+.footer-imprint a:hover {
+  color: var(--white);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 100ms ease;
+}
+
+.footer-socials a:hover {
+  color: var(--white);
+}

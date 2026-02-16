@@ -1,0 +1,191 @@
+/* =============================================
+   MY WORK SECTION
+   ============================================= */
+#work {
+  padding: 120px 80px;
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.work-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.work-header {
+  margin-bottom: 80px;
+  text-align: left;
+}
+
+.work-header .section-title {
+  margin-bottom: 16px;
+}
+
+.work-header p {
+  font-size: 18px;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0;
+}
+
+/* Work Decorative Circles */
+.work-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #7aa3ff 0%,
+    #5988ff 40%,
+    #0043f0 100%
+  );
+  z-index: 0;
+  box-shadow: 0 20px 60px rgba(0, 67, 240, 0.35);
+}
+
+.work-circle-1 {
+  width: 100px;
+  height: 100px;
+  top: -4%;
+  left: 40%;
+}
+
+.work-circle-2 {
+  width: 160px;
+  height: 160px;
+  top: 120px;
+  right: -50px;
+}
+
+.work-circle-3 {
+  width: 480px;
+  height: 480px;
+  right: -25%;
+  top: 35%;
+}
+
+.work-circle-4 {
+  width: 40px;
+  height: 40px;
+  left: 20px;
+  top: 55%;
+}
+
+.work-circle-5 {
+  width: 150px;
+  height: 150px;
+  left: 10%;
+  bottom: 18%;
+}
+
+.work-circle-6 {
+  width: 400px;
+  height: 400px;
+  left: -30%;
+  bottom: 60%;
+}
+
+.work-circle-7 {
+  width: 100px;
+  height: 100px;
+  right: -5%;
+  bottom: 5%;
+}
+
+/* Decorative Circles (general) */
+.decorative-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #7aa3ff 0%,
+    #5988ff 40%,
+    #0043f0 100%
+  );
+  z-index: 0;
+  box-shadow: 0 20px 60px rgba(0, 67, 240, 0.35);
+}
+
+.circle-contact-right {
+  width: 250px;
+  height: 250px;
+  right: -80px;
+  bottom: 100px;
+}
+
+/* Project Cards */
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:last-child {
+  margin-bottom: 0;
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-card.reverse .project-info {
+  text-align: left;
+}
+
+.project-image {
+  flex: 1;
+  max-width: 550px;
+}
+
+.project-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #e4e8ec 0%, #d0d6dc 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--blue);
+  font-weight: 500;
+  box-shadow: 0 12px 40px rgba(89, 136, 255, 0.18);
+  overflow: hidden;
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.project-tech {
+  font-size: 16px;
+  color: var(--blue);
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.project-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--dark);
+  margin-bottom: 24px;
+}

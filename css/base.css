@@ -1,0 +1,52 @@
+/* =============================================
+   VARIABLES & RESET
+   ============================================= */
+:root {
+  --blue: #5988FF;
+  --blue-dark: #4070e6;
+  --blue-light: #7aa3ff;
+  --blue-gradient: linear-gradient(135deg, #5988FF 0%, #7aa3ff 100%);
+  --white: #ffffff;
+  --dark: #1a1a2e;
+  --gray: #6b6b7b;
+  --gray-light: #e8e8ec;
+  --font-heading: "Baloo 2", cursive, sans-serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  background-color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 100ms ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

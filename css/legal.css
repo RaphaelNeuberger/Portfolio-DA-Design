@@ -1,0 +1,127 @@
+/* =============================================
+   LEGAL NOTICE & PRIVACY POLICY PAGES
+   ============================================= */
+.privacy-container,
+.legal-content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 40px 80px;
+  min-height: 100vh;
+}
+
+.privacy-container h1,
+.legal-title {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.privacy-container p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--dark);
+  margin-bottom: 24px;
+}
+
+.privacy-container a {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.legal-section {
+  position: relative;
+  z-index: 1;
+}
+
+.legal-section h2 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-top: 40px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.legal-section h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--blue);
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.legal-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.legal-section li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.legal-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+/* Header fix for legal/privacy pages (no hero = white bg) */
+body:has(.legal-content-container) .hamburger span,
+body:has(.privacy-container) .hamburger span {
+  background: var(--dark);
+}
+
+/* Legal Notice Decorative Circles */
+.legal-bg-circle {
+  position: fixed;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #7aa3ff 0%,
+    #5988FF 40%,
+    #0043F0 100%
+  );
+  z-index: -1;
+  box-shadow: 0 20px 60px rgba(0, 67, 240, 0.35);
+}
+
+.legal-bg-circle-1 {
+  width: 180px;
+  height: 180px;
+  top: 10%;
+  left: -50px;
+}
+
+.legal-bg-circle-2 {
+  width: 120px;
+  height: 120px;
+  top: 30%;
+  right: -40px;
+}
+
+.legal-bg-circle-3 {
+  width: 220px;
+  height: 220px;
+  bottom: 20%;
+  left: -80px;
+}
+
+.legal-bg-circle-4 {
+  width: 60px;
+  height: 60px;
+  bottom: 15%;
+  right: 10%;
+}
