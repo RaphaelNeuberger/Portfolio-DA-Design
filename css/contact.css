@@ -55,6 +55,10 @@
   flex: 1;
 }
 
+.contact-spacer {
+  height: 130px;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;

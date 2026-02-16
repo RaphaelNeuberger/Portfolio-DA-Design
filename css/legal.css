@@ -78,6 +78,33 @@
   margin-bottom: 16px;
 }
 
+.legal-section .section {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--dark);
+}
+
+.legal-section .section .section-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--blue);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.legal-section .section.gray {
+  background: #f5f7fa;
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin-top: 32px;
+}
+
+.legal-section .bold {
+  font-weight: 700;
+}
+
 /* Header fix for legal/privacy pages (no hero = white bg) */
 body:has(.legal-content-container) .hamburger span,
 body:has(.privacy-container) .hamburger span {

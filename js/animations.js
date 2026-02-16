@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
    * @function toggleToTop
    */
   function toggleToTop() {
+    if (!toTop) return;
     if (window.scrollY > window.innerHeight * 0.5) {
       toTop.classList.add("visible");
     } else {
@@ -21,11 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", toggleToTop);
   toggleToTop();
 
-  // Scroll to header when to-top-arrow is clicked
-  toTop.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  if (toTop) {
+    toTop.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 
   // Fade-in animations for sections
   /**

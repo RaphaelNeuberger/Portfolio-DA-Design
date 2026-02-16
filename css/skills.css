@@ -14,19 +14,8 @@
 }
 
 #skills .section-title {
-  font-family: var(--font-heading);
-  font-size: 64px;
-  font-weight: 800;
   color: var(--white);
   margin-bottom: 70px;
-}
-
-.section-title {
-  font-family: var(--font-heading);
-  font-size: 64px;
-  font-weight: 800;
-  color: var(--blue);
-  text-align: left;
 }
 
 .skills-row {

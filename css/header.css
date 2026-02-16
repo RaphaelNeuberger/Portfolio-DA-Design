@@ -53,7 +53,7 @@
 }
 
 .nav-links a:hover {
-  color: var(--blue);
+  color: var(--blue-dark);
 }
 
 .lang-toggle {

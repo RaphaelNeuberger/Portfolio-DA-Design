@@ -37,23 +37,6 @@
   box-shadow: 0 8px 24px rgba(89, 136, 255, 0.35);
 }
 
-.btn-primary-small {
-  display: inline-block;
-  background: var(--blue);
-  color: var(--white);
-  padding: 10px 24px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 100ms ease;
-}
-
-.btn-primary-small:hover {
-  background: var(--blue-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(89, 136, 255, 0.35);
-}
-
 /* Outline button for project cards */
 .btn-outline-dark {
   display: inline-block;

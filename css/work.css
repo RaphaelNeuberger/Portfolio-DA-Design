@@ -143,14 +143,6 @@
   margin-bottom: 0;
 }
 
-.project-card.reverse {
-  flex-direction: row-reverse;
-}
-
-.project-card.reverse .project-info {
-  text-align: left;
-}
-
 .project-image {
   flex: 1;
   max-width: 550px;
@@ -203,4 +195,9 @@
   line-height: 1.7;
   color: var(--dark);
   margin-bottom: 24px;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
 }
