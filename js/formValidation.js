@@ -16,16 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function addFeedbackElements() {
     [nameInput, emailInput, messageInput].forEach(function (input) {
-      if (!input.parentNode.querySelector(".input-feedback")) {
+      if (!input.nextElementSibling || !input.nextElementSibling.classList.contains("input-feedback")) {
         const el = document.createElement("div");
         el.className = "input-feedback";
-        input.parentNode.appendChild(el);
+        input.after(el);
       }
     });
   }
 
   function getFeedbackEl(input) {
-    return input.parentNode.querySelector(".input-feedback");
+    const next = input.nextElementSibling;
+    if (next && next.classList.contains("input-feedback")) return next;
+    return null;
   }
 
   function getTranslation(key) {
