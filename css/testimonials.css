@@ -3,7 +3,7 @@
    ============================================= */
 #testimonials {
   padding: 100px 80px;
-  background: #f3f5f7;
+  background: linear-gradient(180deg, #5988FF 0%, #0043F0 100%);
 }
 
 .testimonials-container {
@@ -14,13 +14,14 @@
 
 .testimonials-container .section-title {
   font-size: 48px;
-  color: var(--blue);
+  color: var(--white);
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .testimonials-subtitle {
   font-size: 18px;
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 60px;
 }
 
@@ -33,21 +34,21 @@
 
 .testimonial-card {
   padding: 10px 0;
-  border-top: 2px solid var(--blue);
+  border-top: 2px solid var(--white);
 }
 
 .testimonial-card h4 {
   font-family: var(--font-heading);
   font-size: 20px;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--white);
   margin-bottom: 4px;
   margin-top: 16px;
 }
 
 .testimonial-role {
   font-size: 16px;
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 16px;
   font-style: italic;
 }
@@ -55,5 +56,5 @@
 .testimonial-text {
   font-size: 16px;
   line-height: 1.7;
-  color: var(--dark);
+  color: var(--white);
 }
