@@ -499,37 +499,6 @@
               Say Hello ;)
             </button>
           </form>
-          <script>
-            (function () {
-              const form = document.querySelector('.contact-form');
-              const btn = form.querySelector('.btn-primary');
-              const inputs = form.querySelectorAll('input[required], textarea[required]');
-              const checkbox = form.querySelector('input[type="checkbox"][required]');
-
-              function checkForm() {
-                let allFilled = true;
-                inputs.forEach(function (input) {
-                  if (input.type === 'checkbox') {
-                    if (!input.checked) allFilled = false;
-                  } else if (!input.value.trim()) {
-                    allFilled = false;
-                  }
-                });
-                if (allFilled) {
-                  btn.classList.add('active');
-                  btn.disabled = false;
-                } else {
-                  btn.classList.remove('active');
-                  btn.disabled = true;
-                }
-              }
-
-              inputs.forEach(function (input) {
-                input.addEventListener('input', checkForm);
-                input.addEventListener('change', checkForm);
-              });
-            })();
-          </script>
         </div>
       </div>
       <div class="decorative-circle circle-contact-1"></div>

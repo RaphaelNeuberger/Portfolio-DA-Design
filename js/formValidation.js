@@ -71,6 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const valid =
       isNameValid() && isEmailValid() && isMessageValid() && privacyInput.checked;
     submitBtn.disabled = !valid;
+    if (valid) {
+      submitBtn.classList.add("active");
+    } else {
+      submitBtn.classList.remove("active");
+    }
     return valid;
   }
 

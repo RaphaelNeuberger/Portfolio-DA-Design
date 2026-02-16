@@ -130,7 +130,7 @@
   font-weight: 700;
   border: 2px solid #b0b0b0;
   cursor: not-allowed;
-  transition: all 200ms ease;
+  transition: all 100ms ease;
 }
 
 .contact-form .btn-primary:hover {
