@@ -2,12 +2,18 @@
    FOOTER
    ============================================= */
 footer {
-  background: var(--dark);
+  background: radial-gradient(
+    circle at 30% 40%,
+    #5988ff 0%,
+    #5988ff 30%,
+    #0043f0 90%
+  );
   padding: 40px 80px;
 }
 
 .footer-container {
   max-width: 1200px;
+  height: 200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -28,7 +34,7 @@ footer {
 }
 
 .footer-copy {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--white);
   font-size: 16px;
   margin: 0;
 }
@@ -38,7 +44,7 @@ footer {
 }
 
 .footer-imprint a {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--white);
   font-size: 16px;
   transition: color 100ms ease;
 }
