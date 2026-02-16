@@ -5,6 +5,8 @@ window.addEventListener("headerLoaded", function () {
   if (!logoImg) return;
 
   function updateLogo() {
+    const hamburger = document.querySelector(".hamburger");
+    if (hamburger && hamburger.classList.contains("active")) return;
     if (header.classList.contains("scrolled")) {
       logoImg.src = "assets/img/logo_blue.svg";
     } else {

@@ -170,22 +170,7 @@
   }
 
   .scroll-indicator {
-    position: absolute;
-    right: 24px;
-    top: auto;
-    bottom: 40px;
-    left: auto;
-    transform: rotate(90deg);
-    transform-origin: center center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .scroll-indicator span {
-    white-space: nowrap;
-    font-size: 16px;
+    display: none;
   }
 
   .scroll-line {
