@@ -34,7 +34,7 @@
   display: flex;
   gap: 40px;
   position: relative;
-  left: calc(45% + 40px);
+  left: calc(50% + 40px);
 }
 
 .nav-links a {
