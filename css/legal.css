@@ -99,22 +99,22 @@ body:has(.privacy-container) .hamburger span {
 }
 
 .legal-bg-circle-1 {
-  width: 120px;
-  height: 120px;
-  top: 30%;
-  right: -40px;
+  width: 150px;
+  height: 150px;
+  top: 15%;
+  right: 3%;
 }
 
 .legal-bg-circle-2 {
-  width: 220px;
-  height: 220px;
-  bottom: 20%;
-  left: -80px;
+  width: 120px;
+  height: 120px;
+  bottom: 25%;
+  left: -30px;
 }
 
 .legal-bg-circle-3 {
-  width: 60px;
-  height: 60px;
-  bottom: 15%;
-  right: 10%;
+  width: 80px;
+  height: 80px;
+  bottom: 40%;
+  right: -1%;
 }
