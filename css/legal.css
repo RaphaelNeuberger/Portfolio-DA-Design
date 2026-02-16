@@ -91,35 +91,28 @@ body:has(.privacy-container) .hamburger span {
   background: radial-gradient(
     circle at 30% 30%,
     #7aa3ff 0%,
-    #5988FF 40%,
-    #0043F0 100%
+    #5988ff 40%,
+    #0043f0 100%
   );
   z-index: -1;
   box-shadow: 0 20px 60px rgba(0, 67, 240, 0.35);
 }
 
 .legal-bg-circle-1 {
-  width: 180px;
-  height: 180px;
-  top: 10%;
-  left: -50px;
-}
-
-.legal-bg-circle-2 {
   width: 120px;
   height: 120px;
   top: 30%;
   right: -40px;
 }
 
-.legal-bg-circle-3 {
+.legal-bg-circle-2 {
   width: 220px;
   height: 220px;
   bottom: 20%;
   left: -80px;
 }
 
-.legal-bg-circle-4 {
+.legal-bg-circle-3 {
   width: 60px;
   height: 60px;
   bottom: 15%;
