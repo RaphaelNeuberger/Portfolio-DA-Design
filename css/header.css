@@ -92,8 +92,8 @@
 }
 
 .logo.scrolled svg {
-  filter: brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(1000%) hue-rotate(180deg);
-}
+  filter: brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(1000%)
+    hue-rotate(180deg);
 }
 
 /* ===== HAMBURGER MENU ===== */
@@ -138,15 +138,18 @@
   top: 0;
   right: -100%;
   width: 100%;
-  max-width: 300px;
   height: 100vh;
-  background: var(--white);
-  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: none;
   z-index: 999;
   padding: 100px 40px 40px;
   transition: right 0.3s ease;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 40px;
 }
 
@@ -158,13 +161,14 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  align-items: center;
 }
 
 .mobile-nav-links a {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 24px;
-  font-weight: 600;
-  color: var(--dark);
+  font-weight: 300;
+  color: var(--blue);
   transition: color 100ms ease;
 }
 
@@ -175,7 +179,7 @@
 .mobile-lang-toggle {
   display: flex;
   gap: 8px;
-  color: var(--dark);
+  color: var(--blue);
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;

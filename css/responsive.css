@@ -39,13 +39,32 @@
     gap: 30px;
   }
 
-  .project-image {
+  .project-card .project-image {
     max-width: 100%;
+    order: -1;
   }
 
   .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 16px;
+  }
+
+  .testimonial-card {
+    min-width: 80vw;
+    max-width: 80vw;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .testimonial-text {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -68,7 +87,7 @@
   }
 
   .hamburger span {
-    background: var(--white);
+    background: var(--blue);
   }
 
   .hamburger.active span {
@@ -82,6 +101,7 @@
   .hero-content {
     flex-direction: column;
     min-height: 100vh;
+    align-items: center;
   }
 
   .hero-left {
@@ -90,7 +110,7 @@
     justify-content: center;
     order: 2;
     align-items: flex-end;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .hero-right {
@@ -99,14 +119,17 @@
     text-align: center;
     order: 1;
     justify-content: flex-start;
+    flex: none;
   }
 
   .hero-bg-circle {
-    width: 100%;
-    height: 100%;
-    top: +20%;
-    left: -25%;
-    border-radius: 0 0 50% 50%;
+    width: 500px;
+    height: 500px;
+    top: auto;
+    top: -3%;
+    left: 30%;
+    transform: translateX(-50%);
+    border-radius: 50%;
   }
 
   .hero-text {
@@ -121,6 +144,8 @@
     color: var(--white);
     opacity: 1;
     -webkit-text-stroke: 0;
+    white-space: normal;
+    width: auto;
   }
 
   .hero-hello {
@@ -131,38 +156,44 @@
 
   .hero-image-wrapper {
     width: 100%;
-    max-width: 450px;
-    height: 500px;
-    overflow: hidden;
+    max-width: 350px;
+    height: auto;
+    overflow: visible;
+    margin-left: 0;
   }
 
   .hero-image-wrapper img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom center;
   }
 
   .scroll-indicator {
-    display: none;
+    position: absolute;
+    right: 24px;
+    top: auto;
+    bottom: 40px;
+    left: auto;
+    transform: rotate(90deg);
+    transform-origin: center center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .scroll-indicator span {
+    white-space: nowrap;
+    font-size: 16px;
+  }
+
+  .scroll-line {
+    height: 60px;
   }
 
   .hero-socials {
-    position: static;
-    flex-direction: row;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    z-index: 2;
-  }
-
-  .hero-socials a {
-    border-color: var(--white);
-    color: var(--white);
-  }
-
-  .hero-socials a:hover {
-    background: var(--white);
-    color: var(--blue);
+    display: none;
   }
 
   #about,
@@ -180,6 +211,15 @@
 
   .section-title {
     font-size: 40px;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .work-header {
+    text-align: left;
   }
 
   #skills .section-title {
@@ -210,20 +250,20 @@
   }
 
   .about-right {
-    text-align: center;
+    text-align: left;
   }
 
   .about-right .btn {
-    margin: 0 auto;
+    margin: 0;
   }
 
   .contact-left {
-    text-align: center;
+    text-align: left;
   }
 
   .contact-left .section-title {
     font-size: 40px;
-    text-align: center;
+    text-align: left;
   }
 
   .contact-left h3 {

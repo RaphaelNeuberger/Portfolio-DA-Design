@@ -26,13 +26,33 @@ function initMobileMenu() {
   /**
    * Toggles the mobile menu open/closed
    */
+  const logoImg = document.querySelector(".logo img");
+
+  function setLogoBlue() {
+    if (logoImg) logoImg.src = "assets/img/logo_blue.svg";
+  }
+
+  function restoreLogo() {
+    if (!logoImg) return;
+    const header = document.getElementById("header");
+    if (header && header.classList.contains("scrolled")) {
+      logoImg.src = "assets/img/logo_blue.svg";
+    } else {
+      logoImg.src = "assets/img/logo.svg";
+    }
+  }
+
   function toggleMenu() {
     hamburger.classList.toggle("active");
     mobileMenu.classList.toggle("active");
     overlay.classList.toggle("active");
-    document.body.style.overflow = hamburger.classList.contains("active")
-      ? "hidden"
-      : "";
+    const isOpen = hamburger.classList.contains("active");
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    if (isOpen) {
+      setLogoBlue();
+    } else {
+      restoreLogo();
+    }
   }
 
   /**
@@ -43,6 +63,7 @@ function initMobileMenu() {
     mobileMenu.classList.remove("active");
     overlay.classList.remove("active");
     document.body.style.overflow = "";
+    restoreLogo();
   }
 
   // Toggle menu on hamburger click
