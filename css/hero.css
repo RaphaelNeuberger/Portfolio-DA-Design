@@ -12,11 +12,12 @@
 
 .hero-bg-circle {
   position: absolute;
-  top: 30%;
+  top: 15%;
   left: -10%;
   transform: translateY(-50%);
-  width: 900px;
-  height: 900px;
+  max-width: 900px;
+  width: 60%;
+  aspect-ratio: 1 / 1;
   background: radial-gradient(
     circle at 30% 30%,
     #7aa3ff 0%,
@@ -60,7 +61,6 @@
   align-items: flex-end;
   justify-content: center;
   background: transparent;
-  margin-left: -360px;
 }
 
 .hero-image-wrapper img {

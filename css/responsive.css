@@ -160,6 +160,9 @@
     height: auto;
     overflow: visible;
     margin-left: 0;
+    order: 2;
+    margin-top: 150px;
+    margin-bottom: 0;
   }
 
   .hero-image-wrapper img {
@@ -312,5 +315,30 @@
   .privacy-container,
   .legal-content-container {
     padding: 100px 24px 60px;
+  }
+}
+
+/* ===== HERO SECTION BREAKPOINTS ===== */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+  .hero-image-wrapper {
+    order: 2;
+    width: 100%;
+    height: auto;
+    margin-top: 100vh;
+    margin-bottom: 0;
+  }
+  .hero-right {
+    order: 1;
+  }
+}
+@media (max-width: 1224px) {
+  .hero-hello {
+    font-size: 32px;
+  }
+  .hero-text h1 {
+    font-size: 64px;
   }
 }
