@@ -125,13 +125,30 @@
 
 .contact-form .btn-primary {
   align-self: center;
-  background: var(--blue);
-  color: var(--white);
+  background: transparent;
+  color: #b0b0b0;
   font-weight: 700;
+  border: 2px solid #b0b0b0;
+  cursor: not-allowed;
+  transition: all 200ms ease;
 }
 
 .contact-form .btn-primary:hover {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.contact-form .btn-primary.active {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+  cursor: pointer;
+}
+
+.contact-form .btn-primary.active:hover {
   background: var(--blue-dark);
+  border-color: var(--blue-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(89, 136, 255, 0.35);
 }
