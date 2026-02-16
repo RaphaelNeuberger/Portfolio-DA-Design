@@ -2,7 +2,7 @@
    CONTACT SECTION
    ============================================= */
 #contact {
-  background: var(--blue);
+  background: linear-gradient(180deg, #FFFFFF 0%, #EAF0FF 100%);
   padding: 100px 80px;
   position: relative;
   overflow: hidden;
@@ -20,11 +20,11 @@
 
 .contact-left {
   flex: 1;
-  color: var(--white);
+  color: var(--blue);
 }
 
 .contact-left .section-title {
-  color: var(--white);
+  color: var(--blue);
   font-size: 64px;
   margin-bottom: 24px;
   text-align: left;
@@ -35,17 +35,18 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 16px;
+  color: var(--blue);
 }
 
 .contact-left p {
   font-size: 16px;
   line-height: 1.7;
-  opacity: 0.85;
+  color: var(--dark);
   margin-bottom: 16px;
 }
 
 .contact-looking a {
-  color: var(--white);
+  color: var(--blue);
   text-decoration: underline;
   font-weight: 600;
 }
@@ -64,10 +65,10 @@
 .contact-form textarea {
   width: 100%;
   padding: 16px 20px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--blue);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--white);
+  background: #FFFFFF;
+  color: var(--dark);
   font-family: var(--font-body);
   font-size: 16px;
   outline: none;
@@ -76,21 +77,23 @@
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--dark);
+  opacity: 1;
 }
 
 .contact-form input:-webkit-autofill,
 .contact-form input:-webkit-autofill:hover,
 .contact-form input:-webkit-autofill:focus {
-  -webkit-text-fill-color: var(--white);
-  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  -webkit-text-fill-color: var(--dark);
+  -webkit-box-shadow: 0 0 0px 1000px var(--white) inset;
+  border: 2px solid var(--blue);
   transition: background-color 5000s ease-in-out 0s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--white);
+  border-color: var(--blue);
+  border-width: 3px;
 }
 
 .contact-form textarea {
@@ -102,7 +105,7 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  color: var(--white);
+  color: var(--dark);
   font-size: 16px;
   line-height: 1.5;
   cursor: pointer;
@@ -111,30 +114,30 @@
 .checkbox-label input[type="checkbox"] {
   width: auto;
   margin-top: 3px;
-  accent-color: var(--white);
+  accent-color: var(--blue);
   cursor: pointer;
 }
 
 .checkbox-label a {
-  color: var(--white);
+  color: var(--blue);
   text-decoration: underline;
 }
 
 .contact-form .btn-primary {
   align-self: flex-end;
-  background: var(--white);
-  color: var(--blue);
+  background: var(--blue);
+  color: var(--white);
   font-weight: 700;
 }
 
 .contact-form .btn-primary:hover {
-  background: var(--gray-light);
+  background: var(--blue-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(89, 136, 255, 0.35);
 }
 
 .input-feedback {
-  font-size: 0.85em;
+  font-size: 16px;
   color: #ff6b6b;
   min-height: 18px;
   margin: 2px 0 0 0;
