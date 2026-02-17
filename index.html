@@ -10,11 +10,14 @@
     <script src="js/logoSwitch.js" defer></script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <!-- ==================== HEADER / NAV ==================== -->
     <div id="header-include"></div>
 
     <!-- ==================== HERO ==================== -->
     <script src="js/include.js"></script>
+    <main id="main">
     <section id="hero" class="fade-in">
       <div class="hero-bg-circle"></div>
       <div class="hero-content">
@@ -84,7 +87,7 @@
               <img
                 class="badge-icon-hover"
                 src="assets/img/icons/location_hover.svg"
-                alt="Location"
+                alt=""
                 width="28"
                 height="28" />
               <span data-i18n="about.badge.location"
@@ -101,7 +104,7 @@
               <img
                 class="badge-icon-hover"
                 src="assets/img/icons/remote_hover.svg"
-                alt="Remote"
+                alt=""
                 width="38"
                 height="38" />
               <span data-i18n="about.badge.remote"
@@ -249,7 +252,8 @@
               <a
                 href="https://join.raphael-neuberger.de"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+                aria-label="View Join project">
                 <img
                   src="assets/img/join.webp"
                   alt="Join - Project Screenshot" />
@@ -316,7 +320,8 @@
               <a
                 href="https://elpolloloco.raphael-neuberger.de"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+                aria-label="View El Pollo Loco project">
                 <img
                   src="assets/img/elpolloloco.webp"
                   alt="El Pollo Loco - Project Screenshot" />
@@ -332,7 +337,8 @@
               <a
                 href="https://dabubble.raphael-neuberger.de"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+                aria-label="View DA Bubble project">
                 <img
                   src="assets/img/dabubble.webp"
                   alt="DA Bubble - Project Screenshot" />
@@ -398,7 +404,8 @@
               <a
                 href="https://pokedex.raphael-neuberger.de"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+                aria-label="View Pokédex project">
                 <img
                   src="assets/img/pokedex.webp"
                   alt="Pokédex - Project Screenshot" />
@@ -476,18 +483,27 @@
         <div class="contact-right">
           <div class="contact-spacer"></div>
           <form class="contact-form" action="#" method="POST" novalidate>
+            <label for="contact-name" class="sr-only" data-i18n="contact.form.name">Your name</label>
             <input
               type="text"
+              id="contact-name"
               name="name"
+              aria-describedby="feedback-name"
               data-i18n-placeholder="contact.form.name"
               placeholder="Your name" />
+            <label for="contact-email" class="sr-only" data-i18n="contact.form.email">Your email</label>
             <input
               type="text"
+              id="contact-email"
               name="email"
+              aria-describedby="feedback-email"
               data-i18n-placeholder="contact.form.email"
               placeholder="Your email" />
+            <label for="contact-message" class="sr-only" data-i18n="contact.form.message">Your message</label>
             <textarea
+              id="contact-message"
               name="message"
+              aria-describedby="feedback-message"
               data-i18n-placeholder="contact.form.message"
               placeholder="Your message"
               rows="6"></textarea>
@@ -513,12 +529,13 @@
       <div class="decorative-circle circle-contact-2"></div>
       <div class="decorative-circle circle-contact-3"></div>
     </section>
+    </main>
 
     <!-- ==================== TO-TOP-ARROW ==================== -->
-    <a href="#header" class="to-top-arrow" aria-label="Scroll to top">
-      <img class="arrow-icon" src="assets/img/icons/goup.svg" alt="Go up" />
-      <img class="arrow-icon-hover" src="assets/img/icons/goup_hover.svg" alt="Go up" />
-    </a>
+    <button type="button" class="to-top-arrow" aria-label="Scroll to top">
+      <img class="arrow-icon" src="assets/img/icons/goup.svg" alt="" />
+      <img class="arrow-icon-hover" src="assets/img/icons/goup_hover.svg" alt="" />
+    </button>
 
     <!-- ==================== FOOTER ==================== -->
     <div id="footer-include"></div>

@@ -21,3 +21,20 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .scroll-indicator .scroll-line::after {
+    animation: none;
+  }
+
+  .btn::after,
+  .btn-outline-dark::after {
+    animation: none;
+  }
+}

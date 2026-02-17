@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!input.nextElementSibling || !input.nextElementSibling.classList.contains("input-feedback")) {
         const el = document.createElement("div");
         el.className = "input-feedback";
+        el.id = "feedback-" + input.name;
+        el.setAttribute("aria-live", "polite");
+        el.setAttribute("role", "alert");
         input.after(el);
       }
     });

@@ -47,11 +47,14 @@ function initMobileMenu() {
     mobileMenu.classList.toggle("active");
     overlay.classList.toggle("active");
     const isOpen = hamburger.classList.contains("active");
+    hamburger.setAttribute("aria-expanded", String(isOpen));
     document.body.style.overflow = isOpen ? "hidden" : "";
     if (isOpen) {
       setLogoBlue();
+      trapFocus(mobileMenu);
     } else {
       restoreLogo();
+      releaseFocusTrap();
     }
   }
 
@@ -60,10 +63,53 @@ function initMobileMenu() {
    */
   function closeMenu() {
     hamburger.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
     mobileMenu.classList.remove("active");
     overlay.classList.remove("active");
     document.body.style.overflow = "";
     restoreLogo();
+    releaseFocusTrap();
+  }
+
+  // Focus trap for mobile menu
+  let focusTrapHandler = null;
+
+  function trapFocus(container) {
+    const focusableEls = container.querySelectorAll(
+      'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusableEls.length === 0) return;
+    const firstEl = focusableEls[0];
+    const lastEl = focusableEls[focusableEls.length - 1];
+    firstEl.focus();
+
+    focusTrapHandler = function (e) {
+      if (e.key === "Escape") {
+        closeMenu();
+        hamburger.focus();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      if (e.shiftKey) {
+        if (document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        }
+      } else {
+        if (document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    };
+    document.addEventListener("keydown", focusTrapHandler);
+  }
+
+  function releaseFocusTrap() {
+    if (focusTrapHandler) {
+      document.removeEventListener("keydown", focusTrapHandler);
+      focusTrapHandler = null;
+    }
   }
 
   // Toggle menu on hamburger click
@@ -79,7 +125,7 @@ function initMobileMenu() {
 
   // Sync language toggle in mobile menu with header
   const mobileLangToggle = document.querySelectorAll(
-    ".mobile-lang-toggle span:not(.separator)",
+    ".mobile-lang-toggle button",
   );
   mobileLangToggle.forEach((span) => {
     span.addEventListener("click", () => {

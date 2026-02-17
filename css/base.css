@@ -230,3 +230,41 @@ img {
   color: var(--blue);
   text-align: center;
 }
+
+/* =============================================
+   ACCESSIBILITY
+   ============================================= */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100;
+  padding: 12px 24px;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Global focus-visible styles */
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}

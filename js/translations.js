@@ -221,12 +221,14 @@ function setLanguage(lang) {
 
   // Activate the current language in the toggle
   const toggleSpans = document.querySelectorAll(
-    ".lang-toggle span:not(.separator)",
+    ".lang-toggle button",
   );
   toggleSpans.forEach((span) => {
     span.classList.remove("active");
+    span.removeAttribute("aria-current");
     if (span.textContent.trim().toLowerCase() === lang) {
       span.classList.add("active");
+      span.setAttribute("aria-current", "true");
     }
   });
 }
@@ -236,7 +238,7 @@ function setLanguage(lang) {
  */
 function initLanguageToggle() {
   const toggleSpans = document.querySelectorAll(
-    ".lang-toggle span:not(.separator)",
+    ".lang-toggle button",
   );
   toggleSpans.forEach((span) => {
     span.addEventListener("click", () => {

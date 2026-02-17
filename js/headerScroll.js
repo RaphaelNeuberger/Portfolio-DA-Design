@@ -13,3 +13,31 @@ window.addEventListener("scroll", function () {
     }
   }
 });
+
+// Active nav link indicator via IntersectionObserver
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-links a, .mobile-nav-links a");
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach(function (link) {
+            if (link.getAttribute("href") === "#" + id) {
+              link.setAttribute("aria-current", "page");
+            } else {
+              link.removeAttribute("aria-current");
+            }
+          });
+        }
+      });
+    },
+    { rootMargin: "-50% 0px -50% 0px" }
+  );
+
+  sections.forEach(function (section) {
+    observer.observe(section);
+  });
+});

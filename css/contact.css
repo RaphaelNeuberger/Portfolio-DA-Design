@@ -100,6 +100,12 @@
   box-shadow: 0 0 0 1px var(--blue);
 }
 
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
 .contact-form textarea {
   resize: vertical;
   min-height: 140px;

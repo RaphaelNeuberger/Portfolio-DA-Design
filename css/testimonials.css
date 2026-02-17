@@ -21,7 +21,7 @@
 
 .testimonials-subtitle {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   margin-bottom: 60px;
 }
 
@@ -48,7 +48,7 @@
 
 .testimonial-role {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #d4e0ff;
   margin-bottom: 16px;
   font-style: italic;
 }
