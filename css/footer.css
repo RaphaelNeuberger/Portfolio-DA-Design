@@ -60,9 +60,10 @@ footer {
 
 .footer-socials a {
   color: rgba(255, 255, 255, 0.6);
-  transition: color 100ms ease;
+  transition: color 100ms ease, transform 100ms ease;
 }
 
 .footer-socials a:hover {
   color: var(--white);
+  transform: scale(1.25);
 }

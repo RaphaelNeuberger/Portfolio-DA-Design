@@ -1,6 +1,12 @@
 /* =============================================
    LEGAL NOTICE & PRIVACY POLICY PAGES
    ============================================= */
+
+/* Language-based content visibility */
+html[lang="en"] [data-lang="de"],
+html[lang="de"] [data-lang="en"] {
+  display: none;
+}
 .privacy-container,
 .legal-content-container {
   max-width: 800px;

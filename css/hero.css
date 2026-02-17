@@ -158,7 +158,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 100ms ease;
+  transition: transform 100ms ease;
+}
+
+.hero-socials a:hover {
+  transform: translateX(-6px);
 }
 
 .hero-socials a svg,

@@ -9,10 +9,46 @@
   padding: 14px 32px;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 100ms ease;
+  transition: all 100ms ease-in-out;
   border: none;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Shine sweep pseudo-element for all buttons */
+.btn::after,
+.btn-outline-dark::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transform: translateX(-200%);
+  will-change: transform;
+}
+
+.btn:hover::after,
+.btn-outline-dark:hover::after {
+  animation: btnShine 0.9s ease-in-out forwards;
+}
+
+@keyframes btnShine {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+/* Outline button */
 .btn-outline {
   color: var(--blue);
   border: 2px solid var(--blue);
@@ -20,21 +56,39 @@
 }
 
 .btn-outline:hover {
-  background: var(--blue);
+  background: linear-gradient(135deg, #5988ff 0%, #5988ff 50%, #0043f0 100%);
   color: var(--white);
+  box-shadow: 0 6px 20px rgba(89, 136, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  background: #0043f0;
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .btn-primary {
-  background: var(--blue);
-  color: var(--white);
+  background: transparent;
+  color: var(--blue);
+  border: 2px solid var(--blue);
   padding: 16px 36px;
   border-radius: 12px;
 }
 
 .btn-primary:hover {
-  background: var(--blue-dark);
+  background: linear-gradient(135deg, #5988ff 0%, #5988ff 50%, #0043f0 100%);
+  color: var(--white);
+  border-color: #5988ff;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(89, 136, 255, 0.35);
+}
+
+.btn-primary:active {
+  background: #0043f0;
+  border-color: #0043f0;
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* Outline button for project cards */
@@ -49,12 +103,24 @@
   text-decoration: none;
   background: transparent;
   cursor: pointer;
-  transition: all 100ms ease;
+  transition: all 100ms ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-outline-dark:hover {
-  background: var(--blue);
+  background: linear-gradient(135deg, #5988ff 0%, #5988ff 50%, #0043f0 100%);
   color: var(--white);
+  border-color: #5988ff;
+  box-shadow: 0 6px 20px rgba(89, 136, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark:active {
+  background: #0043f0;
+  border-color: #0043f0;
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* =============================================
@@ -62,9 +128,9 @@
    ============================================= */
 .to-top-arrow {
   position: fixed;
-  left: 32px;
+  left: max(32px, calc(50vw - 600px));
   bottom: 300px;
-  z-index: 1200;
+  z-index: 4;
   width: 48px;
   height: 48px;
   display: flex;
@@ -84,6 +150,24 @@
 .to-top-arrow.visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* Hide to-top-arrow when mobile menu is open */
+body:has(.mobile-menu.active) .to-top-arrow {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.to-top-arrow .arrow-icon-hover {
+  display: none;
+}
+
+.to-top-arrow:hover .arrow-icon {
+  display: none;
+}
+
+.to-top-arrow:hover .arrow-icon-hover {
+  display: block;
 }
 
 .to-top-arrow:hover {

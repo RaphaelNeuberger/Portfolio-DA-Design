@@ -97,7 +97,7 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--blue);
-  border-width: 3px;
+  box-shadow: 0 0 0 1px var(--blue);
 }
 
 .contact-form textarea {
@@ -144,17 +144,24 @@
 }
 
 .contact-form .btn-primary.active {
-  background: var(--blue);
+  background: linear-gradient(135deg, #5988ff 0%, #5988ff 50%, #0043f0 100%);
   color: var(--white);
   border-color: var(--blue);
   cursor: pointer;
 }
 
 .contact-form .btn-primary.active:hover {
-  background: var(--blue-dark);
-  border-color: var(--blue-dark);
+  background: linear-gradient(135deg, #4a7aff 0%, #4a7aff 40%, #0038d0 100%);
+  border-color: #4a7aff;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(89, 136, 255, 0.35);
+}
+
+.contact-form .btn-primary.active:active {
+  background: #0043f0;
+  border-color: #0043f0;
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .input-feedback {

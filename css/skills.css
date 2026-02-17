@@ -37,9 +37,22 @@
   min-width: 90px;
 }
 
+.skill-item {
+  cursor: default;
+}
+
 .skill-icon {
   width: 72px;
   height: 72px;
+  transition: transform 100ms ease;
+}
+
+.skill-item:hover .skill-icon {
+  transform: translateY(-6px);
+}
+
+.skill-item:hover span {
+  font-weight: 800;
 }
 
 .skill-icon svg,

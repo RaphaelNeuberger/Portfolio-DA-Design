@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const privacyInput = form.querySelector('input[name="privacy"]');
   const submitBtn = form.querySelector('button[type="submit"]');
 
+  const touched = { name: false, email: false, message: false };
+
   addFeedbackElements();
   addEventListeners();
   checkForm();
@@ -49,22 +51,25 @@ document.addEventListener("DOMContentLoaded", function () {
     return messageInput.value.trim().length >= 5;
   }
 
-  function validateField(input, isValid, errorKey) {
+  function showFeedback(input, isValid, errorKey) {
     const el = getFeedbackEl(input);
-    el.textContent = isValid() ? "" : getTranslation(errorKey);
-    return isValid();
+    if (!el) return;
+    el.textContent = isValid ? "" : getTranslation(errorKey);
   }
 
   function validateName() {
-    return validateField(nameInput, isNameValid, "contact.form.error.name");
+    if (!touched.name) return;
+    showFeedback(nameInput, isNameValid(), "contact.form.error.name");
   }
 
   function validateEmail() {
-    return validateField(emailInput, isEmailValid, "contact.form.error.email");
+    if (!touched.email) return;
+    showFeedback(emailInput, isEmailValid(), "contact.form.error.email");
   }
 
   function validateMessage() {
-    return validateField(messageInput, isMessageValid, "contact.form.error.message");
+    if (!touched.message) return;
+    showFeedback(messageInput, isMessageValid(), "contact.form.error.message");
   }
 
   function checkForm() {
@@ -80,11 +85,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addEventListeners() {
-    nameInput.addEventListener("blur", validateName);
-    emailInput.addEventListener("blur", validateEmail);
-    messageInput.addEventListener("blur", validateMessage);
+    nameInput.addEventListener("blur", function () {
+      touched.name = true;
+      validateName();
+      checkForm();
+    });
+    emailInput.addEventListener("blur", function () {
+      touched.email = true;
+      validateEmail();
+      checkForm();
+    });
+    messageInput.addEventListener("blur", function () {
+      touched.message = true;
+      validateMessage();
+      checkForm();
+    });
     privacyInput.addEventListener("change", checkForm);
-    form.addEventListener("input", checkForm);
+
+    nameInput.addEventListener("input", function () {
+      if (touched.name) validateName();
+      checkForm();
+    });
+    emailInput.addEventListener("input", function () {
+      if (touched.email) validateEmail();
+      checkForm();
+    });
+    messageInput.addEventListener("input", function () {
+      if (touched.message) validateMessage();
+      checkForm();
+    });
+
     form.addEventListener("submit", handleSubmit);
   }
 
@@ -126,8 +156,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleSuccess() {
     form.reset();
+    touched.name = false;
+    touched.email = false;
+    touched.message = false;
     clearAllFeedback();
     showSuccessMessage();
+    checkForm();
   }
 
   function clearAllFeedback() {
@@ -144,6 +178,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleSubmit(e) {
     e.preventDefault();
+    touched.name = true;
+    touched.email = true;
+    touched.message = true;
+    validateName();
+    validateEmail();
+    validateMessage();
     if (!checkForm()) return;
     submitBtn.disabled = true;
     submitBtn.textContent = getTranslation("contact.form.sending");

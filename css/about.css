@@ -74,6 +74,18 @@
   flex-shrink: 0;
 }
 
+.about-badge .badge-icon-hover {
+  display: none;
+}
+
+.about-badge:hover .badge-icon {
+  display: none;
+}
+
+.about-badge:hover .badge-icon-hover {
+  display: block;
+}
+
 .about-badge span {
   font-size: 16px;
   font-weight: 500;
