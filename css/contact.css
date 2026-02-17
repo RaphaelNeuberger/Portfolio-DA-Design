@@ -172,10 +172,11 @@
 
 .input-feedback {
   font-size: 16px;
+  line-height: 1.5;
   color: #ff6b6b;
-  min-height: 18px;
+  height: 24px;
   margin: 2px 0 0 0;
-  transition: opacity 100ms;
+  overflow: hidden;
 }
 
 .form-success-message {

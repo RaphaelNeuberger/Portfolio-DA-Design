@@ -50,6 +50,18 @@
   color: var(--blue);
   transition: color 100ms ease;
   letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links a::after {
+  content: attr(data-text);
+  font-weight: 700;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .nav-links a:hover {

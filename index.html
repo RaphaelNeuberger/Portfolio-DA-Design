@@ -491,6 +491,7 @@
               aria-describedby="feedback-name"
               data-i18n-placeholder="contact.form.name"
               placeholder="Your name" />
+            <div class="input-feedback" id="feedback-name" aria-live="polite" role="alert"></div>
             <label for="contact-email" class="sr-only" data-i18n="contact.form.email">Your email</label>
             <input
               type="text"
@@ -499,6 +500,7 @@
               aria-describedby="feedback-email"
               data-i18n-placeholder="contact.form.email"
               placeholder="Your email" />
+            <div class="input-feedback" id="feedback-email" aria-live="polite" role="alert"></div>
             <label for="contact-message" class="sr-only" data-i18n="contact.form.message">Your message</label>
             <textarea
               id="contact-message"
@@ -507,6 +509,7 @@
               data-i18n-placeholder="contact.form.message"
               placeholder="Your message"
               rows="6"></textarea>
+            <div class="input-feedback" id="feedback-message" aria-live="polite" role="alert"></div>
             <label class="checkbox-label">
               <input type="checkbox" name="privacy" />
               <span data-i18n-html="contact.form.privacy"
@@ -528,14 +531,13 @@
       <div class="decorative-circle circle-contact-1"></div>
       <div class="decorative-circle circle-contact-2"></div>
       <div class="decorative-circle circle-contact-3"></div>
+      <!-- TO-TOP-ARROW -->
+      <button type="button" class="to-top-arrow" aria-label="Scroll to top">
+        <img class="arrow-icon" src="assets/img/icons/goup.svg" alt="" />
+        <img class="arrow-icon-hover" src="assets/img/icons/goup_hover.svg" alt="" />
+      </button>
     </section>
     </main>
-
-    <!-- ==================== TO-TOP-ARROW ==================== -->
-    <button type="button" class="to-top-arrow" aria-label="Scroll to top">
-      <img class="arrow-icon" src="assets/img/icons/goup.svg" alt="" />
-      <img class="arrow-icon-hover" src="assets/img/icons/goup_hover.svg" alt="" />
-    </button>
 
     <!-- ==================== FOOTER ==================== -->
     <div id="footer-include"></div>

@@ -7,21 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
    */
   // To-Top-Arrow
   const toTop = document.querySelector(".to-top-arrow");
-  /**
-   * Shows or hides the To-Top arrow depending on the scroll position.
-   * @function toggleToTop
-   */
-  function toggleToTop() {
-    if (!toTop) return;
-    if (window.scrollY > window.innerHeight * 0.5) {
-      toTop.classList.add("visible");
-    } else {
-      toTop.classList.remove("visible");
-    }
-  }
-  window.addEventListener("scroll", toggleToTop);
-  toggleToTop();
-
   if (toTop) {
     toTop.addEventListener("click", function (e) {
       e.preventDefault();

@@ -127,10 +127,6 @@
    COMPONENTS - TO-TOP-ARROW
    ============================================= */
 .to-top-arrow {
-  position: fixed;
-  left: max(32px, calc(50vw - 600px));
-  bottom: 300px;
-  z-index: 4;
   width: 48px;
   height: 48px;
   display: flex;
@@ -142,23 +138,7 @@
   background: transparent;
   border-radius: 50%;
   box-shadow: none;
-  opacity: 0;
-  pointer-events: none;
-  transition:
-    opacity 100ms,
-    background 100ms,
-    box-shadow 100ms;
-}
-
-.to-top-arrow.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Hide to-top-arrow when mobile menu is open */
-body:has(.mobile-menu.active) .to-top-arrow {
-  opacity: 0;
-  pointer-events: none;
+  margin: 0 auto 0 max(0px, calc(50vw - 600px - 80px));
 }
 
 .to-top-arrow .arrow-icon-hover {

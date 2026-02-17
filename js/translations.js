@@ -200,6 +200,9 @@ function setLanguage(lang) {
     const key = el.getAttribute("data-i18n");
     if (translations[lang][key]) {
       el.innerHTML = translations[lang][key];
+      if (el.closest(".nav-links")) {
+        el.setAttribute("data-text", translations[lang][key]);
+      }
     }
   });
 

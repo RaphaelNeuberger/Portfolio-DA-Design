@@ -24,6 +24,10 @@ function includeHTML(selector, url, callback) {
           element.querySelectorAll('a[href^="#"]').forEach((link) => {
             link.setAttribute("href", "index.html" + link.getAttribute("href"));
           });
+          const logoImg = element.querySelector(".logo img");
+          if (logoImg) {
+            logoImg.src = "assets/img/logo_blue.svg";
+          }
         }
         if (callback) callback();
       }
