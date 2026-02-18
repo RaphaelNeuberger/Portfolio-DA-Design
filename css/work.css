@@ -119,7 +119,7 @@
   width: 150px;
   height: 150px;
   left: 25%;
-  bottom: 10%;
+  bottom: 20%;
 }
 
 .circle-contact-3 {
@@ -165,6 +165,7 @@
 
 .project-image-wrapper {
   transition: transform 100ms ease;
+  cursor: pointer;
 }
 
 .project-image-wrapper:hover {

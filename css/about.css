@@ -65,6 +65,7 @@
   align-items: center;
   gap: 10px;
   color: var(--dark);
+  cursor: default;
 }
 
 .about-badge svg {

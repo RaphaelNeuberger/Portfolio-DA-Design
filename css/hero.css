@@ -3,7 +3,7 @@
    ============================================= */
 #hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: stretch;
   overflow: hidden;
@@ -36,7 +36,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .hero-left {

@@ -18,525 +18,560 @@
     <!-- ==================== HERO ==================== -->
     <script src="js/include.js"></script>
     <main id="main">
-    <section id="hero" class="fade-in">
-      <div class="hero-bg-circle"></div>
-      <div class="hero-content">
-        <div class="hero-left">
-          <div class="hero-image">
-            <div class="hero-image-wrapper">
-              <img
-                src="assets/img/raphaelneuberger.webp"
-                alt="Raphael Neuberger" />
+      <section id="hero" class="fade-in">
+        <div class="hero-bg-circle"></div>
+        <div class="hero-content">
+          <div class="hero-left">
+            <div class="hero-image">
+              <div class="hero-image-wrapper">
+                <img
+                  src="assets/img/raphaelneuberger.webp"
+                  alt="Raphael Neuberger" />
+              </div>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div class="hero-text">
+              <span class="hero-hello" data-i18n="hero.hello"
+                >Hello! I am Raphael</span
+              >
+              <h1>FRONTEND<br />DEVELOPER</h1>
+            </div>
+            <div class="scroll-indicator">
+              <span>SCROLL</span>
+              <div class="scroll-line"></div>
+            </div>
+            <div class="hero-socials">
+              <a
+                href="https://github.com/RaphaelNeuberger"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub">
+                <img src="assets/img/icons/github.svg" alt="GitHub" />
+              </a>
+              <a href="mailto:info@raphael-neuberger.de" aria-label="Email">
+                <img src="assets/img/icons/email.svg" alt="Email" />
+              </a>
+              <a
+                href="https://linkedin.com/in/raphaelneuberger"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" />
+              </a>
             </div>
           </div>
         </div>
-        <div class="hero-right">
-          <div class="hero-text">
-            <span class="hero-hello" data-i18n="hero.hello"
-              >Hello! I am Raphael</span
+      </section>
+
+      <!-- ==================== ABOUT ME ==================== -->
+      <section id="about">
+        <div class="decorative-circle circle-about-top"></div>
+        <div class="decorative-circle circle-about-right"></div>
+        <div class="about-container">
+          <div class="about-left">
+            <h2 class="section-title-large" data-i18n="about.title">
+              Let's work<br />together
+            </h2>
+            <div class="about-meta">
+              <span class="iam-label" data-i18n="about.iam">I am</span>
+            </div>
+            <div class="about-badges">
+              <div class="about-badge">
+                <img
+                  class="badge-icon"
+                  src="assets/img/icons/location.svg"
+                  alt="Location"
+                  width="28"
+                  height="28" />
+                <img
+                  class="badge-icon-hover"
+                  src="assets/img/icons/location_hover.svg"
+                  alt=""
+                  width="28"
+                  height="28" />
+                <span data-i18n="about.badge.location"
+                  >located in<br />Munich</span
+                >
+              </div>
+              <div class="about-badge">
+                <img
+                  class="badge-icon"
+                  src="assets/img/icons/remote.svg"
+                  alt="Remote"
+                  width="38"
+                  height="38" />
+                <img
+                  class="badge-icon-hover"
+                  src="assets/img/icons/remote_hover.svg"
+                  alt=""
+                  width="38"
+                  height="38" />
+                <span data-i18n="about.badge.remote"
+                  >open to work<br />remote</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="about-right">
+            <p data-i18n="about.text1">
+              I am a passionate Frontend Developer with a strong focus on
+              creating intuitive and user-friendly web applications. My journey
+              in programming is driven by the constant pursuit of learning new
+              technologies and frameworks. I believe in writing clean,
+              maintainable code that not only works but also makes a difference
+              in users' daily lives.
+            </p>
+            <p data-i18n="about.text2">
+              My approach to problem-solving is rooted in analytical thinking
+              and creativity. I enjoy breaking down complex challenges into
+              manageable parts and finding elegant solutions. Through
+              collaboration and persistence, I continuously learn from every
+              project, always striving to improve both my technical skills and
+              my ability to deliver high-quality results.
+            </p>
+            <a href="#contact" class="btn btn-outline" data-i18n="about.btn"
+              >Send a message</a
             >
-            <h1>FRONTEND<br />DEVELOPER</h1>
-          </div>
-          <div class="scroll-indicator">
-            <span>SCROLL</span>
-            <div class="scroll-line"></div>
-          </div>
-          <div class="hero-socials">
-            <a
-              href="https://github.com/RaphaelNeuberger"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub">
-              <img src="assets/img/icons/github.svg" alt="GitHub" />
-            </a>
-            <a href="/index.html#contact" aria-label="Email">
-              <img src="assets/img/icons/email.svg" alt="Email" />
-            </a>
-            <a
-              href="https://linkedin.com/in/raphaelneuberger"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn">
-              <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" />
-            </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==================== ABOUT ME ==================== -->
-    <section id="about">
-      <div class="decorative-circle circle-about-top"></div>
-      <div class="decorative-circle circle-about-right"></div>
-      <div class="about-container">
-        <div class="about-left">
-          <h2 class="section-title-large" data-i18n="about.title">
-            Let's work<br />together
+      <!-- ==================== SKILL SET ==================== -->
+      <section id="skills">
+        <div class="skills-container">
+          <h2 class="section-title" data-i18n="skills.title">Skill set</h2>
+          <div class="skills-row skills-row-top">
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img src="assets/img/icons/angular.svg" alt="Angular" />
+              </div>
+              <span>Angular</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img src="assets/img/icons/typescript.svg" alt="TypeScript" />
+              </div>
+              <span>TypeScript</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img src="assets/img/icons/javascript.svg" alt="JavaScript" />
+              </div>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img src="assets/img/icons/html.svg" alt="HTML" />
+              </div>
+              <span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img src="assets/img/icons/scrum.svg" alt="Scrum" />
+              </div>
+              <span>Scrum</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img src="assets/img/icons/firebase.svg" alt="Firebase" />
+              </div>
+              <span>Firebase</span>
+            </div>
+          </div>
+          <div class="skills-row skills-row-bottom">
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img src="assets/img/icons/git.svg" alt="Git" />
+              </div>
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img src="assets/img/icons/css.svg" alt="CSS" />
+              </div>
+              <span>CSS</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img src="assets/img/icons/restapi.svg" alt="REST-API" />
+              </div>
+              <span>REST-API</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="assets/img/icons/materialdesign.svg"
+                  alt="Material Design" />
+              </div>
+              <span>Material<br />Design</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="assets/img/icons/growthmindset.svg"
+                  alt="Growth mindset" />
+              </div>
+              <span>Growth<br />mindset</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== MY WORK ==================== -->
+      <section id="work">
+        <div class="work-container">
+          <div class="work-header">
+            <h2 class="section-title" data-i18n="work.title">My work</h2>
+            <p data-i18n="work.subtitle">
+              Explore a selection of my work here - Interact with projects to
+              see my skills in action.
+            </p>
+          </div>
+
+          <!-- Decorative circles -->
+          <div class="work-circle work-circle-1"></div>
+          <!-- top left, small -->
+          <div class="work-circle work-circle-2"></div>
+          <!-- top right, medium -->
+          <div class="work-circle work-circle-3"></div>
+          <!-- mid right, large -->
+          <div class="work-circle work-circle-4"></div>
+          <!-- mid left, small -->
+          <div class="work-circle work-circle-5"></div>
+          <!-- bottom center, small -->
+          <div class="work-circle work-circle-6"></div>
+          <!-- bottom left, medium -->
+          <div class="work-circle work-circle-7"></div>
+          <!-- bottom right, large -->
+
+          <!-- Project 1: Join - Image left, Text right -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-wrapper">
+                <a
+                  href="https://join.raphael-neuberger.de"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="View Join project">
+                  <img
+                    src="assets/img/join.webp"
+                    alt="Join - Project Screenshot" />
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Join</h3>
+              <p class="project-tech">
+                Angular | TypeScript | HTML | CSS | Firebase
+              </p>
+              <p class="project-desc" data-i18n="work.join.desc">
+                Task manager inspired by the Kanban System. Create and organize
+                tasks using drag and drop functions, assign users and
+                categories.
+              </p>
+              <div class="project-buttons">
+                <a
+                  href="https://github.com/RaphaelNeuberger/Join"
+                  class="btn btn-outline-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Github</a
+                >
+                <a
+                  href="https://join.raphael-neuberger.de"
+                  class="btn btn-outline-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Live&nbsp;Demo</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Pollo Loco - Text left, Image right -->
+          <div class="project-card">
+            <div class="project-info">
+              <h3>El Pollo Loco</h3>
+              <p class="project-tech">JavaScript | HTML | CSS</p>
+              <p class="project-desc" data-i18n="work.pollo.desc">
+                Jump, run and throw game based on object-oriented approach. Help
+                Pepe to find coins and tabasco sauce to fight against the crazy
+                hen.
+              </p>
+              <div class="project-buttons">
+                <a
+                  href="https://github.com/RaphaelNeuberger/El-Pollo-Loco"
+                  class="btn btn-outline-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Github</a
+                >
+                <a
+                  href="https://elpolloloco.raphael-neuberger.de"
+                  class="btn btn-outline-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Live&nbsp;Demo</a
+                >
+              </div>
+            </div>
+            <div class="project-image">
+              <div class="project-image-wrapper">
+                <a
+                  href="https://elpolloloco.raphael-neuberger.de"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="View El Pollo Loco project">
+                  <img
+                    src="assets/img/elpolloloco.webp"
+                    alt="El Pollo Loco - Project Screenshot" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: DA Bubble - Image left, Text right -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-wrapper">
+                <a
+                  href="https://dabubble.raphael-neuberger.de"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="View DA Bubble project">
+                  <img
+                    src="assets/img/dabubble.webp"
+                    alt="DA Bubble - Project Screenshot" />
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>DA Bubble</h3>
+              <p class="project-tech">
+                Angular | TypeScript | HTML | CSS | Firebase
+              </p>
+              <p class="project-desc" data-i18n="work.bubble.desc">
+                A Slack clone (chat application/instant messaging system)
+                modeled using Firebase. Communicate in channels and direct
+                messages.
+              </p>
+              <div class="project-buttons">
+                <a
+                  href="https://github.com/RaphaelNeuberger/DaBubble"
+                  class="btn btn-outline-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Github</a
+                >
+                <a
+                  href="https://dabubble.raphael-neuberger.de"
+                  class="btn btn-outline-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Live&nbsp;Demo</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Pokédex - Text left, Image right -->
+          <div class="project-card">
+            <div class="project-info">
+              <h3>Pokédex</h3>
+              <p class="project-tech">JavaScript | HTML | CSS | Api</p>
+              <p class="project-desc" data-i18n="work.pokedex.desc">
+                Based on the PokéAPI a simple library that provides and
+                catalogues pokémon information.
+              </p>
+              <div class="project-buttons">
+                <a
+                  href="https://github.com/RaphaelNeuberger/Pokedex"
+                  class="btn btn-outline-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Github</a
+                >
+                <a
+                  href="https://pokedex.raphael-neuberger.de"
+                  class="btn btn-outline-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Live&nbsp;Demo</a
+                >
+              </div>
+            </div>
+            <div class="project-image">
+              <div class="project-image-wrapper">
+                <a
+                  href="https://pokedex.raphael-neuberger.de"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="View Pokédex project">
+                  <img
+                    src="assets/img/pokedex.webp"
+                    alt="Pokédex - Project Screenshot" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TESTIMONIALS ==================== -->
+      <section id="testimonials" class="fade-in">
+        <div class="testimonials-container">
+          <h2 class="section-title" data-i18n="testimonials.title">
+            Need a teamplayer?
           </h2>
-          <div class="about-meta">
-            <span class="iam-label" data-i18n="about.iam">I am</span>
-          </div>
-          <div class="about-badges">
-            <div class="about-badge">
-              <img
-                class="badge-icon"
-                src="assets/img/icons/location.svg"
-                alt="Location"
-                width="28"
-                height="28" />
-              <img
-                class="badge-icon-hover"
-                src="assets/img/icons/location_hover.svg"
-                alt=""
-                width="28"
-                height="28" />
-              <span data-i18n="about.badge.location"
-                >located in<br />Munich</span
-              >
-            </div>
-            <div class="about-badge">
-              <img
-                class="badge-icon"
-                src="assets/img/icons/remote.svg"
-                alt="Remote"
-                width="38"
-                height="38" />
-              <img
-                class="badge-icon-hover"
-                src="assets/img/icons/remote_hover.svg"
-                alt=""
-                width="38"
-                height="38" />
-              <span data-i18n="about.badge.remote"
-                >open to work<br />remote</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="about-right">
-          <p data-i18n="about.text1">
-            I am a passionate Frontend Developer with a strong focus on creating
-            intuitive and user-friendly web applications. My journey in
-            programming is driven by the constant pursuit of learning new
-            technologies and frameworks. I believe in writing clean,
-            maintainable code that not only works but also makes a difference in
-            users' daily lives.
+          <p class="testimonials-subtitle" data-i18n="testimonials.subtitle">
+            Here what my colleagues said about me
           </p>
-          <p data-i18n="about.text2">
-            My approach to problem-solving is rooted in analytical thinking and
-            creativity. I enjoy breaking down complex challenges into manageable
-            parts and finding elegant solutions. Through collaboration and
-            persistence, I continuously learn from every project, always
-            striving to improve both my technical skills and my ability to
-            deliver high-quality results.
-          </p>
-          <a href="#contact" class="btn btn-outline" data-i18n="about.btn"
-            >Send a message</a
-          >
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <h4>James Guzman</h4>
+              <p class="testimonial-role" data-i18n="testimonials.james.role">
+                Frontend Developer
+              </p>
+              <p class="testimonial-text" data-i18n="testimonials.james.text">
+                "Raphael is a reliable and friendly developer. He was able to
+                solve complex tasks and write clean code. I highly recommend him
+                as a developer."
+              </p>
+            </div>
+            <div class="testimonial-card">
+              <h4>Evelyn Marx</h4>
+              <p class="testimonial-role" data-i18n="testimonials.evelyn.role">
+                Backend Developer
+              </p>
+              <p class="testimonial-text" data-i18n="testimonials.evelyn.text">
+                "Raphael is a motivated and enthusiastic developer who brings
+                creative ideas and is always up for new challenges. He is a
+                pleasure to work with. He is focused and fast."
+              </p>
+            </div>
+            <div class="testimonial-card">
+              <h4>Noah Müller</h4>
+              <p class="testimonial-role" data-i18n="testimonials.noah.role">
+                Project Manager
+              </p>
+              <p class="testimonial-text" data-i18n="testimonials.noah.text">
+                "Raphael has his develop domain - clear communication, with the
+                team members. He is a reliable and friendly person."
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==================== SKILL SET ==================== -->
-    <section id="skills">
-      <div class="skills-container">
-        <h2 class="section-title" data-i18n="skills.title">Skill set</h2>
-        <div class="skills-row skills-row-top">
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/icons/angular.svg" alt="Angular" />
-            </div>
-            <span>Angular</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/icons/typescript.svg" alt="TypeScript" />
-            </div>
-            <span>TypeScript</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/icons/javascript.svg" alt="JavaScript" />
-            </div>
-            <span>JavaScript</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/icons/html.svg" alt="HTML" />
-            </div>
-            <span>HTML</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/icons/scrum.svg" alt="Scrum" />
-            </div>
-            <span>Scrum</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/icons/firebase.svg" alt="Firebase" />
-            </div>
-            <span>Firebase</span>
-          </div>
-        </div>
-        <div class="skills-row skills-row-bottom">
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/icons/git.svg" alt="Git" />
-            </div>
-            <span>Git</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/icons/css.svg" alt="CSS" />
-            </div>
-            <span>CSS</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/icons/restapi.svg" alt="REST-API" />
-            </div>
-            <span>REST-API</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img
-                src="assets/img/icons/materialdesign.svg"
-                alt="Material Design" />
-            </div>
-            <span>Material<br />Design</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img
-                src="assets/img/icons/growthmindset.svg"
-                alt="Growth mindset" />
-            </div>
-            <span>Growth<br />mindset</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== MY WORK ==================== -->
-    <section id="work">
-      <div class="work-container">
-        <div class="work-header">
-          <h2 class="section-title" data-i18n="work.title">My work</h2>
-          <p data-i18n="work.subtitle">
-            Explore a selection of my work here - Interact with projects to see
-            my skills in action.
-          </p>
-        </div>
-
-        <!-- Decorative circles -->
-        <div class="work-circle work-circle-1"></div>
-        <!-- top left, small -->
-        <div class="work-circle work-circle-2"></div>
-        <!-- top right, medium -->
-        <div class="work-circle work-circle-3"></div>
-        <!-- mid right, large -->
-        <div class="work-circle work-circle-4"></div>
-        <!-- mid left, small -->
-        <div class="work-circle work-circle-5"></div>
-        <!-- bottom center, small -->
-        <div class="work-circle work-circle-6"></div>
-        <!-- bottom left, medium -->
-        <div class="work-circle work-circle-7"></div>
-        <!-- bottom right, large -->
-
-        <!-- Project 1: Join - Image left, Text right -->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="project-image-wrapper">
-              <a
-                href="https://join.raphael-neuberger.de"
-                target="_blank"
-                rel="noopener"
-                aria-label="View Join project">
-                <img
-                  src="assets/img/join.webp"
-                  alt="Join - Project Screenshot" />
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Join</h3>
-            <p class="project-tech">
-              Angular | TypeScript | HTML | CSS | Firebase
+      <!-- ==================== CONTACT ==================== -->
+      <section id="contact" class="fade-in">
+        <div class="contact-container">
+          <div class="contact-left">
+            <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+            <h3 data-i18n="contact.heading">Got a problem to solve?</h3>
+            <p data-i18n="contact.text">
+              If you want people to contact you, give them a way. Fill in your
+              information, so they can reach out to the email or phone number
+              provided.
             </p>
-            <p class="project-desc" data-i18n="work.join.desc">
-              Task manager inspired by the Kanban System. Create and organize
-              tasks using drag and drop functions, assign users and categories.
-            </p>
-            <div class="project-buttons">
+            <p class="contact-looking" data-i18n-html="contact.looking">
+              Would you also consider checking my profile on
               <a
-                href="https://github.com/RaphaelNeuberger/Join"
-                class="btn btn-outline-dark"
+                href="https://linkedin.com/in/raphaelneuberger"
                 target="_blank"
-                rel="noopener"
-                >Github</a
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >?
+            </p>
+          </div>
+          <div class="contact-right">
+            <div class="contact-spacer"></div>
+            <form class="contact-form" action="#" method="POST" novalidate>
+              <label
+                for="contact-name"
+                class="sr-only"
+                data-i18n="contact.form.name"
+                >Your name</label
               >
-              <a
-                href="https://join.raphael-neuberger.de"
-                class="btn btn-outline-dark"
-                target="_blank"
-                rel="noopener"
-                >Live&nbsp;Demo</a
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                aria-describedby="feedback-name"
+                data-i18n-placeholder="contact.form.name"
+                placeholder="Your name" />
+              <div
+                class="input-feedback"
+                id="feedback-name"
+                aria-live="polite"
+                role="alert"></div>
+              <label
+                for="contact-email"
+                class="sr-only"
+                data-i18n="contact.form.email"
+                >Your email</label
               >
-            </div>
+              <input
+                type="text"
+                id="contact-email"
+                name="email"
+                aria-describedby="feedback-email"
+                data-i18n-placeholder="contact.form.email"
+                placeholder="Your email" />
+              <div
+                class="input-feedback"
+                id="feedback-email"
+                aria-live="polite"
+                role="alert"></div>
+              <label
+                for="contact-message"
+                class="sr-only"
+                data-i18n="contact.form.message"
+                >Your message</label
+              >
+              <textarea
+                id="contact-message"
+                name="message"
+                aria-describedby="feedback-message"
+                data-i18n-placeholder="contact.form.message"
+                placeholder="Your message"
+                rows="6"></textarea>
+              <div
+                class="input-feedback"
+                id="feedback-message"
+                aria-live="polite"
+                role="alert"></div>
+              <label class="checkbox-label">
+                <input type="checkbox" name="privacy" />
+                <span data-i18n-html="contact.form.privacy"
+                  >I've read the
+                  <a href="privacypolicy.html">privacy policy</a> and agree to
+                  the processing of my data as outlined.</span
+                >
+              </label>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                disabled
+                data-i18n="contact.form.btn">
+                Say Hello ;)
+              </button>
+            </form>
           </div>
         </div>
-
-        <!-- Project 2: Pollo Loco - Text left, Image right -->
-        <div class="project-card">
-          <div class="project-info">
-            <h3>El Pollo Loco</h3>
-            <p class="project-tech">JavaScript | HTML | CSS</p>
-            <p class="project-desc" data-i18n="work.pollo.desc">
-              Jump, run and throw game based on object-oriented approach. Help
-              Pepe to find coins and tabasco sauce to fight against the crazy
-              hen.
-            </p>
-            <div class="project-buttons">
-              <a
-                href="https://github.com/RaphaelNeuberger/El-Pollo-Loco"
-                class="btn btn-outline-dark"
-                target="_blank"
-                rel="noopener"
-                >Github</a
-              >
-              <a
-                href="https://elpolloloco.raphael-neuberger.de"
-                class="btn btn-outline-dark"
-                target="_blank"
-                rel="noopener"
-                >Live&nbsp;Demo</a
-              >
-            </div>
-          </div>
-          <div class="project-image">
-            <div class="project-image-wrapper">
-              <a
-                href="https://elpolloloco.raphael-neuberger.de"
-                target="_blank"
-                rel="noopener"
-                aria-label="View El Pollo Loco project">
-                <img
-                  src="assets/img/elpolloloco.webp"
-                  alt="El Pollo Loco - Project Screenshot" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: DA Bubble - Image left, Text right -->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="project-image-wrapper">
-              <a
-                href="https://dabubble.raphael-neuberger.de"
-                target="_blank"
-                rel="noopener"
-                aria-label="View DA Bubble project">
-                <img
-                  src="assets/img/dabubble.webp"
-                  alt="DA Bubble - Project Screenshot" />
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>DA Bubble</h3>
-            <p class="project-tech">
-              Angular | TypeScript | HTML | CSS | Firebase
-            </p>
-            <p class="project-desc" data-i18n="work.bubble.desc">
-              A Slack clone (chat application/instant messaging system) modeled
-              using Firebase. Communicate in channels and direct messages.
-            </p>
-            <div class="project-buttons">
-              <a
-                href="https://github.com/RaphaelNeuberger/DaBubble"
-                class="btn btn-outline-dark"
-                target="_blank"
-                rel="noopener"
-                >Github</a
-              >
-              <a
-                href="https://dabubble.raphael-neuberger.de"
-                class="btn btn-outline-dark"
-                target="_blank"
-                rel="noopener"
-                >Live&nbsp;Demo</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: Pokédex - Text left, Image right -->
-        <div class="project-card">
-          <div class="project-info">
-            <h3>Pokédex</h3>
-            <p class="project-tech">JavaScript | HTML | CSS | Api</p>
-            <p class="project-desc" data-i18n="work.pokedex.desc">
-              Based on the PokéAPI a simple library that provides and catalogues
-              pokémon information.
-            </p>
-            <div class="project-buttons">
-              <a
-                href="https://github.com/RaphaelNeuberger/Pokedex"
-                class="btn btn-outline-dark"
-                target="_blank"
-                rel="noopener"
-                >Github</a
-              >
-              <a
-                href="https://pokedex.raphael-neuberger.de"
-                class="btn btn-outline-dark"
-                target="_blank"
-                rel="noopener"
-                >Live&nbsp;Demo</a
-              >
-            </div>
-          </div>
-          <div class="project-image">
-            <div class="project-image-wrapper">
-              <a
-                href="https://pokedex.raphael-neuberger.de"
-                target="_blank"
-                rel="noopener"
-                aria-label="View Pokédex project">
-                <img
-                  src="assets/img/pokedex.webp"
-                  alt="Pokédex - Project Screenshot" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== TESTIMONIALS ==================== -->
-    <section id="testimonials" class="fade-in">
-      <div class="testimonials-container">
-        <h2 class="section-title" data-i18n="testimonials.title">
-          Need a teamplayer?
-        </h2>
-        <p class="testimonials-subtitle" data-i18n="testimonials.subtitle">
-          Here what my colleagues said about me
-        </p>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <h4>James Guzman</h4>
-            <p class="testimonial-role" data-i18n="testimonials.james.role">
-              Frontend Developer
-            </p>
-            <p class="testimonial-text" data-i18n="testimonials.james.text">
-              "Raphael is a reliable and friendly developer. He was able to
-              solve complex tasks and write clean code. I highly recommend him
-              as a developer."
-            </p>
-          </div>
-          <div class="testimonial-card">
-            <h4>Evelyn Marx</h4>
-            <p class="testimonial-role" data-i18n="testimonials.evelyn.role">
-              Backend Developer
-            </p>
-            <p class="testimonial-text" data-i18n="testimonials.evelyn.text">
-              "Raphael is a motivated and enthusiastic developer who brings
-              creative ideas and is always up for new challenges. He is a
-              pleasure to work with. He is focused and fast."
-            </p>
-          </div>
-          <div class="testimonial-card">
-            <h4>Noah Müller</h4>
-            <p class="testimonial-role" data-i18n="testimonials.noah.role">
-              Project Manager
-            </p>
-            <p class="testimonial-text" data-i18n="testimonials.noah.text">
-              "Raphael has his develop domain - clear communication, with the
-              team members. He is a reliable and friendly person."
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== CONTACT ==================== -->
-    <section id="contact" class="fade-in">
-      <div class="contact-container">
-        <div class="contact-left">
-          <h2 class="section-title" data-i18n="contact.title">Contact</h2>
-          <h3 data-i18n="contact.heading">Got a problem to solve?</h3>
-          <p data-i18n="contact.text">
-            If you want people to contact you, give them a way. Fill in your
-            information, so they can reach out to the email or phone number
-            provided.
-          </p>
-          <p class="contact-looking" data-i18n-html="contact.looking">
-            Would you also consider checking my profile on
-            <a href="https://linkedin.com/in/raphaelneuberger" target="_blank" rel="noopener noreferrer"
-              >LinkedIn</a
-            >?
-          </p>
-        </div>
-        <div class="contact-right">
-          <div class="contact-spacer"></div>
-          <form class="contact-form" action="#" method="POST" novalidate>
-            <label for="contact-name" class="sr-only" data-i18n="contact.form.name">Your name</label>
-            <input
-              type="text"
-              id="contact-name"
-              name="name"
-              aria-describedby="feedback-name"
-              data-i18n-placeholder="contact.form.name"
-              placeholder="Your name" />
-            <div class="input-feedback" id="feedback-name" aria-live="polite" role="alert"></div>
-            <label for="contact-email" class="sr-only" data-i18n="contact.form.email">Your email</label>
-            <input
-              type="text"
-              id="contact-email"
-              name="email"
-              aria-describedby="feedback-email"
-              data-i18n-placeholder="contact.form.email"
-              placeholder="Your email" />
-            <div class="input-feedback" id="feedback-email" aria-live="polite" role="alert"></div>
-            <label for="contact-message" class="sr-only" data-i18n="contact.form.message">Your message</label>
-            <textarea
-              id="contact-message"
-              name="message"
-              aria-describedby="feedback-message"
-              data-i18n-placeholder="contact.form.message"
-              placeholder="Your message"
-              rows="6"></textarea>
-            <div class="input-feedback" id="feedback-message" aria-live="polite" role="alert"></div>
-            <label class="checkbox-label">
-              <input type="checkbox" name="privacy" />
-              <span data-i18n-html="contact.form.privacy"
-                >I've read the
-                <a href="privacypolicy.html">privacy policy</a> and agree to the
-                processing of my data as outlined.</span
-              >
-            </label>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              disabled
-              data-i18n="contact.form.btn">
-              Say Hello ;)
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="decorative-circle circle-contact-1"></div>
-      <div class="decorative-circle circle-contact-2"></div>
-      <div class="decorative-circle circle-contact-3"></div>
-      <!-- TO-TOP-ARROW -->
-      <button type="button" class="to-top-arrow" aria-label="Scroll to top">
-        <img class="arrow-icon" src="assets/img/icons/goup.svg" alt="" />
-        <img class="arrow-icon-hover" src="assets/img/icons/goup_hover.svg" alt="" />
-      </button>
-    </section>
+        <div class="decorative-circle circle-contact-1"></div>
+        <div class="decorative-circle circle-contact-2"></div>
+        <div class="decorative-circle circle-contact-3"></div>
+        <!-- TO-TOP-ARROW -->
+        <button type="button" class="to-top-arrow" aria-label="Scroll to top">
+          <img class="arrow-icon" src="assets/img/icons/goup.svg" alt="" />
+          <img
+            class="arrow-icon-hover"
+            src="assets/img/icons/goup_hover.svg"
+            alt="" />
+        </button>
+      </section>
     </main>
 
     <!-- ==================== FOOTER ==================== -->
