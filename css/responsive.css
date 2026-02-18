@@ -50,6 +50,11 @@
     font-size: 60px;
   }
 
+  .work-circle-6 {
+    bottom: auto;
+    top: 22%;
+  }
+
   .hero-bg-circle {
     width: 60vw;
   }
@@ -86,6 +91,14 @@
     order: -1;
   }
 
+  .work-circle-6 {
+    display: none;
+  }
+
+  .work-circle-3 {
+    display: none;
+  }
+
   .testimonials-grid {
     display: flex;
     overflow-x: auto;
@@ -108,12 +121,20 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
+
+  .contact-spacer {
+    display: none;
+  }
 }
 
 /* ===== MOBILE (max-width: 768px) ===== */
 @media (max-width: 768px) {
   #header {
     padding: 16px 24px;
+  }
+
+  .contact-spacer {
+    display: none;
   }
 
   .nav-links {
@@ -145,6 +166,7 @@
     flex-direction: column;
     height: 100vh;
     align-items: center;
+    justify-content: space-between;
   }
 
   .hero-left {
