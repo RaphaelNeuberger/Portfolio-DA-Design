@@ -2,6 +2,18 @@
    RESPONSIVE - SMALL MOBILE DEVICES
    ============================================= */
 
+/* ===== MEDIUM MOBILE (max-width: 600px) ===== */
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+  .hero-hello {
+    font-size: 18px;
+  }
+}
+
 /* ===== SMALL MOBILE (max-width: 480px) ===== */
 @media (max-width: 480px) {
   .hero-text h1 {
