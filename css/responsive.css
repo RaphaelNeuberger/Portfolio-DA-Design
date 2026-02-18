@@ -124,12 +124,11 @@
   }
 
   .hero-bg-circle {
-    width: 500px;
-    height: 500px;
-    top: auto;
-    top: -3%;
-    left: 30%;
-    transform: translateX(-50%);
+    width: 140vw;
+    height: 140vw;
+    top: -30vw;
+    left: -55vw;
+    transform: none;
     border-radius: 50%;
   }
 
