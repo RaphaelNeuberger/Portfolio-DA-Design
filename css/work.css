@@ -17,10 +17,14 @@
 .work-header {
   margin-bottom: 80px;
   text-align: left;
+  position: relative;
+  z-index: 2;
 }
 
 .work-header .section-title {
   margin-bottom: 16px;
+  position: relative;
+  z-index: 3;
 }
 
 .work-header p {
@@ -47,7 +51,7 @@
 .work-circle-1 {
   width: 100px;
   height: 100px;
-  top: -4%;
+  top: -8%;
   left: 40%;
 }
 
@@ -68,14 +72,14 @@
 .work-circle-4 {
   width: 40px;
   height: 40px;
-  left: 20px;
+  left: -60px;
   top: 55%;
 }
 
 .work-circle-5 {
   width: 150px;
   height: 150px;
-  left: 10%;
+  left: 30%;
   bottom: 18%;
 }
 
@@ -209,4 +213,6 @@
 .project-buttons {
   display: flex;
   gap: 12px;
+  position: relative;
+  z-index: 1;
 }

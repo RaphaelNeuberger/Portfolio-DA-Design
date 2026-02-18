@@ -1,6 +1,25 @@
 /* =============================================
    RESPONSIVE - TABLET & MOBILE
    ============================================= */
+/* ===== ZWISCHEN 750px UND 950px ===== */
+@media (min-width: 750px) and (max-width: 950px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main-container,
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .nav-links {
+    margin-left: 120px;
+    position: relative;
+    z-index: 2;
+  }
+}
 
 /* ===== TABLET (1024px) ===== */
 @media (max-width: 1024px) {
