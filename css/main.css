@@ -3,27 +3,27 @@
    ============================================= */
 
 /* Base styles (Variables, Reset, General) */
-@import url('base.css?v=20261123h');
+@import url('base.css?v=20261123i');
 
 /* Layout Components */
-@import url('header.css?v=20261123h');
-@import url('hero.css?v=20261123h');
-@import url('about.css?v=20261123h');
-@import url('skills.css?v=20261123h');
-@import url('work.css?v=20261123h');
-@import url('testimonials.css?v=20261123h');
-@import url('contact.css?v=20261123h');
-@import url('footer.css?v=20261123h');
+@import url('header.css?v=20261123i');
+@import url('hero.css?v=20261123i');
+@import url('about.css?v=20261123i');
+@import url('skills.css?v=20261123i');
+@import url('work.css?v=20261123i');
+@import url('testimonials.css?v=20261123i');
+@import url('contact.css?v=20261123i');
+@import url('footer.css?v=20261123i');
 
 /* UI Components */
-@import url('components.css?v=20261123h');
+@import url('components.css?v=20261123i');
 
 /* Animations */
-@import url('animations.css?v=20261123h');
+@import url('animations.css?v=20261123i');
 
 /* Page-specific styles */
-@import url('legal.css?v=20261123h');
+@import url('legal.css?v=20261123i');
 
 /* Responsive Design */
-@import url('responsive.css?v=20261123h');
-@import url('responsive-small.css?v=20261123h');
+@import url('responsive.css?v=20261123i');
+@import url('responsive-small.css?v=20261123i');
