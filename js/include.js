@@ -43,13 +43,13 @@ function includeHTML(selector, url, callback) {
  */
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector("#header-include")) {
-    includeHTML("#header-include", "header.html?v=20261123k", function () {
+    includeHTML("#header-include", "header.html?v=20261123l", function () {
       // Trigger custom event when header is loaded
       window.dispatchEvent(new CustomEvent("headerLoaded"));
     });
   }
   if (document.querySelector("#footer-include")) {
-    includeHTML("#footer-include", "footer.html?v=20261123k", function () {
+    includeHTML("#footer-include", "footer.html?v=20261123l", function () {
       // Trigger custom event when footer is loaded
       window.dispatchEvent(new CustomEvent("footerLoaded"));
     });

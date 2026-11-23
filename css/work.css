@@ -224,3 +224,7 @@
   flex-shrink: 0;
   color: var(--sky-text);
 }
+
+.project-card.is-featured .project-media img {
+  object-position: left top;
+}
