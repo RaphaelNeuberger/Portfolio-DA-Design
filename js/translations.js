@@ -14,17 +14,17 @@ window.translations = {
     "hero.eyebrow": "Open to work · Remote",
     "hero.hello": "Hello! I am Raphael",
     "hero.lead":
-      "I build fast, accessible web apps with Angular and TypeScript – and connect them with AI and automation wherever it saves real work.",
+      "I build web apps end to end – Angular and TypeScript in the frontend, Python, Django and REST APIs in the backend – and connect them with AI and automation wherever it saves real work.",
     "hero.cta.work": "See my projects",
     "hero.cta.contact": "Get in touch",
-    "hero.fact1": "Frontend focus",
+    "hero.fact1": "Frontend",
     "hero.fact2": "Backend & REST APIs",
     "hero.fact3": "Automation",
     "hero.fact3.title": "n8n &amp; AI",
     "hero.social.mail": "Email / contact form",
     "about.title": "Let's work <em>together</em>",
     "about.text1":
-      "I am a passionate Frontend Developer with a strong focus on intuitive, user-friendly web applications. I believe in clean, maintainable code that not only works but makes a difference in users' daily lives.",
+      "I am a passionate Fullstack Developer who builds intuitive, user-friendly web applications – from the interface to the API. I believe in clean, maintainable code that not only works but makes a difference in users' daily lives.",
     "about.text2":
       "My approach to problem-solving is rooted in analytical thinking and creativity: I break complex challenges into manageable parts and look for elegant solutions – ideally together with the team.",
     "about.text3":
@@ -139,17 +139,17 @@ window.translations = {
     "hero.eyebrow": "Offen für neue Projekte · Remote",
     "hero.hello": "Hallo! Ich bin Raphael",
     "hero.lead":
-      "Ich entwickle schnelle, barrierearme Web-Apps mit Angular und TypeScript – und verbinde sie mit KI und Automatisierung, wo sie echte Arbeit spart.",
+      "Ich entwickle Web-Apps von vorne bis hinten – Angular und TypeScript im Frontend, Python, Django und REST-APIs im Backend – und verbinde sie mit KI und Automatisierung, wo sie echte Arbeit spart.",
     "hero.cta.work": "Projekte ansehen",
     "hero.cta.contact": "Kontakt aufnehmen",
-    "hero.fact1": "Frontend-Fokus",
+    "hero.fact1": "Frontend",
     "hero.fact2": "Backend & REST-APIs",
     "hero.fact3": "Automatisierung",
     "hero.fact3.title": "n8n &amp; KI",
     "hero.social.mail": "E-Mail / Kontaktformular",
     "about.title": "Lass uns <em>zusammenarbeiten</em>",
     "about.text1":
-      "Ich bin leidenschaftlicher Frontend-Entwickler mit Fokus auf intuitive, nutzerfreundliche Webanwendungen. Ich setze auf sauberen, wartbaren Code, der nicht nur funktioniert, sondern den Alltag der Nutzer spürbar erleichtert.",
+      "Ich bin leidenschaftlicher Fullstack-Entwickler und baue intuitive, nutzerfreundliche Webanwendungen – von der Oberfläche bis zur API. Ich setze auf sauberen, wartbaren Code, der nicht nur funktioniert, sondern den Alltag der Nutzer spürbar erleichtert.",
     "about.text2":
       "Probleme löse ich analytisch und kreativ: Ich zerlege komplexe Aufgaben in überschaubare Teile und suche nach eleganten Lösungen – am liebsten gemeinsam im Team.",
     "about.text3":
