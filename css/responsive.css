@@ -39,6 +39,7 @@
   .project-card.is-featured .project-media {
     min-height: 0;
     aspect-ratio: 16 / 10;
+    border-right: 0;
   }
 }
 

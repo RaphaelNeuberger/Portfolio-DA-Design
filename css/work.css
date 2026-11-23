@@ -225,6 +225,31 @@
   color: var(--sky-text);
 }
 
+/* Featured: Bild und Text exakt 50/50, Bild füllt die Kartenhöhe ohne Zoom-Effekt */
+.project-card.is-featured .project-media,
+.project-card.is-featured .project-body {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.project-card.is-featured .project-media {
+  min-height: 0;
+  border-right: 1px solid var(--line);
+}
+
 .project-card.is-featured .project-media img {
+  position: absolute;
+  inset: 0;
   object-position: left top;
+}
+
+.project-card.is-featured:hover .project-media img {
+  transform: none;
+}
+
+.project-card.is-featured .project-media .badge {
+  top: auto;
+  left: auto;
+  right: 16px;
+  bottom: 16px;
 }
