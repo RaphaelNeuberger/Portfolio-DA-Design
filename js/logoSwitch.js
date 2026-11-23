@@ -7,9 +7,9 @@ window.addEventListener("headerLoaded", function () {
   function updateLogo() {
     header.classList.toggle("scrolled", window.scrollY > 10);
     if (header.classList.contains("scrolled") || document.body.classList.contains("page-light")) {
-      logoImg.src = "assets/img/logo_blue.svg";
+      logoImg.src = "assets/img/logo-rn-dark.webp";
     } else {
-      logoImg.src = "assets/img/logo.svg";
+      logoImg.src = "assets/img/logo-rn-light.webp";
     }
   }
 

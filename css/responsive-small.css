@@ -2,10 +2,6 @@
    RESPONSIVE – Klein (≤ 480px, getestet bis 320px)
    ============================================= */
 @media (max-width: 480px) {
-  .logo-text small {
-    display: none;
-  }
-
   .hero-actions .btn {
     flex: 1 1 100%;
   }

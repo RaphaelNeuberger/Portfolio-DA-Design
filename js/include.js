@@ -26,7 +26,7 @@ function includeHTML(selector, url, callback) {
           });
           const headerLogo = element.querySelector("#header .logo img");
           if (headerLogo) {
-            headerLogo.src = "assets/img/logo_blue.svg";
+            headerLogo.src = "assets/img/logo-rn-dark.webp";
           }
         }
         if (callback) callback();
@@ -43,13 +43,13 @@ function includeHTML(selector, url, callback) {
  */
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector("#header-include")) {
-    includeHTML("#header-include", "header.html?v=20261123c", function () {
+    includeHTML("#header-include", "header.html?v=20261123d", function () {
       // Trigger custom event when header is loaded
       window.dispatchEvent(new CustomEvent("headerLoaded"));
     });
   }
   if (document.querySelector("#footer-include")) {
-    includeHTML("#footer-include", "footer.html?v=20261123c", function () {
+    includeHTML("#footer-include", "footer.html?v=20261123d", function () {
       // Trigger custom event when footer is loaded
       window.dispatchEvent(new CustomEvent("footerLoaded"));
     });

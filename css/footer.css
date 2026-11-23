@@ -60,3 +60,29 @@ footer {
   width: 22px;
   height: 22px;
 }
+
+.footer-logo img {
+  height: 44px;
+  width: auto;
+}
+
+.footer-nmit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.footer-nmit:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-nmit img {
+  height: 22px;
+  width: auto;
+}
