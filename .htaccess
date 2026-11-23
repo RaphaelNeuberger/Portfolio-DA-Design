@@ -13,3 +13,10 @@
 </IfModule>
 
 Options -Indexes
+
+# www -> ohne www (eine kanonische Adresse für SEO)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.raphael-neuberger\.de$ [NC]
+  RewriteRule ^(.*)$ https://raphael-neuberger.de/$1 [R=301,L]
+</IfModule>
