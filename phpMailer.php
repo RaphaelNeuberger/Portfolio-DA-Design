@@ -10,7 +10,7 @@
 
 declare(strict_types=1);
 
-const SITE_EMAIL = 'info@raphael-neuberger.de';
+const SITE_EMAIL = 'info@newmountains.it';
 const ALLOWED_HOSTS = ['raphael-neuberger.de', 'www.raphael-neuberger.de'];
 const MAX_NAME = 100;
 const MAX_EMAIL = 254;
@@ -108,7 +108,7 @@ $body = "<strong>Name:</strong> {$safeName}<br>"
 $headers = implode("\r\n", [
     'MIME-Version: 1.0',
     'Content-Type: text/html; charset=utf-8',
-    'From: Portfolio Kontakt <' . SITE_EMAIL . '>',
+    'From: Portfolio raphael-neuberger.de <' . SITE_EMAIL . '>',
     'Reply-To: ' . $email,
 ]);
 
