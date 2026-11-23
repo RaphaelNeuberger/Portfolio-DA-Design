@@ -72,3 +72,10 @@ html[lang="en"] [data-lang-block="de"],
 html[lang="de"] [data-lang-block="en"] {
   display: none;
 }
+
+.legal-title,
+.legal-section {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}

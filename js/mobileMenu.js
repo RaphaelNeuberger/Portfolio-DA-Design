@@ -62,7 +62,8 @@ function initMobileMenu() {
     if (focusableEls.length === 0) return;
     const firstEl = focusableEls[0];
     const lastEl = focusableEls[focusableEls.length - 1];
-    firstEl.focus();
+    // Fokus erst setzen, wenn das Panel sichtbar ist (visibility-Transition)
+    requestAnimationFrame(() => setTimeout(() => firstEl.focus(), 60));
 
     focusTrapHandler = function (e) {
       if (e.key === "Escape") {

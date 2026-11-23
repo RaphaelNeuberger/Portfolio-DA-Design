@@ -207,7 +207,7 @@ h2 em,
 }
 
 .section-title {
-  font-size: clamp(32px, 5vw, 52px);
+  font-size: clamp(26px, 5vw, 52px);
   margin-bottom: 18px;
 }
 
@@ -277,4 +277,13 @@ h2 em,
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Lange deutsche Wörter (z. B. „zusammenarbeiten“, „Datenschutz-Grundverordnung“) brechen auf kleinen Displays um */
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+  hyphens: manual;
 }
