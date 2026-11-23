@@ -1,18 +1,17 @@
 /**
- * Scroll header function for the portfolio.
- * Adds the 'scrolled' class to the header when scrolling.
- * Removes the class when back at the top.
+ * Adds the 'scrolled' class to the header once the page is scrolled.
+ * Also runs on load/header include, so deep links (#work) and reloads
+ * further down the page get the light header immediately.
  */
-window.addEventListener("scroll", function () {
+function updateHeaderState() {
   const header = document.getElementById("header");
-  if (header) {
-    if (window.scrollY > 10) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  }
-});
+  if (header) header.classList.toggle("scrolled", window.scrollY > 10);
+}
+
+window.addEventListener("scroll", updateHeaderState, { passive: true });
+window.addEventListener("headerLoaded", updateHeaderState);
+window.addEventListener("load", updateHeaderState);
+window.addEventListener("hashchange", updateHeaderState);
 
 // Active nav link indicator via IntersectionObserver
 document.addEventListener("DOMContentLoaded", function () {
