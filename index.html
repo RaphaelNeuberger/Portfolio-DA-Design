@@ -7,7 +7,7 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>Raphael Neuberger | Fullstack Developer</title>
+    <title data-i18n-title="meta.title.home">Raphael Neuberger | Fullstack Developer</title>
     <meta
       name="description"
       content="Raphael Neuberger – Fullstack Developer (Angular, TypeScript, Python/Django) with a focus on accessible web apps, AI and automation. Portfolio, projects and contact." />
@@ -26,9 +26,9 @@
       as="font"
       type="font/woff2"
       crossorigin />
-    <link rel="stylesheet" href="css/main.css?v=20261123j" />
-    <script src="js/translations.js?v=20261123j" defer></script>
-    <script src="js/logoSwitch.js?v=20261123j" defer></script>
+    <link rel="stylesheet" href="css/main.css?v=20261123k" />
+    <script src="js/translations.js?v=20261123k" defer></script>
+    <script src="js/logoSwitch.js?v=20261123k" defer></script>
   </head>
   <body>
     <a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
@@ -208,6 +208,9 @@
                 <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">Dj</span></span>Django / DRF</li>
                 <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">PHP</span></span>PHP</li>
                 <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">SQL</span></span>SQL</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">My</span></span>MySQL</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">Ma</span></span>MariaDB</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">Lite</span></span>SQLite</li>
               </ul>
             </div>
             <div class="card skill-group fade-in">
@@ -266,7 +269,7 @@
           <div class="project-grid" aria-live="polite">
             <!-- Join – Issue Collector (featured) -->
             <article class="card project-card is-featured" data-tags="ai js">
-              <a class="project-media" href="https://raphael-neuberger.developerakademie.net/join/" target="_blank" rel="noopener" aria-label="Join – Issue Collector: Live demo" data-i18n-aria="work.aria.ic">
+              <a class="project-media" href="https://raphael-neuberger.developerakademie.net/join/" target="_blank" rel="noopener" aria-label="Join – Issue Collector" data-i18n-aria="work.aria.ic">
                 <div class="project-cover">
                   <span class="cover-kicker" data-i18n="work.ic.kicker">AI &amp; automation</span>
                   <span class="cover-title">Join<br />Issue Collector</span>
@@ -287,7 +290,7 @@
                   <li data-i18n="work.ic.h2">AI gate processes only real requests</li>
                   <li data-i18n="work.ic.h3">Contact form instead of mailto – fully testable</li>
                 </ul>
-                <ul class="chip-list" aria-label="Technologies">
+                <ul class="chip-list" aria-label="Technologies" data-i18n-aria="a11y.tech">
                   <li class="chip">JavaScript</li>
                   <li class="chip">n8n</li>
                   <li class="chip">LLM</li>
@@ -295,7 +298,7 @@
                   <li class="chip">CSS</li>
                 </ul>
                 <div class="project-buttons">
-                  <a href="https://raphael-neuberger.developerakademie.net/join/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://raphael-neuberger.developerakademie.net/join/" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="work.live">Live Demo</a>
                   <a href="https://github.com/RaphaelNeuberger/Join-Issue-Collector" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
@@ -303,7 +306,7 @@
 
             <!-- Join -->
             <article class="card project-card" data-tags="angular">
-              <a class="project-media" href="https://join.raphael-neuberger.de" target="_blank" rel="noopener" aria-label="Join: Live demo">
+              <a class="project-media" href="https://join.raphael-neuberger.de" target="_blank" rel="noopener" aria-label="Join">
                 <img src="assets/img/join.webp" alt="" loading="lazy" width="800" height="500" />
               </a>
               <div class="project-body">
@@ -313,14 +316,14 @@
                   Task manager inspired by the Kanban system. Create and organize
                   tasks via drag and drop, assign users and categories.
                 </p>
-                <ul class="chip-list" aria-label="Technologies">
+                <ul class="chip-list" aria-label="Technologies" data-i18n-aria="a11y.tech">
                   <li class="chip">Angular</li>
                   <li class="chip">TypeScript</li>
                   <li class="chip">Firebase</li>
                   <li class="chip">CSS</li>
                 </ul>
                 <div class="project-buttons">
-                  <a href="https://join.raphael-neuberger.de" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://join.raphael-neuberger.de" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="work.live">Live Demo</a>
                   <a href="https://github.com/RaphaelNeuberger/Join" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
@@ -328,7 +331,7 @@
 
             <!-- Code à la Cuisine -->
             <article class="card project-card" data-tags="angular ai">
-              <a class="project-media" href="https://raphael-neuberger.developerakademie.net/angular-projects/code_a_cuisine/" target="_blank" rel="noopener" aria-label="Code à la Cuisine: Live demo">
+              <a class="project-media" href="https://raphael-neuberger.developerakademie.net/angular-projects/code_a_cuisine/" target="_blank" rel="noopener" aria-label="Code à la Cuisine">
                 <div class="project-cover">
                   <span class="cover-kicker">Angular · AI</span>
                   <span class="cover-title">Code à la<br />Cuisine</span>
@@ -341,14 +344,14 @@
                   Recipe app that suggests dishes based on the ingredients you
                   have at home – the recipes are generated by an AI workflow.
                 </p>
-                <ul class="chip-list" aria-label="Technologies">
+                <ul class="chip-list" aria-label="Technologies" data-i18n-aria="a11y.tech">
                   <li class="chip">Angular</li>
                   <li class="chip">TypeScript</li>
                   <li class="chip">n8n</li>
                   <li class="chip">LLM</li>
                 </ul>
                 <div class="project-buttons">
-                  <a href="https://raphael-neuberger.developerakademie.net/angular-projects/code_a_cuisine/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://raphael-neuberger.developerakademie.net/angular-projects/code_a_cuisine/" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="work.live">Live Demo</a>
                   <a href="https://github.com/RaphaelNeuberger/Code-a-Cuisine" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
@@ -356,7 +359,7 @@
 
             <!-- Poll App -->
             <article class="card project-card" data-tags="angular">
-              <a class="project-media" href="https://raphael-neuberger.developerakademie.net/angular-projects/poll-app/" target="_blank" rel="noopener" aria-label="Poll App: Live demo">
+              <a class="project-media" href="https://raphael-neuberger.developerakademie.net/angular-projects/poll-app/" target="_blank" rel="noopener" aria-label="Poll App">
                 <div class="project-cover">
                   <span class="cover-kicker">Angular</span>
                   <span class="cover-title">Poll App</span>
@@ -369,13 +372,13 @@
                   Create polls, cast votes and see the results at a glance – a
                   lean survey app built with Angular.
                 </p>
-                <ul class="chip-list" aria-label="Technologies">
+                <ul class="chip-list" aria-label="Technologies" data-i18n-aria="a11y.tech">
                   <li class="chip">Angular</li>
                   <li class="chip">TypeScript</li>
                   <li class="chip">CSS</li>
                 </ul>
                 <div class="project-buttons">
-                  <a href="https://raphael-neuberger.developerakademie.net/angular-projects/poll-app/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://raphael-neuberger.developerakademie.net/angular-projects/poll-app/" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="work.live">Live Demo</a>
                   <a href="https://github.com/RaphaelNeuberger/poll-app" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
@@ -383,7 +386,7 @@
 
             <!-- El Pollo Loco -->
             <article class="card project-card" data-tags="js">
-              <a class="project-media" href="https://elpolloloco.raphael-neuberger.de" target="_blank" rel="noopener" aria-label="El Pollo Loco: Live demo">
+              <a class="project-media" href="https://elpolloloco.raphael-neuberger.de" target="_blank" rel="noopener" aria-label="El Pollo Loco">
                 <img src="assets/img/elpolloloco.webp" alt="" loading="lazy" width="800" height="500" />
               </a>
               <div class="project-body">
@@ -393,13 +396,13 @@
                   Jump, run and throw game based on an object-oriented approach.
                   Help Pepe find coins and tabasco salsa to fight the crazy hen.
                 </p>
-                <ul class="chip-list" aria-label="Technologies">
+                <ul class="chip-list" aria-label="Technologies" data-i18n-aria="a11y.tech">
                   <li class="chip">JavaScript</li>
                   <li class="chip">HTML</li>
                   <li class="chip">CSS</li>
                 </ul>
                 <div class="project-buttons">
-                  <a href="https://elpolloloco.raphael-neuberger.de" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://elpolloloco.raphael-neuberger.de" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="work.live">Live Demo</a>
                   <a href="https://github.com/RaphaelNeuberger/El-Pollo-Loco" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
@@ -407,7 +410,7 @@
 
             <!-- Pokédex -->
             <article class="card project-card" data-tags="js">
-              <a class="project-media" href="https://pokedex.raphael-neuberger.de" target="_blank" rel="noopener" aria-label="Pokédex: Live demo">
+              <a class="project-media" href="https://pokedex.raphael-neuberger.de" target="_blank" rel="noopener" aria-label="Pokédex">
                 <img src="assets/img/pokedex.webp" alt="" loading="lazy" width="800" height="500" />
               </a>
               <div class="project-body">
@@ -417,14 +420,14 @@
                   A simple library based on the PokéAPI that loads, catalogues and
                   displays Pokémon information.
                 </p>
-                <ul class="chip-list" aria-label="Technologies">
+                <ul class="chip-list" aria-label="Technologies" data-i18n-aria="a11y.tech">
                   <li class="chip">JavaScript</li>
                   <li class="chip">REST-API</li>
                   <li class="chip">HTML</li>
                   <li class="chip">CSS</li>
                 </ul>
                 <div class="project-buttons">
-                  <a href="https://pokedex.raphael-neuberger.de" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://pokedex.raphael-neuberger.de" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="work.live">Live Demo</a>
                   <a href="https://github.com/RaphaelNeuberger/Pokedex" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
@@ -443,7 +446,7 @@
                   A Slack clone: real-time chat with channels, direct messages
                   and threads, built in a team of three.
                 </p>
-                <ul class="chip-list" aria-label="Technologies">
+                <ul class="chip-list" aria-label="Technologies" data-i18n-aria="a11y.tech">
                   <li class="chip">Angular</li>
                   <li class="chip">TypeScript</li>
                   <li class="chip">Firebase</li>
@@ -491,7 +494,7 @@
                   <li data-i18n="clients.nm.h2">Subscriptions, Stripe payments, customer account and instant search</li>
                   <li data-i18n="clients.nm.h3">Caching, Cloudflare, structured data and technical SEO</li>
                 </ul>
-                <ul class="chip-list" aria-label="Technologies">
+                <ul class="chip-list" aria-label="Technologies" data-i18n-aria="a11y.tech">
                   <li class="chip">WordPress</li>
                   <li class="chip">WooCommerce</li>
                   <li class="chip">Elementor</li>
@@ -516,7 +519,7 @@
                   <li data-i18n="clients.hcs.h2">PageSpeed 98 desktop / 97 mobile</li>
                   <li data-i18n="clients.hcs.h3">Local SEO, llms.txt for AI search, accessibility assistant</li>
                 </ul>
-                <ul class="chip-list" aria-label="Technologies">
+                <ul class="chip-list" aria-label="Technologies" data-i18n-aria="a11y.tech">
                   <li class="chip">WordPress</li>
                   <li class="chip">Elementor Pro</li>
                   <li class="chip">PHP</li>
@@ -633,11 +636,11 @@
     </button>
 
     <div id="footer-include"></div>
-    <script src="js/include.js?v=20261123j"></script>
-    <script src="js/headerScroll.js?v=20261123j"></script>
-    <script src="js/animations.js?v=20261123j"></script>
-    <script src="js/workFilter.js?v=20261123j"></script>
-    <script src="js/formValidation.js?v=20261123j"></script>
-    <script src="js/mobileMenu.js?v=20261123j"></script>
+    <script src="js/include.js?v=20261123k"></script>
+    <script src="js/headerScroll.js?v=20261123k"></script>
+    <script src="js/animations.js?v=20261123k"></script>
+    <script src="js/workFilter.js?v=20261123k"></script>
+    <script src="js/formValidation.js?v=20261123k"></script>
+    <script src="js/mobileMenu.js?v=20261123k"></script>
   </body>
 </html>

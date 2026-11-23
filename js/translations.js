@@ -5,6 +5,17 @@
  */
 window.translations = {
   en: {
+    "work.live": "Live Demo",
+    "a11y.tech": "Technologies",
+    "a11y.home": "Raphael Neuberger – Home",
+    "a11y.nav.main": "Main navigation",
+    "a11y.nav.mobile": "Mobile navigation",
+    "a11y.lang": "Language",
+    "a11y.menu": "Toggle menu",
+    "a11y.nmit": "Newmountains.IT – IT services for SMEs",
+    "meta.title.home": "Raphael Neuberger | Fullstack Developer",
+    "meta.title.legal": "Legal Notice | Raphael Neuberger",
+    "meta.title.privacy": "Privacy Policy | Raphael Neuberger",
     "a11y.skip": "Skip to main content",
     "a11y.totop": "Scroll to top",
     "nav.about": "About me",
@@ -148,6 +159,17 @@ window.translations = {
     "privacy.back": "Back to home",
   },
   de: {
+    "work.live": "Live-Demo",
+    "a11y.tech": "Technologien",
+    "a11y.home": "Raphael Neuberger – Startseite",
+    "a11y.nav.main": "Hauptnavigation",
+    "a11y.nav.mobile": "Mobile Navigation",
+    "a11y.lang": "Sprache",
+    "a11y.menu": "Menü öffnen oder schließen",
+    "a11y.nmit": "Newmountains.IT – IT-Dienstleister für KMU",
+    "meta.title.home": "Raphael Neuberger | Fullstack-Entwickler",
+    "meta.title.legal": "Impressum | Raphael Neuberger",
+    "meta.title.privacy": "Datenschutzerklärung | Raphael Neuberger",
     "a11y.skip": "Zum Inhalt springen",
     "a11y.totop": "Nach oben scrollen",
     "nav.about": "Über mich",
@@ -372,6 +394,7 @@ function setLanguage(lang) {
   translateAll(dict, "data-i18n-html", (el, v) => (el.innerHTML = v));
   translateAll(dict, "data-i18n-placeholder", (el, v) => (el.placeholder = v));
   translateAll(dict, "data-i18n-aria", (el, v) => el.setAttribute("aria-label", v));
+  translateAll(dict, "data-i18n-title", (el, v) => (document.title = v));
   updateToggles(lang);
   window.dispatchEvent(new CustomEvent("languageChanged", { detail: lang }));
 }

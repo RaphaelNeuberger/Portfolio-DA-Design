@@ -30,7 +30,7 @@ function initToTop() {
  * Adds the class "visible" to .fade-in elements once they enter the viewport.
  */
 function initFadeIn() {
-  const els = document.querySelectorAll(".fade-in");
+  const els = document.querySelectorAll(".fade-in, .project-grid .project-card");
   if (!("IntersectionObserver" in window)) {
     els.forEach((el) => el.classList.add("visible"));
     return;

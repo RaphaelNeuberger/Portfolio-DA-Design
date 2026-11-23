@@ -31,3 +31,198 @@
     transform: translateY(14px);
   }
 }
+
+/* =============================================
+   HERO – Einstieg beim Laden (gestaffelt)
+   ============================================= */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.92) rotate(-1.5deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+.hero-text > * {
+  animation: rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.hero-text > :nth-child(1) { animation-delay: 80ms; }
+.hero-text > :nth-child(2) { animation-delay: 180ms; }
+.hero-text > :nth-child(3) { animation-delay: 280ms; }
+.hero-text > :nth-child(4) { animation-delay: 400ms; }
+.hero-text > :nth-child(5) { animation-delay: 520ms; }
+.hero-text > :nth-child(6) { animation-delay: 640ms; }
+
+.hero-image {
+  animation: zoomIn 900ms cubic-bezier(0.2, 0.7, 0.2, 1) 250ms both;
+}
+
+.hero-socials {
+  animation: rise 600ms ease 900ms both;
+}
+
+/* Verlaufswort schimmert langsam Sky <-> Violett */
+@keyframes gradShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+#hero h1 em {
+  background-image: linear-gradient(120deg, var(--sky), var(--violet), var(--sky));
+  background-size: 200% 100%;
+  animation: gradShift 8s ease-in-out infinite;
+}
+
+/* Glow im Hero wandert sanft */
+@keyframes glowDrift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-6%, 4%) scale(1.08); }
+  100% { transform: translate(4%, -3%) scale(1); }
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(143, 53, 238, 0.28), transparent 65%);
+  filter: blur(20px);
+  animation: glowDrift 16s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+/* „Open to work“-Punkt pulsiert */
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+  70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.hero-text .eyebrow::before {
+  animation: pulseDot 2.2s ease-out infinite;
+}
+
+/* =============================================
+   SCROLL – gestaffeltes Einblenden in Rastern
+   ============================================= */
+.values-grid > .fade-in:nth-child(2),
+.skills-groups > .fade-in:nth-child(2),
+.project-grid > .fade-in:nth-child(2),
+.testimonials-grid > .fade-in:nth-child(2) { transition-delay: 120ms; }
+.values-grid > .fade-in:nth-child(3),
+.skills-groups > .fade-in:nth-child(3),
+.testimonials-grid > .fade-in:nth-child(3) { transition-delay: 240ms; }
+.values-grid > .fade-in:nth-child(4),
+.skills-groups > .fade-in:nth-child(4) { transition-delay: 360ms; }
+.skills-groups > .fade-in:nth-child(5) { transition-delay: 480ms; }
+
+/* Projektkarten blenden einzeln ein */
+.project-grid .project-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease, box-shadow 200ms ease,
+    border-color 200ms ease;
+}
+.project-grid .project-card.visible,
+.no-js .project-grid .project-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-grid .project-card.visible:hover {
+  transform: translateY(-4px);
+}
+
+/* Skill-Icons poppen nacheinander auf */
+@keyframes pop {
+  0% { opacity: 0; transform: scale(0.6); }
+  70% { transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.skill-group .skill-icon { opacity: 0; }
+.no-js .skill-group .skill-icon { opacity: 1; }
+.skill-group.visible .skill-icon {
+  animation: pop 500ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.skill-group.visible .skill-item:nth-child(1) .skill-icon { animation-delay: 150ms; }
+.skill-group.visible .skill-item:nth-child(2) .skill-icon { animation-delay: 220ms; }
+.skill-group.visible .skill-item:nth-child(3) .skill-icon { animation-delay: 290ms; }
+.skill-group.visible .skill-item:nth-child(4) .skill-icon { animation-delay: 360ms; }
+.skill-group.visible .skill-item:nth-child(5) .skill-icon { animation-delay: 430ms; }
+.skill-group.visible .skill-item:nth-child(6) .skill-icon { animation-delay: 500ms; }
+.skill-group.visible .skill-item:nth-child(7) .skill-icon { animation-delay: 570ms; }
+.skill-group.visible .skill-item:nth-child(n+8) .skill-icon { animation-delay: 640ms; }
+
+/* =============================================
+   MIKRO-INTERAKTIONEN
+   ============================================= */
+.btn .btn-icon,
+.more-item svg {
+  transition: transform 200ms ease;
+}
+.btn:hover .btn-icon,
+.more-item:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* Glanz-Streifen über Primär-/Akzent-Buttons */
+.btn-primary,
+.btn-accent {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after,
+.btn-accent::after {
+  content: "";
+  position: absolute;
+  inset: -50% auto -50% -60%;
+  width: 40%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transform: translateX(0) skewX(-12deg);
+  transition: transform 700ms ease;
+  pointer-events: none;
+}
+.btn-primary:hover::after,
+.btn-accent:hover::after {
+  transform: translateX(420%) skewX(-12deg);
+}
+
+/* Unterstrich-Animation in der Desktop-Navigation */
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease;
+}
+.nav-links a:hover::after,
+.nav-links a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+/* Testimonials-Avatar dreht sich leicht beim Hover */
+.testimonial-card:hover .testimonial-avatar {
+  background: var(--grad);
+  transform: rotate(-8deg) scale(1.05);
+}
+.testimonial-avatar {
+  transition: transform 250ms ease, background 250ms ease;
+}
