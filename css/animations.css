@@ -1,20 +1,10 @@
 /* =============================================
-   ANIMATIONS & KEYFRAMES
+   ANIMATIONS
    ============================================= */
-@keyframes scrollPulse {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(150%);
-  }
-}
-
 .fade-in {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
 }
 
 .fade-in.visible {
@@ -22,19 +12,22 @@
   transform: translateY(0);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .fade-in {
+/* Ohne JS bleibt alles sichtbar */
+.no-js .fade-in {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes scrollDot {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  40% {
     opacity: 1;
-    transform: none;
-    transition: none;
   }
-
-  .scroll-indicator .scroll-line::after {
-    animation: none;
-  }
-
-  .btn::after,
-  .btn-outline-dark::after {
-    animation: none;
+  100% {
+    opacity: 0;
+    transform: translateY(14px);
   }
 }

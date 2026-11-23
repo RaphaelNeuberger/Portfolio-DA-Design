@@ -2,68 +2,61 @@
    FOOTER
    ============================================= */
 footer {
-  background: radial-gradient(
-    circle at 30% 40%,
-    #5988ff 0%,
-    #5988ff 30%,
-    #0043f0 90%
-  );
-  padding: 40px 80px;
+  background: var(--navy-deep);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 40px var(--gutter);
 }
 
 .footer-container {
-  max-width: 1200px;
-  height: 200px;
-  margin: 0 auto;
-  display: flex;
+  max-width: var(--container);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 24px;
 }
 
-.footer-logo svg text {
-  fill: var(--white) !important;
+.footer-logo {
+  color: var(--white);
 }
 
 .footer-center {
+  text-align: center;
+}
+
+.footer-links {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 4px;
 }
 
-.footer-copy {
+.footer-links a:hover {
   color: var(--white);
-  font-size: 16px;
-  margin: 0;
-}
-
-.footer-imprint {
-  margin: 0;
-}
-
-.footer-imprint a {
-  color: var(--white);
-  font-size: 16px;
-  transition: color 100ms ease;
-}
-
-.footer-imprint a:hover {
-  color: var(--white);
+  text-decoration: underline;
 }
 
 .footer-socials {
   display: flex;
-  gap: 20px;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 .footer-socials a {
-  color: rgba(255, 255, 255, 0.6);
-  transition: color 100ms ease, transform 100ms ease;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: background-color 150ms ease;
 }
 
 .footer-socials a:hover {
-  color: var(--white);
-  transform: scale(1.25);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-socials img {
+  width: 22px;
+  height: 22px;
 }

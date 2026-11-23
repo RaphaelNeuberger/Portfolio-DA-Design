@@ -1,35 +1,58 @@
-// To-Top-Arrow visibility & fade-in animations for sections
+/**
+ * Fade-in animations, to-top button and small page helpers.
+ */
+document.documentElement.classList.remove("no-js");
 
 document.addEventListener("DOMContentLoaded", function () {
-  /**
-   * Initializes the visibility of the To-Top arrow and fade-in animations for sections.
-   * Runs after DOMContentLoaded.
-   */
-  // To-Top-Arrow
-  const toTop = document.querySelector(".to-top-arrow");
-  if (toTop) {
-    toTop.addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
+  initToTop();
+  initFadeIn();
+});
 
-  // Fade-in animations for sections
-  /**
-   * IntersectionObserver for fade-in animations of sections.
-   * Adds the 'visible' class to a section as soon as it appears in the viewport.
-   */
-  const fadeEls = document.querySelectorAll(".fade-in");
-  const observer = new window.IntersectionObserver(
+window.addEventListener("footerLoaded", setFooterYear);
+
+/**
+ * Shows the to-top button after scrolling and scrolls up on click.
+ */
+function initToTop() {
+  const toTop = document.querySelector(".to-top-arrow");
+  if (!toTop) return;
+  toTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  const update = function () {
+    toTop.classList.toggle("visible", window.scrollY > 600);
+  };
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+}
+
+/**
+ * Adds the class "visible" to .fade-in elements once they enter the viewport.
+ */
+function initFadeIn() {
+  const els = document.querySelectorAll(".fade-in");
+  if (!("IntersectionObserver" in window)) {
+    els.forEach((el) => el.classList.add("visible"));
+    return;
+  }
+  const observer = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          obs.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        obs.unobserve(entry.target);
       });
     },
-    { threshold: 0.15 },
+    { threshold: 0.12 },
   );
-  fadeEls.forEach((el) => observer.observe(el));
-});
+  els.forEach((el) => observer.observe(el));
+}
+
+/**
+ * Keeps the copyright year in the footer current.
+ */
+function setFooterYear() {
+  document.querySelectorAll(".js-year").forEach((el) => {
+    el.textContent = String(new Date().getFullYear());
+  });
+}

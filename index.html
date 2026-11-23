@@ -1,583 +1,564 @@
 <!doctype html>
-<html lang="de">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Raphael Neuberger | Frontend Developer</title>
+    <meta
+      name="description"
+      content="Raphael Neuberger – Frontend Developer (Angular, TypeScript) with a focus on accessible web apps, AI and automation. Portfolio, projects and contact." />
+    <meta name="theme-color" content="#001860" />
     <link rel="icon" type="image/svg+xml" href="assets/img/logo_blue.svg" />
+    <link
+      rel="preload"
+      href="assets/fonts/montserrat-v31-latin/montserrat-v31-latin-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      href="assets/fonts/inter/inter-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/translations.js" defer></script>
     <script src="js/logoSwitch.js" defer></script>
   </head>
   <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
+    <a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
 
-    <!-- ==================== HEADER / NAV ==================== -->
     <div id="header-include"></div>
 
-    <!-- ==================== HERO ==================== -->
-    <script src="js/include.js"></script>
     <main id="main">
-      <section id="hero" class="fade-in">
-        <div class="hero-bg-circle"></div>
+      <!-- ==================== HERO ==================== -->
+      <section id="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-          <div class="hero-left">
-            <div class="hero-image">
-              <div class="hero-image-wrapper">
-                <img
-                  src="assets/img/raphaelneuberger.webp"
-                  alt="Raphael Neuberger" />
-              </div>
+          <div class="hero-text">
+            <span class="eyebrow" data-i18n="hero.eyebrow">Open to work · Remote</span>
+            <span class="hero-hello" data-i18n="hero.hello">Hello! I am Raphael</span>
+            <h1 id="hero-title">Frontend <em>Developer</em></h1>
+            <p class="hero-lead" data-i18n="hero.lead">
+              I build fast, accessible web apps with Angular and TypeScript –
+              and connect them with AI and automation wherever it saves real
+              work.
+            </p>
+            <div class="hero-actions">
+              <a href="#work" class="btn btn-accent" data-i18n="hero.cta.work">See my projects</a>
+              <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.contact">Get in touch</a>
             </div>
+            <ul class="hero-facts">
+              <li class="hero-fact">
+                <strong>Angular &amp; TypeScript</strong>
+                <span data-i18n="hero.fact1">Frontend focus</span>
+              </li>
+              <li class="hero-fact">
+                <strong>Python &amp; Django</strong>
+                <span data-i18n="hero.fact2">Backend & REST APIs</span>
+              </li>
+              <li class="hero-fact">
+                <strong data-i18n="hero.fact3.title">n8n &amp; AI</strong>
+                <span data-i18n="hero.fact3">Automation</span>
+              </li>
+            </ul>
           </div>
-          <div class="hero-right">
-            <div class="hero-text">
-              <span class="hero-hello" data-i18n="hero.hello"
-                >Hello! I am Raphael</span
-              >
-              <h1>FRONTEND<br />DEVELOPER</h1>
-            </div>
-            <div class="scroll-indicator">
-              <span>SCROLL</span>
-              <div class="scroll-line"></div>
+
+          <div class="hero-image">
+            <div class="hero-image-wrapper">
+              <img
+                src="assets/img/raphaelneuberger.webp"
+                alt="Raphael Neuberger"
+                width="420"
+                height="525"
+                fetchpriority="high" />
             </div>
             <div class="hero-socials">
-              <a
-                href="https://github.com/RaphaelNeuberger"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub">
-                <img src="assets/img/icons/github.svg" alt="GitHub" />
+              <a href="https://github.com/RaphaelNeuberger" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="assets/img/icons/github_white.svg" alt="" width="22" height="22" />
               </a>
-              <a href="mailto:info@raphael-neuberger.de" aria-label="Email">
-                <img src="assets/img/icons/email.svg" alt="Email" />
+              <a href="#contact" aria-label="Email / contact form" data-i18n-aria="hero.social.mail">
+                <img src="assets/img/icons/email_white.svg" alt="" width="22" height="22" />
               </a>
-              <a
-                href="https://linkedin.com/in/raphaelneuberger"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn">
-                <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" />
+              <a href="https://www.linkedin.com/in/raphaelneuberger" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="assets/img/icons/linkedin_white.svg" alt="" width="22" height="22" />
               </a>
             </div>
           </div>
         </div>
+        <div class="scroll-indicator" aria-hidden="true"></div>
       </section>
 
-      <!-- ==================== ABOUT ME ==================== -->
-      <section id="about">
-        <div class="decorative-circle circle-about-top"></div>
-        <div class="decorative-circle circle-about-right"></div>
-        <div class="about-container">
-          <div class="about-left">
-            <h2 class="section-title-large" data-i18n="about.title">
-              Let's work<br />together
-            </h2>
-            <div class="about-meta">
-              <span class="iam-label" data-i18n="about.iam">I am</span>
-            </div>
-            <div class="about-badges">
-              <div class="about-badge">
-                <img
-                  class="badge-icon"
-                  src="assets/img/icons/location.svg"
-                  alt="Location"
-                  width="28"
-                  height="28" />
-                <img
-                  class="badge-icon-hover"
-                  src="assets/img/icons/location_hover.svg"
-                  alt=""
-                  width="28"
-                  height="28" />
-                <span data-i18n="about.badge.location"
-                  >located in<br />Munich</span
-                >
-              </div>
-              <div class="about-badge">
-                <img
-                  class="badge-icon"
-                  src="assets/img/icons/remote.svg"
-                  alt="Remote"
-                  width="38"
-                  height="38" />
-                <img
-                  class="badge-icon-hover"
-                  src="assets/img/icons/remote_hover.svg"
-                  alt=""
-                  width="38"
-                  height="38" />
-                <span data-i18n="about.badge.remote"
-                  >open to work<br />remote</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="about-right">
+      <!-- ==================== ABOUT ==================== -->
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container about-container">
+          <div class="about-text fade-in">
+            <span class="eyebrow" data-i18n="nav.about">About me</span>
+            <h2 id="about-title" class="section-title" data-i18n="about.title">Let's work <em>together</em></h2>
             <p data-i18n="about.text1">
               I am a passionate Frontend Developer with a strong focus on
-              creating intuitive and user-friendly web applications. My journey
-              in programming is driven by the constant pursuit of learning new
-              technologies and frameworks. I believe in writing clean,
-              maintainable code that not only works but also makes a difference
-              in users' daily lives.
+              intuitive, user-friendly web applications. I believe in clean,
+              maintainable code that not only works but makes a difference in
+              users' daily lives.
             </p>
             <p data-i18n="about.text2">
-              My approach to problem-solving is rooted in analytical thinking
-              and creativity. I enjoy breaking down complex challenges into
-              manageable parts and finding elegant solutions. Through
-              collaboration and persistence, I continuously learn from every
-              project, always striving to improve both my technical skills and
-              my ability to deliver high-quality results.
+              My approach to problem-solving is rooted in analytical thinking and
+              creativity: I break complex challenges into manageable parts and
+              look for elegant solutions – ideally together with the team.
             </p>
-            <a href="#contact" class="btn btn-outline" data-i18n="about.btn"
-              >Send a message</a
-            >
+            <p data-i18n="about.text3">
+              Before moving into development I led IT and e-commerce at a
+              mid-sized company, and today I run my own IT service business,
+              <a href="https://newmountains.it" target="_blank" rel="noopener">Newmountains.IT</a>.
+              That's why I think beyond the code – about users, maintainability
+              and business impact.
+            </p>
+            <div class="about-badges">
+              <span class="about-badge">
+                <span class="badge-dot" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                </span>
+                <span data-i18n="about.badge.location">Based in Munich</span>
+              </span>
+              <span class="about-badge">
+                <span class="badge-dot" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+                </span>
+                <span data-i18n="about.badge.remote">Open to remote work</span>
+              </span>
+            </div>
+            <a href="#contact" class="btn btn-primary" data-i18n="about.btn">Send a message</a>
+          </div>
+
+          <ul class="values-grid">
+            <li class="card value-card fade-in">
+              <span class="value-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>
+              </span>
+              <div>
+                <h3 data-i18n="values.code.title">Clean, maintainable code</h3>
+                <p data-i18n="values.code.text">Small functions, clear naming, documented and versioned – so others can keep working on it tomorrow.</p>
+              </div>
+            </li>
+            <li class="card value-card fade-in">
+              <span class="value-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg>
+              </span>
+              <div>
+                <h3 data-i18n="values.a11y.title">Responsive &amp; accessible</h3>
+                <p data-i18n="values.a11y.text">Tested from 320px to widescreen, keyboard-friendly and with WCAG in mind.</p>
+              </div>
+            </li>
+            <li class="card value-card fade-in">
+              <span class="value-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              <div>
+                <h3 data-i18n="values.ai.title">AI &amp; automation</h3>
+                <p data-i18n="values.ai.text">n8n workflows and LLMs that take repetitive work off people's hands – with clear rules and safeguards.</p>
+              </div>
+            </li>
+            <li class="card value-card fade-in">
+              <span class="value-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+              </span>
+              <div>
+                <h3 data-i18n="values.biz.title">Business mindset</h3>
+                <p data-i18n="values.biz.text">Years in IT and e-commerce leadership: I understand what a feature has to achieve for users and the business.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ==================== SKILLS ==================== -->
+      <section id="skills" class="section section-soft" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-head center fade-in">
+            <span class="eyebrow" data-i18n="skills.eyebrow">Tech stack</span>
+            <h2 id="skills-title" class="section-title" data-i18n="skills.title">Skill <em>set</em></h2>
+            <p class="section-lead" data-i18n="skills.lead">
+              The technologies I use in my projects – and keep expanding with
+              every new one.
+            </p>
+          </div>
+
+          <div class="skills-groups">
+            <div class="card skill-group fade-in">
+              <h3>Frontend</h3>
+              <ul class="skill-list">
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/angular.svg" alt="" /></span>Angular</li>
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/typescript.svg" alt="" /></span>TypeScript</li>
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/javascript.svg" alt="" /></span>JavaScript</li>
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/html.svg" alt="" /></span>HTML</li>
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/css.svg" alt="" /></span>CSS</li>
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/materialdesign.svg" alt="" /></span>Material Design</li>
+              </ul>
+            </div>
+            <div class="card skill-group fade-in">
+              <h3 data-i18n="skills.group.backend">Backend &amp; data</h3>
+              <ul class="skill-list">
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/firebase.svg" alt="" /></span>Firebase</li>
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/restapi.svg" alt="" /></span>REST-API</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">Py</span></span>Python</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">Dj</span></span>Django / DRF</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">SQL</span></span>SQL</li>
+              </ul>
+            </div>
+            <div class="card skill-group fade-in">
+              <h3 data-i18n="skills.group.ai">AI &amp; automation</h3>
+              <ul class="skill-list">
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">n8n</span></span>n8n</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">AI</span></span><span data-i18n="skills.prompt">Prompt engineering</span></li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">API</span></span><span data-i18n="skills.llm">LLM APIs</span></li>
+              </ul>
+            </div>
+            <div class="card skill-group fade-in">
+              <h3 data-i18n="skills.group.tools">Tools &amp; methods</h3>
+              <ul class="skill-list">
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/git.svg" alt="" /></span>Git</li>
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/scrum.svg" alt="" /></span>Scrum</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">Dk</span></span>Docker</li>
+                <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/growthmindset.svg" alt="" /></span><span data-i18n="skills.growth">Growth mindset</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ==================== SKILL SET ==================== -->
-      <section id="skills">
-        <div class="skills-container">
-          <h2 class="section-title" data-i18n="skills.title">Skill set</h2>
-          <div class="skills-row skills-row-top">
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="assets/img/icons/angular.svg" alt="Angular" />
-              </div>
-              <span>Angular</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="assets/img/icons/typescript.svg" alt="TypeScript" />
-              </div>
-              <span>TypeScript</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="assets/img/icons/javascript.svg" alt="JavaScript" />
-              </div>
-              <span>JavaScript</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="assets/img/icons/html.svg" alt="HTML" />
-              </div>
-              <span>HTML</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="assets/img/icons/scrum.svg" alt="Scrum" />
-              </div>
-              <span>Scrum</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="assets/img/icons/firebase.svg" alt="Firebase" />
-              </div>
-              <span>Firebase</span>
-            </div>
-          </div>
-          <div class="skills-row skills-row-bottom">
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="assets/img/icons/git.svg" alt="Git" />
-              </div>
-              <span>Git</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="assets/img/icons/css.svg" alt="CSS" />
-              </div>
-              <span>CSS</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="assets/img/icons/restapi.svg" alt="REST-API" />
-              </div>
-              <span>REST-API</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img
-                  src="assets/img/icons/materialdesign.svg"
-                  alt="Material Design" />
-              </div>
-              <span>Material<br />Design</span>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img
-                  src="assets/img/icons/growthmindset.svg"
-                  alt="Growth mindset" />
-              </div>
-              <span>Growth<br />mindset</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==================== MY WORK ==================== -->
-      <section id="work">
-        <div class="work-container">
-          <div class="work-header">
-            <h2 class="section-title" data-i18n="work.title">My work</h2>
-            <p data-i18n="work.subtitle">
-              Explore a selection of my work here - Interact with projects to
-              see my skills in action.
+      <!-- ==================== WORK ==================== -->
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="container">
+          <div class="section-head fade-in">
+            <span class="eyebrow" data-i18n="work.eyebrow">Portfolio</span>
+            <h2 id="work-title" class="section-title" data-i18n="work.title">My <em>work</em></h2>
+            <p class="section-lead" data-i18n="work.subtitle">
+              A selection of my projects – click through the live demos and the
+              code on GitHub to see my skills in action.
             </p>
           </div>
 
-          <!-- Decorative circles -->
-          <div class="work-circle work-circle-1"></div>
-          <!-- top left, small -->
-          <div class="work-circle work-circle-2"></div>
-          <!-- top right, medium -->
-          <div class="work-circle work-circle-3"></div>
-          <!-- mid right, large -->
-          <div class="work-circle work-circle-4"></div>
-          <!-- mid left, small -->
-          <div class="work-circle work-circle-5"></div>
-          <!-- bottom center, small -->
-          <div class="work-circle work-circle-6"></div>
-          <!-- bottom left, medium -->
-          <div class="work-circle work-circle-7"></div>
-          <!-- bottom right, large -->
-
-          <!-- Project 1: Join - Image left, Text right -->
-          <div class="project-card">
-            <div class="project-image">
-              <div class="project-image-wrapper">
-                <a
-                  href="https://join.raphael-neuberger.de"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="View Join project">
-                  <img
-                    src="assets/img/join.webp"
-                    alt="Join - Project Screenshot" />
-                </a>
-              </div>
-            </div>
-            <div class="project-info">
-              <h3>Join</h3>
-              <p class="project-tech">
-                Angular | TypeScript | HTML | CSS | Firebase
-              </p>
-              <p class="project-desc" data-i18n="work.join.desc">
-                Task manager inspired by the Kanban System. Create and organize
-                tasks using drag and drop functions, assign users and
-                categories.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://github.com/RaphaelNeuberger/Join"
-                  class="btn btn-outline-dark"
-                  target="_blank"
-                  rel="noopener"
-                  >Github</a
-                >
-                <a
-                  href="https://join.raphael-neuberger.de"
-                  class="btn btn-outline-dark"
-                  target="_blank"
-                  rel="noopener"
-                  >Live&nbsp;Demo</a
-                >
-              </div>
-            </div>
+          <div class="work-filter" role="group" aria-label="Filter projects" data-i18n-aria="work.filter.label">
+            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true" data-i18n="work.filter.all">All</button>
+            <button type="button" class="filter-btn" data-filter="angular" aria-pressed="false">Angular</button>
+            <button type="button" class="filter-btn" data-filter="js" aria-pressed="false">JavaScript</button>
+            <button type="button" class="filter-btn" data-filter="ai" aria-pressed="false" data-i18n="work.filter.ai">AI &amp; automation</button>
           </div>
 
-          <!-- Project 2: Pollo Loco - Text left, Image right -->
-          <div class="project-card">
-            <div class="project-info">
-              <h3>El Pollo Loco</h3>
-              <p class="project-tech">JavaScript | HTML | CSS</p>
-              <p class="project-desc" data-i18n="work.pollo.desc">
-                Jump, run and throw game based on object-oriented approach. Help
-                Pepe to find coins and tabasco sauce to fight against the crazy
-                hen.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://github.com/RaphaelNeuberger/El-Pollo-Loco"
-                  class="btn btn-outline-dark"
-                  target="_blank"
-                  rel="noopener"
-                  >Github</a
-                >
-                <a
-                  href="https://elpolloloco.raphael-neuberger.de"
-                  class="btn btn-outline-dark"
-                  target="_blank"
-                  rel="noopener"
-                  >Live&nbsp;Demo</a
-                >
+          <div class="project-grid" aria-live="polite">
+            <!-- Join – Issue Collector (featured) -->
+            <article class="card project-card is-featured" data-tags="ai js">
+              <a class="project-media" href="https://raphael-neuberger.developerakademie.net/join/" target="_blank" rel="noopener" aria-label="Join – Issue Collector: Live demo" data-i18n-aria="work.aria.ic">
+                <div class="project-cover">
+                  <span class="cover-kicker" data-i18n="work.ic.kicker">AI &amp; automation</span>
+                  <span class="cover-title">Join<br />Issue Collector</span>
+                </div>
+                <span class="badge" data-i18n="work.badge.new">New</span>
+              </a>
+              <div class="project-body">
+                <h3>Join – Issue Collector</h3>
+                <p class="project-meta" data-i18n="work.ic.meta">Solo project · Kanban + n8n</p>
+                <p class="project-desc" data-i18n="work.ic.desc">
+                  A Kanban board that turns incoming requests into tasks
+                  automatically: n8n workflows read the request, an AI extracts
+                  everything relevant and creates the task directly on the
+                  board.
+                </p>
+                <ul class="project-highlights">
+                  <li data-i18n="work.ic.h1">AI extracts title, subtasks and due date</li>
+                  <li data-i18n="work.ic.h2">AI gate processes only real requests</li>
+                  <li data-i18n="work.ic.h3">Contact form instead of mailto – fully testable</li>
+                </ul>
+                <ul class="chip-list" aria-label="Technologies">
+                  <li class="chip">JavaScript</li>
+                  <li class="chip">n8n</li>
+                  <li class="chip">LLM</li>
+                  <li class="chip">HTML</li>
+                  <li class="chip">CSS</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://raphael-neuberger.developerakademie.net/join/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://github.com/RaphaelNeuberger/Join-Issue-Collector" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+                </div>
               </div>
-            </div>
-            <div class="project-image">
-              <div class="project-image-wrapper">
-                <a
-                  href="https://elpolloloco.raphael-neuberger.de"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="View El Pollo Loco project">
-                  <img
-                    src="assets/img/elpolloloco.webp"
-                    alt="El Pollo Loco - Project Screenshot" />
-                </a>
+            </article>
+
+            <!-- Join -->
+            <article class="card project-card" data-tags="angular">
+              <a class="project-media" href="https://join.raphael-neuberger.de" target="_blank" rel="noopener" aria-label="Join: Live demo">
+                <img src="assets/img/join.webp" alt="" loading="lazy" width="800" height="500" />
+              </a>
+              <div class="project-body">
+                <h3>Join</h3>
+                <p class="project-meta" data-i18n="work.join.meta">Team project · Kanban</p>
+                <p class="project-desc" data-i18n="work.join.desc">
+                  Task manager inspired by the Kanban system. Create and organize
+                  tasks via drag and drop, assign users and categories.
+                </p>
+                <ul class="chip-list" aria-label="Technologies">
+                  <li class="chip">Angular</li>
+                  <li class="chip">TypeScript</li>
+                  <li class="chip">Firebase</li>
+                  <li class="chip">CSS</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://join.raphael-neuberger.de" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://github.com/RaphaelNeuberger/Join" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+                </div>
               </div>
-            </div>
+            </article>
+
+            <!-- Code à la Cuisine -->
+            <article class="card project-card" data-tags="angular ai">
+              <a class="project-media" href="https://raphael-neuberger.developerakademie.net/angular-projects/code_a_cuisine/" target="_blank" rel="noopener" aria-label="Code à la Cuisine: Live demo">
+                <div class="project-cover">
+                  <span class="cover-kicker">Angular · AI</span>
+                  <span class="cover-title">Code à la<br />Cuisine</span>
+                </div>
+              </a>
+              <div class="project-body">
+                <h3>Code à la Cuisine</h3>
+                <p class="project-meta" data-i18n="work.cuisine.meta">Angular app · AI workflow</p>
+                <p class="project-desc" data-i18n="work.cuisine.desc">
+                  Recipe app that suggests dishes based on the ingredients you
+                  have at home – the recipes are generated by an AI workflow.
+                </p>
+                <ul class="chip-list" aria-label="Technologies">
+                  <li class="chip">Angular</li>
+                  <li class="chip">TypeScript</li>
+                  <li class="chip">n8n</li>
+                  <li class="chip">LLM</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://raphael-neuberger.developerakademie.net/angular-projects/code_a_cuisine/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://github.com/RaphaelNeuberger/Code-a-Cuisine" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Poll App -->
+            <article class="card project-card" data-tags="angular">
+              <a class="project-media" href="https://raphael-neuberger.developerakademie.net/angular-projects/poll-app/" target="_blank" rel="noopener" aria-label="Poll App: Live demo">
+                <div class="project-cover">
+                  <span class="cover-kicker">Angular</span>
+                  <span class="cover-title">Poll App</span>
+                </div>
+              </a>
+              <div class="project-body">
+                <h3>Poll App</h3>
+                <p class="project-meta" data-i18n="work.poll.meta">Angular app</p>
+                <p class="project-desc" data-i18n="work.poll.desc">
+                  Create polls, cast votes and see the results at a glance – a
+                  lean survey app built with Angular.
+                </p>
+                <ul class="chip-list" aria-label="Technologies">
+                  <li class="chip">Angular</li>
+                  <li class="chip">TypeScript</li>
+                  <li class="chip">CSS</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://raphael-neuberger.developerakademie.net/angular-projects/poll-app/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://github.com/RaphaelNeuberger/poll-app" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- El Pollo Loco -->
+            <article class="card project-card" data-tags="js">
+              <a class="project-media" href="https://elpolloloco.raphael-neuberger.de" target="_blank" rel="noopener" aria-label="El Pollo Loco: Live demo">
+                <img src="assets/img/elpolloloco.webp" alt="" loading="lazy" width="800" height="500" />
+              </a>
+              <div class="project-body">
+                <h3>El Pollo Loco</h3>
+                <p class="project-meta" data-i18n="work.pollo.meta">Browser game · OOP</p>
+                <p class="project-desc" data-i18n="work.pollo.desc">
+                  Jump, run and throw game based on an object-oriented approach.
+                  Help Pepe find coins and tabasco salsa to fight the crazy hen.
+                </p>
+                <ul class="chip-list" aria-label="Technologies">
+                  <li class="chip">JavaScript</li>
+                  <li class="chip">HTML</li>
+                  <li class="chip">CSS</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://elpolloloco.raphael-neuberger.de" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://github.com/RaphaelNeuberger/El-Pollo-Loco" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Pokédex -->
+            <article class="card project-card" data-tags="js">
+              <a class="project-media" href="https://pokedex.raphael-neuberger.de" target="_blank" rel="noopener" aria-label="Pokédex: Live demo">
+                <img src="assets/img/pokedex.webp" alt="" loading="lazy" width="800" height="500" />
+              </a>
+              <div class="project-body">
+                <h3>Pokédex</h3>
+                <p class="project-meta" data-i18n="work.pokedex.meta">API project</p>
+                <p class="project-desc" data-i18n="work.pokedex.desc">
+                  A simple library based on the PokéAPI that loads, catalogues and
+                  displays Pokémon information.
+                </p>
+                <ul class="chip-list" aria-label="Technologies">
+                  <li class="chip">JavaScript</li>
+                  <li class="chip">REST-API</li>
+                  <li class="chip">HTML</li>
+                  <li class="chip">CSS</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://pokedex.raphael-neuberger.de" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://github.com/RaphaelNeuberger/Pokedex" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- DaBubble (in Arbeit) -->
+            <article class="card project-card" data-tags="angular">
+              <div class="project-media">
+                <img src="assets/img/dabubble.webp" alt="" loading="lazy" width="800" height="500" />
+                <span class="badge" data-i18n="work.badge.wip">In progress</span>
+              </div>
+              <div class="project-body">
+                <h3>DaBubble</h3>
+                <p class="project-meta" data-i18n="work.bubble.meta">Team project · Slack clone</p>
+                <p class="project-desc" data-i18n="work.bubble.desc">
+                  A Slack clone: real-time chat with channels, direct messages
+                  and threads, built in a team of three.
+                </p>
+                <ul class="chip-list" aria-label="Technologies">
+                  <li class="chip">Angular</li>
+                  <li class="chip">TypeScript</li>
+                  <li class="chip">Firebase</li>
+                </ul>
+                <p class="project-meta" data-i18n="work.bubble.soon">Live demo coming soon.</p>
+              </div>
+            </article>
           </div>
 
-          <!-- Project 3: DA Bubble - Image left, Text right -->
-          <!-- <div class="project-card">
-            <div class="project-image">
-              <div class="project-image-wrapper">
-                <a
-                  href="https://dabubble.raphael-neuberger.de"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="View DA Bubble project">
-                  <img
-                    src="assets/img/dabubble.webp"
-                    alt="DA Bubble - Project Screenshot" />
-                </a>
-              </div>
-            </div>
-            <div class="project-info">
-              <h3>DA Bubble</h3>
-              <p class="project-tech">
-                Angular | TypeScript | HTML | CSS | Firebase
-              </p>
-              <p class="project-desc" data-i18n="work.bubble.desc">
-                A Slack clone (chat application/instant messaging system)
-                modeled using Firebase. Communicate in channels and direct
-                messages.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://github.com/RaphaelNeuberger/DaBubble"
-                  class="btn btn-outline-dark"
-                  target="_blank"
-                  rel="noopener"
-                  >Github</a
-                >
-                <a
-                  href="https://dabubble.raphael-neuberger.de"
-                  class="btn btn-outline-dark"
-                  target="_blank"
-                  rel="noopener"
-                  >Live&nbsp;Demo</a
-                >
-              </div>
-            </div>
-          </div> -->
+          <p class="card work-empty" hidden data-i18n="work.empty">No projects in this category yet.</p>
 
-          <!-- Project 4: Pokédex - Text left, Image right -->
-          <div class="project-card">
-            <div class="project-info">
-              <h3>Pokédex</h3>
-              <p class="project-tech">JavaScript | HTML | CSS | Api</p>
-              <p class="project-desc" data-i18n="work.pokedex.desc">
-                Based on the PokéAPI a simple library that provides and
-                catalogues pokémon information.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://github.com/RaphaelNeuberger/Pokedex"
-                  class="btn btn-outline-dark"
-                  target="_blank"
-                  rel="noopener"
-                  >Github</a
-                >
-                <a
-                  href="https://pokedex.raphael-neuberger.de"
-                  class="btn btn-outline-dark"
-                  target="_blank"
-                  rel="noopener"
-                  >Live&nbsp;Demo</a
-                >
-              </div>
-            </div>
-            <div class="project-image">
-              <div class="project-image-wrapper">
-                <a
-                  href="https://pokedex.raphael-neuberger.de"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="View Pokédex project">
-                  <img
-                    src="assets/img/pokedex.webp"
-                    alt="Pokédex - Project Screenshot" />
-                </a>
-              </div>
-            </div>
+          <div class="more-projects fade-in">
+            <h3 data-i18n="work.more.title">More practice projects</h3>
+            <ul class="more-grid">
+              <li><a class="card more-item" href="https://github.com/RaphaelNeuberger/Memory" target="_blank" rel="noopener"><span>Memory<small>JavaScript</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+              <li><a class="card more-item" href="https://github.com/RaphaelNeuberger/QuizApp" target="_blank" rel="noopener"><span>Quiz App<small>JavaScript</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+              <li><a class="card more-item" href="https://github.com/RaphaelNeuberger/BestellApp" target="_blank" rel="noopener"><span>Bestell-App<small>JavaScript</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+              <li><a class="card more-item" href="https://github.com/RaphaelNeuberger/Bookstore" target="_blank" rel="noopener"><span>Bookstore<small>JavaScript</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+              <li><a class="card more-item" href="https://github.com/RaphaelNeuberger/TicTacToe" target="_blank" rel="noopener"><span>Tic Tac Toe<small>JavaScript</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+            </ul>
           </div>
         </div>
       </section>
 
       <!-- ==================== TESTIMONIALS ==================== -->
-      <section id="testimonials" class="fade-in">
-        <div class="testimonials-container">
-          <h2 class="section-title" data-i18n="testimonials.title">
-            Need a teamplayer?
-          </h2>
-          <p class="testimonials-subtitle" data-i18n="testimonials.subtitle">
-            Here what my colleagues said about me
-          </p>
+      <section id="testimonials" class="section section-soft" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section-head center fade-in">
+            <span class="eyebrow" data-i18n="testimonials.eyebrow">References</span>
+            <h2 id="testimonials-title" class="section-title" data-i18n="testimonials.title">Need a <em>teamplayer</em>?</h2>
+            <p class="section-lead" data-i18n="testimonials.subtitle">Here is what my colleagues said about me.</p>
+          </div>
           <div class="testimonials-grid">
-            <div class="testimonial-card">
-              <h4>James Guzman</h4>
-              <p class="testimonial-role" data-i18n="testimonials.james.role">
-                Frontend Developer
-              </p>
-              <p class="testimonial-text" data-i18n="testimonials.james.text">
-                "Raphael is a reliable and friendly developer. He was able to
-                solve complex tasks and write clean code. I highly recommend him
-                as a developer."
-              </p>
-            </div>
-            <div class="testimonial-card">
-              <h4>Evelyn Marx</h4>
-              <p class="testimonial-role" data-i18n="testimonials.evelyn.role">
-                Backend Developer
-              </p>
-              <p class="testimonial-text" data-i18n="testimonials.evelyn.text">
-                "Raphael is a motivated and enthusiastic developer who brings
-                creative ideas and is always up for new challenges. He is a
-                pleasure to work with. He is focused and fast."
-              </p>
-            </div>
-            <div class="testimonial-card">
-              <h4>Noah Müller</h4>
-              <p class="testimonial-role" data-i18n="testimonials.noah.role">
-                Project Manager
-              </p>
-              <p class="testimonial-text" data-i18n="testimonials.noah.text">
-                "Raphael has his develop domain - clear communication, with the
-                team members. He is a reliable and friendly person."
-              </p>
-            </div>
+            <figure class="card testimonial-card fade-in">
+              <blockquote class="testimonial-text" data-i18n="testimonials.james.text">
+                Raphael is a reliable and friendly developer. He was able to solve
+                complex tasks and write clean code. I highly recommend him as a
+                developer.
+              </blockquote>
+              <figcaption class="testimonial-author">
+                <span class="testimonial-avatar" aria-hidden="true">JG</span>
+                <div><h4>James Guzman</h4><span class="testimonial-role" data-i18n="testimonials.james.role">Frontend Developer</span></div>
+              </figcaption>
+            </figure>
+            <figure class="card testimonial-card fade-in">
+              <blockquote class="testimonial-text" data-i18n="testimonials.evelyn.text">
+                Raphael is a motivated and enthusiastic developer who brings
+                creative ideas and is always up for new challenges. He is focused,
+                fast and a pleasure to work with.
+              </blockquote>
+              <figcaption class="testimonial-author">
+                <span class="testimonial-avatar" aria-hidden="true">EM</span>
+                <div><h4>Evelyn Marx</h4><span class="testimonial-role" data-i18n="testimonials.evelyn.role">Backend Developer</span></div>
+              </figcaption>
+            </figure>
+            <figure class="card testimonial-card fade-in">
+              <blockquote class="testimonial-text" data-i18n="testimonials.noah.text">
+                Raphael communicates clearly with the whole team and keeps
+                everyone on the same page. A reliable and friendly person.
+              </blockquote>
+              <figcaption class="testimonial-author">
+                <span class="testimonial-avatar" aria-hidden="true">NM</span>
+                <div><h4>Noah Müller</h4><span class="testimonial-role" data-i18n="testimonials.noah.role">Project Manager</span></div>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
       <!-- ==================== CONTACT ==================== -->
-      <section id="contact" class="fade-in">
-        <div class="contact-container">
-          <div class="contact-left">
-            <h2 class="section-title" data-i18n="contact.title">Contact</h2>
-            <h3 data-i18n="contact.heading">Got a problem to solve?</h3>
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="container contact-container">
+          <div class="contact-left fade-in">
+            <span class="eyebrow" data-i18n="contact.title">Contact</span>
+            <h2 id="contact-title" class="section-title" data-i18n="contact.heading">Got a problem to <em>solve</em>?</h2>
             <p data-i18n="contact.text">
-              If you want people to contact you, give them a way. Fill in your
-              information, so they can reach out to the email or phone number
-              provided.
+              Looking for a developer who thinks along? Tell me about your
+              project or open position – I look forward to your message.
             </p>
-            <p class="contact-looking" data-i18n-html="contact.looking">
-              Would you also consider checking my profile on
-              <a
-                href="https://linkedin.com/in/raphaelneuberger"
-                target="_blank"
-                rel="noopener noreferrer"
-                >LinkedIn</a
-              >?
-            </p>
+            <div class="contact-channels">
+              <a class="contact-channel" href="https://www.linkedin.com/in/raphaelneuberger" target="_blank" rel="noopener noreferrer">
+                <img src="assets/img/icons/linkedin_white.svg" alt="" width="22" height="22" />
+                <span data-i18n="contact.linkedin">Connect on LinkedIn</span>
+              </a>
+              <a class="contact-channel" href="https://github.com/RaphaelNeuberger" target="_blank" rel="noopener noreferrer">
+                <img src="assets/img/icons/github_white.svg" alt="" width="22" height="22" />
+                <span data-i18n="contact.github">Code on GitHub</span>
+              </a>
+            </div>
           </div>
-          <div class="contact-right">
-            <div class="contact-spacer"></div>
-            <form class="contact-form" action="#" method="POST" novalidate>
-              <label
-                for="contact-name"
-                class="sr-only"
-                data-i18n="contact.form.name"
-                >Your name</label
-              >
-              <input
-                type="text"
-                id="contact-name"
-                name="name"
-                aria-describedby="feedback-name"
-                data-i18n-placeholder="contact.form.name"
-                placeholder="Your name" />
-              <div
-                class="input-feedback"
-                id="feedback-name"
-                aria-live="polite"
-                role="alert"></div>
-              <label
-                for="contact-email"
-                class="sr-only"
-                data-i18n="contact.form.email"
-                >Your email</label
-              >
-              <input
-                type="text"
-                id="contact-email"
-                name="email"
-                aria-describedby="feedback-email"
-                data-i18n-placeholder="contact.form.email"
-                placeholder="Your email" />
-              <div
-                class="input-feedback"
-                id="feedback-email"
-                aria-live="polite"
-                role="alert"></div>
-              <label
-                for="contact-message"
-                class="sr-only"
-                data-i18n="contact.form.message"
-                >Your message</label
-              >
-              <textarea
-                id="contact-message"
-                name="message"
-                aria-describedby="feedback-message"
-                data-i18n-placeholder="contact.form.message"
-                placeholder="Your message"
-                rows="6"></textarea>
-              <div
-                class="input-feedback"
-                id="feedback-message"
-                aria-live="polite"
-                role="alert"></div>
-              <label class="checkbox-label">
-                <input type="checkbox" name="privacy" />
-                <span data-i18n-html="contact.form.privacy"
-                  >I've read the
-                  <a href="privacypolicy.html">privacy policy</a> and agree to
-                  the processing of my data as outlined.</span
-                >
-              </label>
-              <button
-                type="submit"
-                class="btn btn-primary"
-                disabled
-                data-i18n="contact.form.btn">
-                Say Hello ;)
-              </button>
-            </form>
-          </div>
+
+          <form class="contact-form fade-in" action="phpMailer.php" method="POST" novalidate>
+            <div class="form-field">
+              <label for="contact-name" data-i18n="contact.form.name">Your name</label>
+              <input type="text" id="contact-name" name="name" autocomplete="name" maxlength="100" required aria-describedby="feedback-name" />
+              <div class="input-feedback" id="feedback-name" aria-live="polite"></div>
+            </div>
+            <div class="form-field">
+              <label for="contact-email" data-i18n="contact.form.email">Your email</label>
+              <input type="email" id="contact-email" name="email" autocomplete="email" inputmode="email" maxlength="254" required aria-describedby="feedback-email" />
+              <div class="input-feedback" id="feedback-email" aria-live="polite"></div>
+            </div>
+            <div class="form-field">
+              <label for="contact-message" data-i18n="contact.form.message">Your message</label>
+              <textarea id="contact-message" name="message" rows="6" maxlength="5000" required aria-describedby="feedback-message"></textarea>
+              <div class="input-feedback" id="feedback-message" aria-live="polite"></div>
+            </div>
+            <div class="hp-field" aria-hidden="true">
+              <label for="contact-website">Website</label>
+              <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <label class="checkbox-label">
+              <input type="checkbox" name="privacy" required />
+              <span data-i18n="contact.form.privacy">I've read the <a href="privacypolicy.html">privacy policy</a> and agree to the processing of my data as outlined.</span>
+            </label>
+            <button type="submit" class="btn btn-accent" disabled data-i18n="contact.form.btn">Say Hello ;)</button>
+          </form>
         </div>
-        <div class="decorative-circle circle-contact-1"></div>
-        <div class="decorative-circle circle-contact-2"></div>
-        <div class="decorative-circle circle-contact-3"></div>
-        <!-- TO-TOP-ARROW -->
-        <button type="button" class="to-top-arrow" aria-label="Scroll to top">
-          <img class="arrow-icon" src="assets/img/icons/goup.svg" alt="" />
-          <img
-            class="arrow-icon-hover"
-            src="assets/img/icons/goup_hover.svg"
-            alt="" />
-        </button>
       </section>
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
+    <button type="button" class="to-top-arrow" aria-label="Scroll to top" data-i18n-aria="a11y.totop">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
     <div id="footer-include"></div>
+    <script src="js/include.js"></script>
     <script src="js/headerScroll.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/workFilter.js"></script>
     <script src="js/formValidation.js"></script>
     <script src="js/mobileMenu.js"></script>
   </body>

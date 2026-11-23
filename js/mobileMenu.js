@@ -26,22 +26,6 @@ function initMobileMenu() {
   /**
    * Toggles the mobile menu open/closed
    */
-  const logoImg = document.querySelector(".logo img");
-
-  function setLogoBlue() {
-    if (logoImg) logoImg.src = "assets/img/logo_blue.svg";
-  }
-
-  function restoreLogo() {
-    if (!logoImg) return;
-    const header = document.getElementById("header");
-    if (header && header.classList.contains("scrolled")) {
-      logoImg.src = "assets/img/logo_blue.svg";
-    } else {
-      logoImg.src = "assets/img/logo.svg";
-    }
-  }
-
   function toggleMenu() {
     hamburger.classList.toggle("active");
     mobileMenu.classList.toggle("active");
@@ -50,10 +34,8 @@ function initMobileMenu() {
     hamburger.setAttribute("aria-expanded", String(isOpen));
     document.body.style.overflow = isOpen ? "hidden" : "";
     if (isOpen) {
-      setLogoBlue();
       trapFocus(mobileMenu);
     } else {
-      restoreLogo();
       releaseFocusTrap();
     }
   }
@@ -67,7 +49,6 @@ function initMobileMenu() {
     mobileMenu.classList.remove("active");
     overlay.classList.remove("active");
     document.body.style.overflow = "";
-    restoreLogo();
     releaseFocusTrap();
   }
 
@@ -134,15 +115,12 @@ function initMobileMenu() {
       if (window.setLanguage) {
         window.setLanguage(lang);
       }
-      // Update active state in mobile menu
-      mobileLangToggle.forEach((s) => s.classList.remove("active"));
-      span.classList.add("active");
     });
   });
 
   // Close menu on window resize if open
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 768 && hamburger.classList.contains("active")) {
+    if (window.innerWidth > 1024 && hamburger.classList.contains("active")) {
       closeMenu();
     }
   });

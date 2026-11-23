@@ -1,60 +1,63 @@
 /* =============================================
-   TESTIMONIALS SECTION
+   TESTIMONIALS
    ============================================= */
-#testimonials {
-  padding: 100px 80px;
-  background: linear-gradient(180deg, #5988FF 0%, #0043F0 100%);
-}
-
-.testimonials-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.testimonials-container .section-title {
-  font-size: 48px;
-  color: var(--white);
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.testimonials-subtitle {
-  font-size: 18px;
-  color: #ffffff;
-  margin-bottom: 60px;
-}
-
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  text-align: left;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .testimonial-card {
-  padding: 10px 0;
-  border-top: 2px solid var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px;
 }
 
-.testimonial-card h4 {
+.testimonial-card::before {
+  content: "\201C";
   font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 4px;
-  margin-top: 16px;
-}
-
-.testimonial-role {
-  font-size: 16px;
-  color: #d4e0ff;
-  margin-bottom: 16px;
-  font-style: italic;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 0.6;
+  height: 28px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .testimonial-text {
   font-size: 16px;
-  line-height: 1.7;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--navy);
   color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+.testimonial-author h4 {
+  font-size: 17px;
+}
+
+.testimonial-role {
+  font-size: 16px;
+  color: var(--muted);
 }

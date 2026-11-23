@@ -5,15 +5,13 @@ window.addEventListener("headerLoaded", function () {
   if (!logoImg) return;
 
   function updateLogo() {
-    const hamburger = document.querySelector(".hamburger");
-    if (hamburger && hamburger.classList.contains("active")) return;
-    if (header.classList.contains("scrolled")) {
+    if (header.classList.contains("scrolled") || document.body.classList.contains("page-light")) {
       logoImg.src = "assets/img/logo_blue.svg";
     } else {
       logoImg.src = "assets/img/logo.svg";
     }
   }
 
-  window.addEventListener("scroll", updateLogo);
+  window.addEventListener("scroll", updateLogo, { passive: true });
   updateLogo(); // Initial
 });

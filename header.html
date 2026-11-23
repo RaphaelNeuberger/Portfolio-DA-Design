@@ -1,29 +1,31 @@
 <header id="header">
   <div class="header-container">
-    <a href="index.html" class="logo">
-      <img src="assets/img/logo.svg" alt="Logo" width="52" height="52" />
+    <a href="index.html" class="logo" aria-label="Raphael Neuberger – Home">
+      <img src="assets/img/logo.svg" alt="" width="40" height="43" />
+      <span class="logo-text">Raphael Neuberger<small>Frontend Developer</small></span>
     </a>
-    <nav>
+    <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="#about" data-i18n="nav.about" data-text="About me">About me</a></li>
-        <li><a href="#skills" data-i18n="nav.skills" data-text="Skill set">Skill set</a></li>
-        <li><a href="#work" data-i18n="nav.work" data-text="My work">My work</a></li>
+        <li><a href="#about" data-i18n="nav.about">About me</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skill set</a></li>
+        <li><a href="#work" data-i18n="nav.work">My work</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
     <div class="lang-toggle" role="group" aria-label="Language">
-      <button type="button">DE</button>
+      <button type="button" lang="de">DE</button>
       <span class="separator">/</span>
-      <button type="button" class="active" aria-current="true">EN</button>
+      <button type="button" lang="en" class="active" aria-pressed="true">EN</button>
     </div>
-    <button type="button" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <button type="button" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
   </div>
 </header>
-<div class="mobile-menu">
-  <nav>
+<div class="mobile-menu" id="mobile-menu">
+  <nav aria-label="Mobile">
     <ul class="mobile-nav-links">
       <li><a href="#about" data-i18n="nav.about">About me</a></li>
       <li><a href="#skills" data-i18n="nav.skills">Skill set</a></li>
@@ -32,8 +34,8 @@
     </ul>
   </nav>
   <div class="mobile-lang-toggle" role="group" aria-label="Language">
-    <button type="button">DE</button>
+    <button type="button" lang="de">DE</button>
     <span class="separator">/</span>
-    <button type="button" class="active" aria-current="true">EN</button>
+    <button type="button" lang="en" class="active" aria-pressed="true">EN</button>
   </div>
 </div>

@@ -1,153 +1,74 @@
 /* =============================================
-   LEGAL NOTICE & PRIVACY POLICY PAGES
+   LEGAL / PRIVACY (helle Unterseiten)
    ============================================= */
-
-/* Language-based content visibility */
-html[lang="en"] [data-lang="de"],
-html[lang="de"] [data-lang="en"] {
-  display: none;
+.legal-hero {
+  padding: calc(var(--header-h) + 56px) var(--gutter) 48px;
+  background: var(--bg-soft);
 }
-.privacy-container,
+
+.legal-hero .container,
 .legal-content-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 120px 40px 80px;
-  min-height: 100vh;
+  max-width: 860px;
+  margin-inline: auto;
 }
 
-.privacy-container h1,
 .legal-title {
-  font-family: var(--font-heading);
-  font-size: 48px;
-  font-weight: 800;
-  color: var(--blue);
-  margin-bottom: 32px;
-  text-align: center;
+  font-size: clamp(32px, 5vw, 48px);
 }
 
-.privacy-container p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--dark);
-  margin-bottom: 24px;
+.legal-content-container {
+  padding: 48px var(--gutter) 96px;
 }
 
-.privacy-container a {
-  display: inline-block;
-  margin-top: 24px;
-  color: var(--blue);
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.legal-section {
-  position: relative;
-  z-index: 1;
+.legal-section + .legal-section {
+  margin-top: 40px;
 }
 
 .legal-section h2 {
-  font-family: var(--font-heading);
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--blue);
-  margin-top: 40px;
-  margin-bottom: 16px;
-  text-align: center;
+  font-size: 24px;
+  margin-bottom: 14px;
 }
 
 .legal-section h3 {
-  font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--blue);
-  margin-top: 28px;
-  margin-bottom: 12px;
+  font-size: 19px;
+  margin: 28px 0 8px;
 }
 
-.legal-section ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
+.legal-section p,
 .legal-section li {
   font-size: 16px;
-  line-height: 1.8;
-  color: var(--dark);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-.legal-section p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--dark);
+.legal-section ul.address {
   margin-bottom: 16px;
 }
 
-.legal-section .section {
-  margin-bottom: 24px;
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--dark);
+.legal-section ul.bullets {
+  list-style: disc;
+  padding-left: 22px;
 }
 
-.legal-section .section .section-title {
-  font-family: var(--font-heading);
-  font-size: 20px;
+.legal-section a {
+  color: var(--sky-text);
   font-weight: 600;
-  color: var(--blue);
-  display: block;
-  margin-bottom: 8px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.legal-section .section.gray {
-  background: #f5f7fa;
+.legal-note {
+  margin-top: 40px;
   padding: 20px 24px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-soft);
+}
+
+.legal-back {
   margin-top: 32px;
 }
 
-.legal-section .bold {
-  font-weight: 700;
-}
-
-/* Header fix for legal/privacy pages (no hero = white bg) */
-body:has(.legal-content-container) .hamburger span,
-body:has(.privacy-container) .hamburger span {
-  background: var(--dark);
-}
-
-/* Legal Notice Decorative Circles */
-.legal-bg-circle {
-  position: fixed;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 30% 30%,
-    #7aa3ff 0%,
-    #5988ff 40%,
-    #0043f0 100%
-  );
-  z-index: -1;
-  box-shadow: 0 20px 60px rgba(0, 67, 240, 0.35);
-}
-
-.legal-bg-circle-1 {
-  width: 150px;
-  height: 150px;
-  top: 15%;
-  right: 3%;
-}
-
-.legal-bg-circle-2 {
-  width: 120px;
-  height: 120px;
-  bottom: 25%;
-  left: -30px;
-}
-
-.legal-bg-circle-3 {
-  width: 80px;
-  height: 80px;
-  bottom: 40%;
-  right: -1%;
+/* Zweisprachige Rechtstexte: Block je Sprache, gesteuert über <html lang> */
+html[lang="en"] [data-lang-block="de"],
+html[lang="de"] [data-lang-block="en"] {
+  display: none;
 }

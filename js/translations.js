@@ -1,283 +1,363 @@
 /**
- * Translation object for the internationalization (i18n) of the site.
- * Contains all texts for German (de) and English (en).
+ * Translations (i18n) for German (de) and English (en).
+ * Values are static, trusted strings and may contain simple markup (<em>, <a>, <br>).
  * @type {Object.<string, Object.<string, string>>}
  */
 window.translations = {
   en: {
+    "a11y.skip": "Skip to main content",
+    "a11y.totop": "Scroll to top",
     "nav.about": "About me",
     "nav.skills": "Skill set",
     "nav.work": "My work",
     "nav.contact": "Contact",
+    "hero.eyebrow": "Open to work · Remote",
     "hero.hello": "Hello! I am Raphael",
-    "about.title": "Let's work<br/>together",
-    "about.iam": "I am",
+    "hero.lead":
+      "I build fast, accessible web apps with Angular and TypeScript – and connect them with AI and automation wherever it saves real work.",
+    "hero.cta.work": "See my projects",
+    "hero.cta.contact": "Get in touch",
+    "hero.fact1": "Frontend focus",
+    "hero.fact2": "Backend & REST APIs",
+    "hero.fact3": "Automation",
+    "hero.fact3.title": "n8n &amp; AI",
+    "hero.social.mail": "Email / contact form",
+    "about.title": "Let's work <em>together</em>",
     "about.text1":
-      "I am a passionate Frontend Developer with a strong focus on creating intuitive and user-friendly web applications. My journey in programming is driven by the constant pursuit of learning new technologies and frameworks. I believe in writing clean, maintainable code that not only works but also makes a difference in users' daily lives.",
+      "I am a passionate Frontend Developer with a strong focus on intuitive, user-friendly web applications. I believe in clean, maintainable code that not only works but makes a difference in users' daily lives.",
     "about.text2":
-      "My approach to problem-solving is rooted in analytical thinking and creativity. I enjoy breaking down complex challenges into manageable parts and finding elegant solutions. Through collaboration and persistence, I continuously learn from every project, always striving to improve both my technical skills and my ability to deliver high-quality results.",
+      "My approach to problem-solving is rooted in analytical thinking and creativity: I break complex challenges into manageable parts and look for elegant solutions – ideally together with the team.",
+    "about.text3":
+      'Before moving into development I led IT and e-commerce at a mid-sized company, and today I run my own IT service business, <a href="https://newmountains.it" target="_blank" rel="noopener">Newmountains.IT</a>. That\'s why I think beyond the code – about users, maintainability and business impact.',
+    "about.badge.location": "Based in Munich",
+    "about.badge.remote": "Open to remote work",
     "about.btn": "Send a message",
-    "about.badge.location": "located in<br/>Munich",
-    "about.badge.remote": "open to work<br/>remote",
-    "about.badge.relocate": "open to<br/>relocate",
-    "skills.title": "Skill set",
-    "skills.cta": "Get in touch",
-    "skills.looking": "Looking for a developer?",
-    "skills.talk": "Let's talk!",
-    "work.title": "My work",
+    "values.code.title": "Clean, maintainable code",
+    "values.code.text":
+      "Small functions, clear naming, documented and versioned – so others can keep working on it tomorrow.",
+    "values.a11y.title": "Responsive &amp; accessible",
+    "values.a11y.text":
+      "Tested from 320px to widescreen, keyboard-friendly and with WCAG in mind.",
+    "values.ai.title": "AI &amp; automation",
+    "values.ai.text":
+      "n8n workflows and LLMs that take repetitive work off people's hands – with clear rules and safeguards.",
+    "values.biz.title": "Business mindset",
+    "values.biz.text":
+      "Years in IT and e-commerce leadership: I understand what a feature has to achieve for users and the business.",
+    "skills.eyebrow": "Tech stack",
+    "skills.title": "Skill <em>set</em>",
+    "skills.lead":
+      "The technologies I use in my projects – and keep expanding with every new one.",
+    "skills.group.backend": "Backend &amp; data",
+    "skills.group.ai": "AI &amp; automation",
+    "skills.group.tools": "Tools &amp; methods",
+    "skills.prompt": "Prompt engineering",
+    "skills.llm": "LLM APIs",
+    "skills.growth": "Growth mindset",
+    "work.eyebrow": "Portfolio",
+    "work.title": "My <em>work</em>",
     "work.subtitle":
-      "Explore a selection of my work here - Interact with projects to see my skills in action.",
+      "A selection of my projects – click through the live demos and the code on GitHub to see my skills in action.",
+    "work.filter.label": "Filter projects",
+    "work.filter.all": "All",
+    "work.filter.ai": "AI &amp; automation",
+    "work.badge.new": "New",
+    "work.badge.wip": "In progress",
+    "work.aria.ic": "Join – Issue Collector: Live demo",
+    "work.ic.kicker": "AI &amp; automation",
+    "work.ic.meta": "Solo project · Kanban + n8n",
+    "work.ic.desc":
+      "A Kanban board that turns incoming requests into tasks automatically: n8n workflows read the request, an AI extracts everything relevant and creates the task directly on the board.",
+    "work.ic.h1": "AI extracts title, subtasks and due date",
+    "work.ic.h2": "AI gate processes only real requests",
+    "work.ic.h3": "Contact form instead of mailto – fully testable",
+    "work.join.meta": "Team project · Kanban",
     "work.join.desc":
-      "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "Task manager inspired by the Kanban system. Create and organize tasks via drag and drop, assign users and categories.",
+    "work.cuisine.meta": "Angular app · AI workflow",
+    "work.cuisine.desc":
+      "Recipe app that suggests dishes based on the ingredients you have at home – the recipes are generated by an AI workflow.",
+    "work.poll.meta": "Angular app",
+    "work.poll.desc":
+      "Create polls, cast votes and see the results at a glance – a lean survey app built with Angular.",
+    "work.pollo.meta": "Browser game · OOP",
     "work.pollo.desc":
-      "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco sauce to fight against the crazy hen.",
-    "work.bubble.desc":
-      "A Slack clone (chat application/instant messaging system) modeled using Firebase. Communicate in channels and direct messages.",
+      "Jump, run and throw game based on an object-oriented approach. Help Pepe find coins and tabasco salsa to fight the crazy hen.",
+    "work.pokedex.meta": "API project",
     "work.pokedex.desc":
-      "Based on the PokéAPI a simple library that provides and catalogs pokémon information.",
-    "testimonials.title": "Need a teamplayer?",
-    "testimonials.subtitle": "Here what my colleagues said about me",
+      "A simple library based on the PokéAPI that loads, catalogues and displays Pokémon information.",
+    "work.bubble.meta": "Team project · Slack clone",
+    "work.bubble.desc":
+      "A Slack clone: real-time chat with channels, direct messages and threads, built in a team of three.",
+    "work.bubble.soon": "Live demo coming soon.",
+    "work.empty": "No projects in this category yet.",
+    "work.more.title": "More practice projects",
+    "testimonials.eyebrow": "References",
+    "testimonials.title": "Need a <em>teamplayer</em>?",
+    "testimonials.subtitle": "Here is what my colleagues said about me.",
     "testimonials.james.role": "Frontend Developer",
     "testimonials.james.text":
-      '"Raphael is a reliable and friendly developer. He was able to solve complex tasks and write clean code. I highly recommend him as a developer."',
+      "Raphael is a reliable and friendly developer. He was able to solve complex tasks and write clean code. I highly recommend him as a developer.",
     "testimonials.evelyn.role": "Backend Developer",
     "testimonials.evelyn.text":
-      '"Raphael is a motivated and enthusiastic developer who brings creative ideas and is always up for new challenges. He is a pleasure to work with. He is focused and fast."',
+      "Raphael is a motivated and enthusiastic developer who brings creative ideas and is always up for new challenges. He is focused, fast and a pleasure to work with.",
     "testimonials.noah.role": "Project Manager",
     "testimonials.noah.text":
-      '"Raphael has his develop domain - clear communication, with the team members. He is a reliable and friendly person."',
+      "Raphael communicates clearly with the whole team and keeps everyone on the same page. A reliable and friendly person.",
     "contact.title": "Contact",
-    "contact.heading": "Got a problem to solve?",
+    "contact.heading": "Got a problem to <em>solve</em>?",
     "contact.text":
-      "If you want people to contact you, give them a way. Fill in your information, so they can reach out to the email or phone number provided.",
-    "contact.looking":
-      'Would you also consider checking my profile on <a href="https://linkedin.com" target="_blank">LinkedIn</a>?',
+      "Looking for a developer who thinks along? Tell me about your project or open position – I look forward to your message.",
+    "contact.linkedin": "Connect on LinkedIn",
+    "contact.github": "Code on GitHub",
     "contact.form.name": "Your name",
     "contact.form.email": "Your email",
     "contact.form.message": "Your message",
     "contact.form.privacy":
       'I\'ve read the <a href="privacypolicy.html">privacy policy</a> and agree to the processing of my data as outlined.',
     "contact.form.btn": "Say Hello ;)",
-    "contact.form.error.name": "Please enter your name.",
+    "contact.form.error.name": "Please enter your name (at least 2 characters).",
     "contact.form.error.email": "Please enter a valid email address.",
-    "contact.form.error.message": "Please enter a message.",
-    "contact.form.sending": "Sending...",
-    "contact.form.success": "Thank you for your message!",
+    "contact.form.error.message": "Please enter a message (at least 5 characters).",
+    "contact.form.sending": "Sending …",
+    "contact.form.success": "Thank you for your message! I'll get back to you soon.",
     "contact.form.error": "Something went wrong. Please try again later.",
     "footer.legal": "Legal Notice",
     "footer.privacy": "Privacy Policy",
     "legal.title": "Legal Notice",
-    "legal.imprint": "Imprint",
-    "legal.owner": "Owner:",
-    "legal.board": "Explanatory Board",
-    "legal.acceptance": "Acceptance of terms",
-    "legal.acceptance.text":
-      "By accessing and using this website, you acknowledge and agree to the following terms and conditions, and any applicable laws and regulations. If you do not agree, please do not use this site.",
-    "legal.scope": "Scope and accuracy of the presented information",
-    "legal.scope.text":
-      "The information on this website is for general information purposes only. While we strive for accuracy, we make no warranties of any kind about the completeness, reliability, or accuracy of this information.",
-    "legal.rights": "Proprietary rights",
-    "legal.rights.text":
-      "All content, images, and graphics on this site are protected by copyright and may not be used without permission.",
-    "legal.use": "Use of the website",
-    "legal.use.text":
-      "Use of this website and its content is only for informational purposes. Unauthorised use may result in legal action.",
-    "legal.disclaimer": "Disclaimer of warranties and limitation of liability",
-    "legal.disclaimer.text":
-      "We disclaim any liability, whether direct or indirect, for any loss or damage resulting from the use of this website or its content.",
-    "legal.date": "Date: February 2026",
     "privacy.title": "Privacy Policy",
-    "privacy.text":
-      "This website respects your privacy. No personal data is stored or processed beyond what is necessary for contact and communication.<br/>For detailed information about data protection, please contact the site owner.<br/>By using this site, you agree to the privacy terms outlined here.",
-    "privacy.back": "Back to Home",
+    "privacy.back": "Back to home",
   },
   de: {
+    "a11y.skip": "Zum Inhalt springen",
+    "a11y.totop": "Nach oben scrollen",
     "nav.about": "Über mich",
-    "nav.skills": "Fähigkeiten",
-    "nav.work": "Meine Arbeit",
+    "nav.skills": "Skills",
+    "nav.work": "Projekte",
     "nav.contact": "Kontakt",
+    "hero.eyebrow": "Offen für neue Projekte · Remote",
     "hero.hello": "Hallo! Ich bin Raphael",
-    "about.title": "Lass uns zusammen arbeiten",
-    "about.iam": "Ich bin",
+    "hero.lead":
+      "Ich entwickle schnelle, barrierearme Web-Apps mit Angular und TypeScript – und verbinde sie mit KI und Automatisierung, wo sie echte Arbeit spart.",
+    "hero.cta.work": "Projekte ansehen",
+    "hero.cta.contact": "Kontakt aufnehmen",
+    "hero.fact1": "Frontend-Fokus",
+    "hero.fact2": "Backend & REST-APIs",
+    "hero.fact3": "Automatisierung",
+    "hero.fact3.title": "n8n &amp; KI",
+    "hero.social.mail": "E-Mail / Kontaktformular",
+    "about.title": "Lass uns <em>zusammenarbeiten</em>",
     "about.text1":
-      "Ich bin ein leidenschaftlicher Frontend-Entwickler mit einem starken Fokus auf die Entwicklung intuitiver und benutzerfreundlicher Webanwendungen. Meine Reise in der Programmierung wird durch das ständige Streben nach dem Erlernen neuer Technologien und Frameworks angetrieben. Ich glaube an sauberen, wartbaren Code, der nicht nur funktioniert, sondern auch einen Unterschied im Alltag der Nutzer macht.",
+      "Ich bin leidenschaftlicher Frontend-Entwickler mit Fokus auf intuitive, nutzerfreundliche Webanwendungen. Ich setze auf sauberen, wartbaren Code, der nicht nur funktioniert, sondern den Alltag der Nutzer spürbar erleichtert.",
     "about.text2":
-      "Mein Ansatz zur Problemlösung basiert auf analytischem Denken und Kreativität. Ich genieße es, komplexe Herausforderungen in überschaubare Teile zu zerlegen und elegante Lösungen zu finden. Durch Zusammenarbeit und Ausdauer lerne ich kontinuierlich aus jedem Projekt und strebe danach, sowohl meine technischen Fähigkeiten als auch meine Fähigkeit, qualitativ hochwertige Ergebnisse zu liefern, zu verbessern.",
+      "Probleme löse ich analytisch und kreativ: Ich zerlege komplexe Aufgaben in überschaubare Teile und suche nach eleganten Lösungen – am liebsten gemeinsam im Team.",
+    "about.text3":
+      'Vor meinem Wechsel in die Entwicklung habe ich IT und E-Commerce eines mittelständischen Unternehmens geleitet, heute führe ich mein eigenes IT-Dienstleistungsunternehmen <a href="https://newmountains.it" target="_blank" rel="noopener">Newmountains.IT</a>. Deshalb denke ich über den Code hinaus – an Nutzer, Wartbarkeit und Business-Nutzen.',
+    "about.badge.location": "Standort München",
+    "about.badge.remote": "Offen für Remote-Arbeit",
     "about.btn": "Nachricht senden",
-    "about.badge.location": "Standort<br/>München",
-    "about.badge.remote": "offen für<br/>Remote-Arbeit",
-    "about.badge.relocate": "offen für<br/>Umzug",
-    "skills.title": "Fähigkeiten",
-    "skills.cta": "Kontakt aufnehmen",
-    "skills.looking": "Auf der Suche nach einem Entwickler?",
-    "skills.talk": "Lass uns reden!",
-    "work.title": "Meine Arbeit",
+    "values.code.title": "Sauberer, wartbarer Code",
+    "values.code.text":
+      "Kleine Funktionen, klare Benennung, dokumentiert und versioniert – damit andere morgen nahtlos weiterarbeiten können.",
+    "values.a11y.title": "Responsiv &amp; barrierearm",
+    "values.a11y.text":
+      "Getestet von 320 px bis Widescreen, per Tastatur bedienbar und mit WCAG im Blick.",
+    "values.ai.title": "KI &amp; Automatisierung",
+    "values.ai.text":
+      "n8n-Workflows und LLMs, die Routinearbeit abnehmen – mit klaren Regeln und Sicherheitsnetzen.",
+    "values.biz.title": "Unternehmerisches Denken",
+    "values.biz.text":
+      "Jahre in IT- und E-Commerce-Leitung: Ich weiß, was ein Feature für Nutzer und Unternehmen leisten muss.",
+    "skills.eyebrow": "Tech-Stack",
+    "skills.title": "Meine <em>Skills</em>",
+    "skills.lead":
+      "Die Technologien, mit denen ich in meinen Projekten arbeite – und die mit jedem Projekt wachsen.",
+    "skills.group.backend": "Backend &amp; Daten",
+    "skills.group.ai": "KI &amp; Automatisierung",
+    "skills.group.tools": "Tools &amp; Methoden",
+    "skills.prompt": "Prompt Engineering",
+    "skills.llm": "LLM-APIs",
+    "skills.growth": "Growth Mindset",
+    "work.eyebrow": "Portfolio",
+    "work.title": "Meine <em>Projekte</em>",
     "work.subtitle":
-      "Entdecke hier eine Auswahl meiner Arbeiten – Interagiere mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+      "Eine Auswahl meiner Arbeiten – klick dich durch die Live-Demos und den Code auf GitHub.",
+    "work.filter.label": "Projekte filtern",
+    "work.filter.all": "Alle",
+    "work.filter.ai": "KI &amp; Automatisierung",
+    "work.badge.new": "Neu",
+    "work.badge.wip": "In Arbeit",
+    "work.aria.ic": "Join – Issue Collector: Live-Demo",
+    "work.ic.kicker": "KI &amp; Automatisierung",
+    "work.ic.meta": "Einzelprojekt · Kanban + n8n",
+    "work.ic.desc":
+      "Ein Kanban-Board, das eingehende Anfragen automatisch in Aufgaben verwandelt: n8n-Workflows lesen die Anfrage, eine KI extrahiert alles Relevante und legt den Task direkt im Board an.",
+    "work.ic.h1": "KI extrahiert Titel, Subtasks und Fälligkeitsdatum",
+    "work.ic.h2": "KI-Gate verarbeitet nur echte Anfragen",
+    "work.ic.h3": "Kontaktformular statt mailto – vollständig testbar",
+    "work.join.meta": "Teamprojekt · Kanban",
     "work.join.desc":
-      "Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
+      "Aufgabenmanager nach dem Kanban-Prinzip. Aufgaben per Drag-and-drop erstellen und organisieren, Nutzer und Kategorien zuweisen.",
+    "work.cuisine.meta": "Angular-App · KI-Workflow",
+    "work.cuisine.desc":
+      "Rezept-App, die aus den Zutaten, die du zu Hause hast, passende Gerichte vorschlägt – die Rezepte erzeugt ein KI-Workflow.",
+    "work.poll.meta": "Angular-App",
+    "work.poll.desc":
+      "Umfragen erstellen, abstimmen und Ergebnisse auf einen Blick sehen – eine schlanke Umfrage-App mit Angular.",
+    "work.pollo.meta": "Browserspiel · OOP",
     "work.pollo.desc":
-      "Ein Jump-, Run- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Flaschen zu finden, um gegen das verrückte Huhn zu kämpfen.",
-    "work.bubble.desc":
-      "Ein Slack-Klon (Chat-Anwendung/Instant-Messaging-System) modelliert mit POUCH.io/CouchDB.",
+      "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu sammeln, um gegen das verrückte Huhn zu kämpfen.",
+    "work.pokedex.meta": "API-Projekt",
     "work.pokedex.desc":
-      "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
-    "testimonials.title": "Teamplayer gesucht?",
-    "testimonials.subtitle": "Das sagen meine Kollegen über mich",
+      "Eine Bibliothek auf Basis der PokéAPI, die Pokémon-Informationen lädt, katalogisiert und darstellt.",
+    "work.bubble.meta": "Teamprojekt · Slack-Klon",
+    "work.bubble.desc":
+      "Ein Slack-Klon: Echtzeit-Chat mit Channels, Direktnachrichten und Threads, entwickelt im Dreierteam.",
+    "work.bubble.soon": "Live-Demo folgt in Kürze.",
+    "work.empty": "In dieser Kategorie gibt es noch keine Projekte.",
+    "work.more.title": "Weitere Übungsprojekte",
+    "testimonials.eyebrow": "Referenzen",
+    "testimonials.title": "Teamplayer <em>gesucht</em>?",
+    "testimonials.subtitle": "Das sagen Kolleginnen und Kollegen über mich.",
     "testimonials.james.role": "Frontend-Entwickler",
     "testimonials.james.text":
-      '"Raphael ist ein zuverlässiger und freundlicher Entwickler. Er konnte komplexe Aufgaben lösen und sauberen Code schreiben. Ich empfehle ihn sehr als Entwickler."',
+      "Raphael ist ein zuverlässiger und freundlicher Entwickler. Er hat komplexe Aufgaben gelöst und sauberen Code geschrieben. Ich kann ihn als Entwickler sehr empfehlen.",
     "testimonials.evelyn.role": "Backend-Entwicklerin",
     "testimonials.evelyn.text":
-      '"Raphael ist ein motivierter und begeisterungsfähiger Entwickler, der kreative Ideen einbringt und immer für neue Herausforderungen bereit ist. Die Zusammenarbeit mit ihm macht Freude. Er ist fokussiert und schnell."',
+      "Raphael ist ein motivierter, begeisterungsfähiger Entwickler, der kreative Ideen einbringt und jede neue Herausforderung annimmt. Er arbeitet fokussiert und schnell – die Zusammenarbeit macht Freude.",
     "testimonials.noah.role": "Projektmanager",
     "testimonials.noah.text":
-      '"Raphael hat seine Entwickler-Domäne – klare Kommunikation mit den Teammitgliedern. Er ist eine zuverlässige und freundliche Person."',
+      "Raphael kommuniziert klar mit dem ganzen Team und sorgt dafür, dass alle auf dem gleichen Stand sind. Ein zuverlässiger und freundlicher Mensch.",
     "contact.title": "Kontakt",
-    "contact.heading": "Ein Problem zu lösen?",
+    "contact.heading": "Ein Problem zu <em>lösen</em>?",
     "contact.text":
-      "Wenn du möchtest, dass man dich kontaktiert, gib ihnen einen Weg. Fülle deine Informationen aus, damit sie dich per E-Mail oder Telefonnummer erreichen können.",
-    "contact.looking":
-      'Würdest du auch einen Blick auf mein Profil auf <a href="https://linkedin.com" target="_blank">LinkedIn</a> werfen?',
+      "Du suchst einen Entwickler, der mitdenkt? Erzähl mir von deinem Projekt oder deiner offenen Stelle – ich freue mich auf deine Nachricht.",
+    "contact.linkedin": "Auf LinkedIn vernetzen",
+    "contact.github": "Code auf GitHub",
     "contact.form.name": "Dein Name",
     "contact.form.email": "Deine E-Mail",
     "contact.form.message": "Deine Nachricht",
     "contact.form.privacy":
       'Ich habe die <a href="privacypolicy.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
     "contact.form.btn": "Sag Hallo ;)",
-    "contact.form.error.name": "Bitte gib deinen Namen ein.",
+    "contact.form.error.name": "Bitte gib deinen Namen ein (mind. 2 Zeichen).",
     "contact.form.error.email": "Bitte gib eine gültige E-Mail-Adresse ein.",
-    "contact.form.error.message": "Bitte gib eine Nachricht ein.",
-    "contact.form.sending": "Wird gesendet...",
-    "contact.form.success": "Danke für deine Nachricht!",
+    "contact.form.error.message": "Bitte gib eine Nachricht ein (mind. 5 Zeichen).",
+    "contact.form.sending": "Wird gesendet …",
+    "contact.form.success": "Danke für deine Nachricht! Ich melde mich in Kürze.",
     "contact.form.error": "Etwas ist schiefgelaufen. Bitte versuche es später erneut.",
     "footer.legal": "Impressum",
-    "footer.privacy": "Datenschutzerklärung",
+    "footer.privacy": "Datenschutz",
     "legal.title": "Impressum",
-    "legal.imprint": "Impressum",
-    "legal.owner": "Inhaber:",
-    "legal.board": "Verantwortliche Stelle",
-    "legal.acceptance": "Akzeptanz der Bedingungen",
-    "legal.acceptance.text":
-      "Durch den Zugriff auf und die Nutzung dieser Website erkennen Sie die folgenden Geschäftsbedingungen sowie alle geltenden Gesetze und Vorschriften an. Wenn Sie nicht einverstanden sind, nutzen Sie diese Seite bitte nicht.",
-    "legal.scope": "Umfang und Richtigkeit der dargestellten Informationen",
-    "legal.scope.text":
-      "Die Informationen auf dieser Website dienen nur allgemeinen Informationszwecken. Obwohl wir uns um Genauigkeit bemühen, übernehmen wir keinerlei Gewähr für die Vollständigkeit, Zuverlässigkeit oder Richtigkeit dieser Informationen.",
-    "legal.rights": "Eigentumsrechte",
-    "legal.rights.text":
-      "Alle Inhalte, Bilder und Grafiken auf dieser Seite sind urheberrechtlich geschützt und dürfen nicht ohne Genehmigung verwendet werden.",
-    "legal.use": "Nutzung der Website",
-    "legal.use.text":
-      "Die Nutzung dieser Website und ihrer Inhalte dient ausschließlich Informationszwecken. Eine unbefugte Nutzung kann rechtliche Schritte nach sich ziehen.",
-    "legal.disclaimer": "Haftungsausschluss und Haftungsbeschränkung",
-    "legal.disclaimer.text":
-      "Wir lehnen jede Haftung, ob direkt oder indirekt, für Verluste oder Schäden ab, die aus der Nutzung dieser Website oder ihrer Inhalte entstehen.",
-    "legal.date": "Datum: Februar 2026",
     "privacy.title": "Datenschutzerklärung",
-    "privacy.text":
-      "Diese Website respektiert Ihre Privatsphäre. Es werden keine personenbezogenen Daten gespeichert oder verarbeitet, die über das für Kontakt und Kommunikation Notwendige hinausgehen.<br/>Für detaillierte Informationen zum Datenschutz wenden Sie sich bitte an den Seitenbetreiber.<br/>Durch die Nutzung dieser Seite stimmen Sie den hier dargelegten Datenschutzbestimmungen zu.",
     "privacy.back": "Zurück zur Startseite",
   },
 };
 
 /**
- * Currently selected language ("en" or "de").
- * @type {string}
+ * Reads a value from localStorage without throwing (private mode, blocked storage).
+ * @param {string} key
+ * @returns {string|null}
  */
-let currentLang = localStorage.getItem("lang") || "en";
+function safeGetItem(key) {
+  try {
+    return window.localStorage.getItem(key);
+  } catch (e) {
+    return null;
+  }
+}
 
 /**
- * Sets the language of the page and updates all i18n texts.
- * @param {string} lang - Language code ("en" or "de").
+ * Writes a value to localStorage without throwing.
+ * @param {string} key
+ * @param {string} value
  */
-function setLanguage(lang) {
-  currentLang = lang;
-  localStorage.setItem("lang", lang);
-  document.documentElement.lang = lang;
+function safeSetItem(key, value) {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch (e) {
+    /* storage unavailable – language simply isn't remembered */
+  }
+}
 
-  // Translate all elements with data-i18n
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[lang][key]) {
-      el.innerHTML = translations[lang][key];
-      if (el.closest(".nav-links")) {
-        el.setAttribute("data-text", translations[lang][key]);
-      }
-    }
-  });
+/**
+ * Determines the initial language: saved choice, otherwise browser language.
+ * @returns {"de"|"en"}
+ */
+function detectLanguage() {
+  const saved = safeGetItem("lang");
+  if (saved === "de" || saved === "en") return saved;
+  const browser = (navigator.language || "en").toLowerCase();
+  return browser.startsWith("de") ? "de" : "en";
+}
 
-  // Translate all elements with data-i18n-html
-  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-html");
-    if (translations[lang][key]) {
-      el.innerHTML = translations[lang][key];
-    }
-  });
+let currentLang = detectLanguage();
 
-  // Translate all placeholders
-  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-placeholder");
-    if (translations[lang][key]) {
-      el.placeholder = translations[lang][key];
-    }
-  });
-
-  // Activate the current language in the toggle
-  const toggleSpans = document.querySelectorAll(
-    ".lang-toggle button",
-  );
-  toggleSpans.forEach((span) => {
-    span.classList.remove("active");
-    span.removeAttribute("aria-current");
-    if (span.textContent.trim().toLowerCase() === lang) {
-      span.classList.add("active");
-      span.setAttribute("aria-current", "true");
-    }
+/**
+ * Applies a translation dictionary to all elements of one attribute type.
+ * @param {Object.<string,string>} dict
+ * @param {string} attr - data attribute holding the key
+ * @param {function(Element,string):void} apply
+ */
+function translateAll(dict, attr, apply) {
+  document.querySelectorAll("[" + attr + "]").forEach((el) => {
+    const value = dict[el.getAttribute(attr)];
+    if (value) apply(el, value);
   });
 }
 
 /**
- * Initializes the language toggle event listeners.
+ * Marks the active language button in all toggles.
+ * @param {string} lang
+ */
+function updateToggles(lang) {
+  document
+    .querySelectorAll(".lang-toggle button, .mobile-lang-toggle button")
+    .forEach((btn) => {
+      const isActive = btn.textContent.trim().toLowerCase() === lang;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", String(isActive));
+    });
+}
+
+/**
+ * Sets the page language and updates all i18n texts.
+ * @param {"de"|"en"} lang
+ */
+function setLanguage(lang) {
+  const dict = window.translations[lang];
+  if (!dict) return;
+  currentLang = lang;
+  safeSetItem("lang", lang);
+  document.documentElement.lang = lang;
+  translateAll(dict, "data-i18n", (el, v) => (el.innerHTML = v));
+  translateAll(dict, "data-i18n-html", (el, v) => (el.innerHTML = v));
+  translateAll(dict, "data-i18n-placeholder", (el, v) => (el.placeholder = v));
+  translateAll(dict, "data-i18n-aria", (el, v) => el.setAttribute("aria-label", v));
+  updateToggles(lang);
+  window.dispatchEvent(new CustomEvent("languageChanged", { detail: lang }));
+}
+window.setLanguage = setLanguage;
+
+/**
+ * Binds click handlers to the header language toggle (once).
  */
 function initLanguageToggle() {
-  const toggleSpans = document.querySelectorAll(
-    ".lang-toggle button",
-  );
-  toggleSpans.forEach((span) => {
-    span.addEventListener("click", () => {
-      const lang = span.textContent.trim().toLowerCase();
-      if (lang !== currentLang) {
-        setLanguage(lang);
-      }
+  document.querySelectorAll(".lang-toggle button").forEach((btn) => {
+    if (btn.dataset.bound) return;
+    btn.dataset.bound = "1";
+    btn.addEventListener("click", () => {
+      const lang = btn.textContent.trim().toLowerCase();
+      if (lang !== currentLang) setLanguage(lang);
     });
   });
 }
 
-/**
- * Initializes the language toggle and sets event listeners for switching.
- * Waits for header to be loaded before attaching event listeners.
- */
 window.addEventListener("headerLoaded", () => {
   initLanguageToggle();
-  // Apply current language to newly loaded header
   setLanguage(currentLang);
 });
 
-/**
- * Apply translations to footer when it's loaded.
- */
-window.addEventListener("footerLoaded", () => {
-  // Apply current language to newly loaded footer
-  setLanguage(currentLang);
-});
+window.addEventListener("footerLoaded", () => setLanguage(currentLang));
 
-// Apply saved language on DOMContentLoaded and initialize toggle if available
-document.addEventListener("DOMContentLoaded", () => {
-  setLanguage(currentLang);
-  // Wait a bit for includes to load, then check again
-  setTimeout(() => {
-    if (document.querySelector(".lang-toggle")) {
-      initLanguageToggle();
-    }
-  }, 100);
-});
+document.addEventListener("DOMContentLoaded", () => setLanguage(currentLang));

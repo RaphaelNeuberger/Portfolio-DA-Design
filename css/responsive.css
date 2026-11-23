@@ -1,393 +1,71 @@
 /* =============================================
-   RESPONSIVE - TABLET & MOBILE
+   RESPONSIVE – Tablet (≤ 1024px)
    ============================================= */
-/* ===== ZWISCHEN 769px UND 1024px ===== */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero-bg-circle {
-    width: 55vw;
-    left: -15%;
-  }
-
-  .hero-right {
-    padding-right: 24px;
-    flex: 1;
-  }
-
-  .hero-image-wrapper {
-    width: 42vw;
-    height: 90vh;
-  }
-}
-
-/* ===== 1200px BREAKPOINT ===== */
-@media (max-width: 1200px) {
-  .skills-row {
-    flex-wrap: wrap;
-    gap: 24px 40px;
-    justify-content: center;
-  }
-
-  #skills {
-    padding: 100px 40px;
-  }
-
-  .hero-bg-circle {
-    width: 58vw;
-  }
-
-  .nav-links {
-    gap: 24px;
-  }
-
-  #header {
-    padding: 20px 40px;
-  }
-}
-
-/* ===== TABLET (1024px) ===== */
 @media (max-width: 1024px) {
-  .hero-text h1 {
-    font-size: 60px;
-  }
-
-  .work-circle-6 {
-    bottom: auto;
-    top: 22%;
-  }
-
-  .hero-bg-circle {
-    width: 60vw;
-  }
-
-  .hero-image-wrapper {
-    width: 380px;
-    height: 500px;
-  }
-
-  .section-title-large {
-    font-size: 56px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .contact-container {
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .project-card,
-  .project-card.reverse {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .project-card .project-image {
-    max-width: 100%;
-    order: -1;
-  }
-
-  .work-circle-6 {
-    display: none;
-  }
-
-  .work-circle-3 {
-    display: none;
-  }
-
-  .testimonials-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    padding-bottom: 16px;
-  }
-
-  .testimonial-card {
-    min-width: 80vw;
-    max-width: 80vw;
-    flex-shrink: 0;
-    scroll-snap-align: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .testimonial-text {
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .contact-spacer {
-    display: none;
-  }
-}
-
-/* ===== MOBILE (max-width: 768px) ===== */
-@media (max-width: 768px) {
-  #header {
-    padding: 16px 24px;
-  }
-
-  .contact-spacer {
-    display: none;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .lang-toggle {
+  .nav-links,
+  #header .lang-toggle {
     display: none;
   }
 
   .hamburger {
-    display: flex;
-  }
-
-  .hamburger span {
-    background: var(--blue);
-  }
-
-  .hamburger.active span {
-    background: var(--dark);
-  }
-
-  #hero {
-    height: 100vh;
-    min-height: 0;
+    display: block;
   }
 
   .hero-content {
-    flex-direction: column;
-    height: 100vh;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .hero-left {
-    flex: none;
-    width: 100%;
-    justify-content: center;
-    order: 2;
-    align-items: flex-end;
-    overflow: visible;
-  }
-
-  .hero-right {
-    padding: 100px 24px 20px;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
     text-align: left;
-    order: 1;
-    justify-content: flex-start;
-    flex: none;
-    width: 100%;
   }
 
-  .hero-bg-circle {
-    width: 100vw;
-    height: 100vw;
-    top: -20vw;
-    left: -30vw;
-    transform: none;
-    border-radius: 50%;
+  .hero-image {
+    grid-row: 1;
+    width: min(300px, 70%);
+    justify-self: start;
+    margin-bottom: 24px;
   }
 
-  .hero-text {
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
+  .about-container,
+  .contact-container {
+    grid-template-columns: 1fr;
   }
 
-  .hero-text h1 {
-    font-size: 48px;
-    line-height: 1.1;
-    color: var(--white);
-    opacity: 1;
-    -webkit-text-stroke: 0;
-    white-space: normal;
-    width: auto;
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 
-  .hero-hello {
-    font-size: 20px;
-    margin-bottom: 12px;
-    color: var(--white);
+  .project-card.is-featured {
+    flex-direction: column;
   }
 
-  .hero-image-wrapper {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    overflow: visible;
-    margin-left: 0;
-    order: 2;
-    margin-top: 150px;
-    margin-bottom: 0;
+  .project-card.is-featured .project-media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* =============================================
+   RESPONSIVE – Mobil (≤ 767px)
+   ============================================= */
+@media (max-width: 767px) {
+  :root {
+    --header-h: 72px;
   }
 
-  .hero-image-wrapper img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: bottom center;
+  .skills-groups,
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .scroll-indicator {
     display: none;
   }
 
-  .scroll-line {
-    height: 60px;
-  }
-
-  .hero-socials {
-    display: none;
-  }
-
-  #about,
-  #skills,
-  #work,
-  #testimonials,
-  #contact {
-    padding: 60px 24px;
-  }
-
-  .section-title-large {
-    font-size: 40px;
-    text-align: center;
-  }
-
-  .section-title {
-    font-size: 40px;
-    text-align: center;
-  }
-
-  h3 {
-    text-align: center;
-  }
-
-  .work-header {
-    text-align: left;
-  }
-
-  #skills .section-title {
-    font-size: 40px;
-  }
-
-  .testimonials-container .section-title {
-    font-size: 36px;
-  }
-
-  .project-info h3 {
-    font-size: 28px;
-  }
-
-  .about-left {
-    text-align: center;
-  }
-
-  .about-meta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-badges {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .about-right {
-    text-align: left;
-  }
-
-  .about-right .btn {
-    margin: 0;
-  }
-
-  .contact-left {
-    text-align: left;
-  }
-
-  .contact-left .section-title {
-    font-size: 40px;
-    text-align: left;
-  }
-
-  .contact-left h3 {
-    font-size: 24px;
-  }
-
-  .skills-row {
-    gap: 24px 32px;
-    flex-wrap: wrap;
-  }
-
-  .skill-icon {
-    width: 56px;
-    height: 56px;
-  }
-
-  footer {
-    padding: 32px 24px 20px;
-  }
-
   .footer-container {
-    flex-direction: column;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
   }
 
-  .decorative-circle,
-  .work-circle {
-    display: none;
-  }
-
-  .legal-bg-circle {
-    opacity: 0.08;
-  }
-
-  .to-top-arrow {
-    margin-left: 0;
-    width: 40px;
-    height: 40px;
-  }
-
-  .to-top-arrow svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .legal-title,
-  .privacy-container h1 {
-    font-size: 36px;
-  }
-
-  .legal-section h2 {
-    font-size: 24px;
-  }
-
-  .legal-section h3 {
-    font-size: 18px;
-  }
-
-  .privacy-container,
-  .legal-content-container {
-    padding: 100px 24px 60px;
-  }
-}
-
-/* ===== HERO SECTION BREAKPOINTS ===== */
-@media (max-width: 1224px) {
-  .hero-hello {
-    font-size: 32px;
-  }
-  .hero-text h1 {
-    font-size: 64px;
+  .footer-socials {
+    justify-content: center;
   }
 }

@@ -1,218 +1,226 @@
 /* =============================================
-   MY WORK SECTION
+   WORK / PROJEKTE
    ============================================= */
-#work {
-  padding: 120px 80px;
-  position: relative;
-  overflow: hidden;
-  background: var(--white);
+.work-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
 }
 
-.work-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
+.filter-btn {
+  min-height: 44px;
+  padding: 8px 18px;
+  border: 1px solid rgba(18, 115, 184, 0.18);
+  border-radius: var(--radius-pill);
+  background: var(--bg-soft);
+  color: var(--sky-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
 }
 
-.work-header {
-  margin-bottom: 80px;
-  text-align: left;
-  position: relative;
-  z-index: 2;
+.filter-btn:hover {
+  background: #e1ecf8;
 }
 
-.work-header .section-title {
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 3;
+.filter-btn[aria-pressed="true"] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
 }
 
-.work-header p {
-  font-size: 18px;
-  color: var(--dark);
-  max-width: 600px;
-  margin: 0;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
-/* Work Decorative Circles */
-.work-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 30% 30%,
-    #7aa3ff 0%,
-    #5988ff 40%,
-    #0043f0 100%
-  );
-  z-index: 0;
-  box-shadow: 0 20px 60px rgba(0, 67, 240, 0.35);
-}
-
-.work-circle-1 {
-  width: 100px;
-  height: 100px;
-  top: -8%;
-  left: 40%;
-}
-
-.work-circle-2 {
-  width: 160px;
-  height: 160px;
-  top: 120px;
-  right: -50px;
-}
-
-.work-circle-3 {
-  width: 480px;
-  height: 480px;
-  right: -25%;
-  top: 55%;
-}
-
-.work-circle-4 {
-  width: 40px;
-  height: 40px;
-  left: -60px;
-  top: 30%;
-}
-
-.work-circle-5 {
-  width: 150px;
-  height: 150px;
-  left: 30%;
-  bottom: 18%;
-}
-
-.work-circle-6 {
-  width: 400px;
-  height: 400px;
-  left: -30%;
-  bottom: 75%;
-}
-
-.work-circle-7 {
-  width: 100px;
-  height: 100px;
-  right: -5%;
-  bottom: 5%;
-}
-
-/* Decorative Circles (general) */
-.decorative-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 30% 30%,
-    #7aa3ff 0%,
-    #5988ff 40%,
-    #0043f0 100%
-  );
-  z-index: 0;
-  box-shadow: 0 20px 60px rgba(0, 67, 240, 0.35);
-}
-
-/* Contact section circles */
-.circle-contact-1 {
-  width: 100px;
-  height: 100px;
-  right: 35%;
-  top: 5%;
-}
-
-.circle-contact-2 {
-  width: 150px;
-  height: 150px;
-  left: 25%;
-  bottom: 35%;
-}
-
-.circle-contact-3 {
-  width: 50px;
-  height: 50px;
-  right: 15%;
-  bottom: 10%;
-}
-
-/* Project Cards */
 .project-card {
   display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-bottom: 100px;
-  position: relative;
-  z-index: 1;
-}
-
-.project-card:last-child {
-  margin-bottom: 0;
-}
-
-.project-image {
-  flex: 1;
-  max-width: 550px;
-}
-
-.project-image-wrapper {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  background: linear-gradient(135deg, #e4e8ec 0%, #d0d6dc 100%);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  color: var(--blue);
-  font-weight: 500;
-  box-shadow: 0 12px 40px rgba(89, 136, 255, 0.18);
+  flex-direction: column;
   overflow: hidden;
 }
 
-.project-image-wrapper {
-  transition: transform 100ms ease;
-  cursor: pointer;
+.project-card[hidden] {
+  display: none;
 }
 
-.project-image-wrapper:hover {
-  transform: translateY(-16px) scale(1.06);
+.project-card.is-featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
 }
 
-.project-image-wrapper img {
+.project-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.project-card.is-featured .project-media {
+  flex: 1 1 55%;
+  aspect-ratio: auto;
+  min-height: 340px;
+}
+
+.project-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 16px;
+  object-position: top center;
+  transition: transform 400ms ease;
 }
 
-.project-info {
+.project-card:hover .project-media img {
+  transform: scale(1.04);
+}
+
+/* Cover für Projekte ohne Screenshot */
+.project-cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 28px;
+  color: var(--white);
+  background:
+    radial-gradient(70% 80% at 90% 10%, rgba(143, 53, 238, 0.55), transparent 60%),
+    radial-gradient(60% 70% at 0% 100%, rgba(46, 163, 242, 0.45), transparent 60%),
+    var(--navy);
+}
+
+.project-cover .cover-kicker {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sky);
+}
+
+.project-cover .cover-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.05;
+}
+
+.project-media .badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 16, 63, 0.12);
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
   flex: 1;
 }
 
-.project-info h3 {
-  font-family: var(--font-heading);
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--blue);
-  margin-bottom: 8px;
+.project-card.is-featured .project-body {
+  flex: 1 1 45%;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 44px);
 }
 
-.project-tech {
+.project-body h3 {
+  font-size: 24px;
+}
+
+.project-meta {
   font-size: 16px;
-  color: var(--blue);
-  margin-bottom: 16px;
-  letter-spacing: 0.5px;
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--muted);
 }
 
 .project-desc {
   font-size: 16px;
-  line-height: 1.7;
-  color: var(--dark);
-  margin-bottom: 24px;
+}
+
+.project-highlights {
+  display: grid;
+  gap: 8px;
+}
+
+.project-highlights li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 16px;
+}
+
+.project-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--grad);
 }
 
 .project-buttons {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.project-buttons .btn {
+  min-height: 44px;
+  padding: 10px 20px;
+}
+
+.work-empty {
+  padding: 32px;
+  text-align: center;
+}
+
+/* Weitere Übungsprojekte */
+.more-projects {
+  margin-top: 64px;
+}
+
+.more-projects h3 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.more-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
-  position: relative;
-  z-index: 1;
+  padding: 18px 20px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.more-item small {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.more-item svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--sky-text);
 }

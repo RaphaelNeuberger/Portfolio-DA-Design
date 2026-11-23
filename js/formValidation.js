@@ -12,31 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const touched = { name: false, email: false, message: false };
 
-  addFeedbackElements();
   addEventListeners();
   checkForm();
 
-  function addFeedbackElements() {
-    [nameInput, emailInput, messageInput].forEach(function (input) {
-      if (!input.nextElementSibling || !input.nextElementSibling.classList.contains("input-feedback")) {
-        const el = document.createElement("div");
-        el.className = "input-feedback";
-        el.id = "feedback-" + input.name;
-        el.setAttribute("aria-live", "polite");
-        el.setAttribute("role", "alert");
-        input.after(el);
-      }
-    });
-  }
-
-  function getFeedbackEl(input) {
-    const next = input.nextElementSibling;
-    if (next && next.classList.contains("input-feedback")) return next;
-    return null;
-  }
-
   function getTranslation(key) {
-    const lang = document.documentElement.lang || "en";
+    const lang = document.documentElement.lang === "de" ? "de" : "en";
     if (!window.translations || !window.translations[lang]) return key;
     return window.translations[lang][key] || key;
   }
@@ -55,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showFeedback(input, isValid, errorKey) {
-    const el = getFeedbackEl(input);
+    input.setAttribute("aria-invalid", String(!isValid));
+    const el = document.getElementById("feedback-" + input.name);
     if (!el) return;
     el.textContent = isValid ? "" : getTranslation(errorKey);
   }
@@ -122,10 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getFormData() {
+    const honeypot = form.querySelector('input[name="website"]');
     return {
       name: nameInput.value.trim(),
       email: emailInput.value.trim(),
       message: messageInput.value.trim(),
+      website: honeypot ? honeypot.value : "",
     };
   }
 
@@ -137,6 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
       form.appendChild(msg);
     }
     msg.textContent = getTranslation("contact.form.success");
+    msg.classList.remove("is-error");
+    msg.setAttribute("role", "status");
     msg.classList.add("visible");
     setTimeout(function () { msg.classList.remove("visible"); }, 4000);
   }
@@ -149,12 +134,12 @@ document.addEventListener("DOMContentLoaded", function () {
       form.appendChild(msg);
     }
     msg.textContent = getTranslation("contact.form.error");
-    msg.style.color = "#ff6b6b";
+    msg.classList.add("is-error");
+    msg.setAttribute("role", "alert");
     msg.classList.add("visible");
     setTimeout(function () {
       msg.classList.remove("visible");
-      msg.style.color = "";
-    }, 4000);
+    }, 6000);
   }
 
   function handleSuccess() {
@@ -170,6 +155,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function clearAllFeedback() {
     form.querySelectorAll(".input-feedback").forEach(function (el) {
       el.textContent = "";
+    });
+    form.querySelectorAll("[aria-invalid]").forEach(function (el) {
+      el.removeAttribute("aria-invalid");
     });
   }
 
