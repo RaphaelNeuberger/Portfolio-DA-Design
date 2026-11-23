@@ -26,9 +26,9 @@
       as="font"
       type="font/woff2"
       crossorigin />
-    <link rel="stylesheet" href="css/main.css?v=20261123f" />
-    <script src="js/translations.js?v=20261123f" defer></script>
-    <script src="js/logoSwitch.js?v=20261123f" defer></script>
+    <link rel="stylesheet" href="css/main.css?v=20261123g" />
+    <script src="js/translations.js?v=20261123g" defer></script>
+    <script src="js/logoSwitch.js?v=20261123g" defer></script>
   </head>
   <body>
     <a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
@@ -210,6 +210,16 @@
               </ul>
             </div>
             <div class="card skill-group fade-in">
+              <h3 data-i18n="skills.group.cms">CMS &amp; e-commerce</h3>
+              <ul class="skill-list">
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">WP</span></span>WordPress</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">Woo</span></span>WooCommerce</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">E</span></span>Elementor</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">PHP</span></span>PHP</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">SEO</span></span><span data-i18n="skills.seo">SEO &amp; schema</span></li>
+              </ul>
+            </div>
+            <div class="card skill-group fade-in">
               <h3 data-i18n="skills.group.ai">AI &amp; automation</h3>
               <ul class="skill-list">
                 <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">n8n</span></span>n8n</li>
@@ -223,6 +233,7 @@
                 <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/git.svg" alt="" /></span>Git</li>
                 <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/scrum.svg" alt="" /></span>Scrum</li>
                 <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">Dk</span></span>Docker</li>
+                <li class="skill-item"><span class="skill-icon"><span class="mono" aria-hidden="true">&gt;_</span></span><span data-i18n="skills.linux">Linux &amp; server</span></li>
                 <li class="skill-item"><span class="skill-icon"><img src="assets/img/icons/growthmindset.svg" alt="" /></span><span data-i18n="skills.growth">Growth mindset</span></li>
               </ul>
             </div>
@@ -454,8 +465,71 @@
         </div>
       </section>
 
+
+      <!-- ==================== KUNDENPROJEKTE ==================== -->
+      <section id="clients" class="section section-soft" aria-labelledby="clients-title">
+        <div class="container">
+          <div class="section-head fade-in">
+            <span class="eyebrow" data-i18n="clients.eyebrow">Client work</span>
+            <h2 id="clients-title" class="section-title" data-i18n="clients.title">Client <em>projects</em></h2>
+            <p class="section-lead" data-i18n="clients.lead">Real websites in production – designed, built, hosted and maintained by me through Newmountains.IT.</p>
+          </div>
+          <div class="project-grid">
+            <article class="card project-card fade-in">
+              <a class="project-media" href="https://newmountains.it" target="_blank" rel="noopener" aria-label="newmountains.it">
+                <img src="assets/img/kunde-newmountains.webp" alt="" loading="lazy" width="1200" height="750" />
+              </a>
+              <div class="project-body">
+                <h3>Newmountains.IT</h3>
+                <p class="project-meta" data-i18n="clients.nm.meta">Own company · Website &amp; online shop</p>
+                <p class="project-desc" data-i18n="clients.nm.desc">Company website with a WooCommerce shop for cloud, AI and IT services – from design and content to hosting and ongoing optimisation.</p>
+                <ul class="project-highlights">
+                  <li data-i18n="clients.nm.h1">Own CSS design system as a versioned plugin</li>
+                  <li data-i18n="clients.nm.h2">Subscriptions, Stripe payments, customer account and instant search</li>
+                  <li data-i18n="clients.nm.h3">Caching, Cloudflare, structured data and technical SEO</li>
+                </ul>
+                <ul class="chip-list" aria-label="Technologies">
+                  <li class="chip">WordPress</li>
+                  <li class="chip">WooCommerce</li>
+                  <li class="chip">Elementor</li>
+                  <li class="chip">PHP</li>
+                  <li class="chip">CSS</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://newmountains.it" class="btn btn-primary" target="_blank" rel="noopener"><span data-i18n="clients.visit">Visit website</span><svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                </div>
+              </div>
+            </article>
+            <article class="card project-card fade-in">
+              <a class="project-media" href="https://humancoreshift.com" target="_blank" rel="noopener" aria-label="humancoreshift.com">
+                <img src="assets/img/kunde-humancoreshift.webp" alt="" loading="lazy" width="1200" height="700" />
+              </a>
+              <div class="project-body">
+                <h3>Human Core Shift</h3>
+                <p class="project-meta" data-i18n="clients.hcs.meta">Client project · Coaching website</p>
+                <p class="project-desc" data-i18n="clients.hcs.desc">Website for a Human Design coach in Freising and online: premium design, clear offers and online booking for the free discovery call.</p>
+                <ul class="project-highlights">
+                  <li data-i18n="clients.hcs.h1">Custom booking plugin for appointments</li>
+                  <li data-i18n="clients.hcs.h2">PageSpeed 98 desktop / 97 mobile</li>
+                  <li data-i18n="clients.hcs.h3">Local SEO, llms.txt for AI search, accessibility assistant</li>
+                </ul>
+                <ul class="chip-list" aria-label="Technologies">
+                  <li class="chip">WordPress</li>
+                  <li class="chip">Elementor Pro</li>
+                  <li class="chip">PHP</li>
+                  <li class="chip">Rank Math</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://humancoreshift.com" class="btn btn-primary" target="_blank" rel="noopener"><span data-i18n="clients.visit">Visit website</span><svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- ==================== TESTIMONIALS ==================== -->
-      <section id="testimonials" class="section section-soft" aria-labelledby="testimonials-title">
+      <section id="testimonials" class="section" aria-labelledby="testimonials-title">
         <div class="container">
           <div class="section-head center fade-in">
             <span class="eyebrow" data-i18n="testimonials.eyebrow">References</span>
@@ -556,11 +630,11 @@
     </button>
 
     <div id="footer-include"></div>
-    <script src="js/include.js?v=20261123f"></script>
-    <script src="js/headerScroll.js?v=20261123f"></script>
-    <script src="js/animations.js?v=20261123f"></script>
-    <script src="js/workFilter.js?v=20261123f"></script>
-    <script src="js/formValidation.js?v=20261123f"></script>
-    <script src="js/mobileMenu.js?v=20261123f"></script>
+    <script src="js/include.js?v=20261123g"></script>
+    <script src="js/headerScroll.js?v=20261123g"></script>
+    <script src="js/animations.js?v=20261123g"></script>
+    <script src="js/workFilter.js?v=20261123g"></script>
+    <script src="js/formValidation.js?v=20261123g"></script>
+    <script src="js/mobileMenu.js?v=20261123g"></script>
   </body>
 </html>
