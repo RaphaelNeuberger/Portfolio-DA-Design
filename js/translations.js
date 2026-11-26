@@ -101,8 +101,8 @@ window.translations = {
     "work.bubble.desc":
       "A Slack clone: real-time chat with channels, direct messages and threads, built in a team of three.",
     "work.bubble.soon": "Live demo coming soon.",
-    "work.aria.coderr": "Coderr – GitHub repository",
-    "work.aria.kanmind": "KanMind – GitHub repository",
+    "work.aria.coderr": "Coderr: Live demo",
+    "work.aria.kanmind": "KanMind: Live demo",
     "work.coderr.meta": "Backend project · Freelancer platform",
     "work.coderr.desc":
       "REST API for a freelancer marketplace: business users offer services in three packages, customers order and review them.",
@@ -266,8 +266,8 @@ window.translations = {
     "work.bubble.desc":
       "Ein Slack-Klon: Echtzeit-Chat mit Channels, Direktnachrichten und Threads, entwickelt im Dreierteam.",
     "work.bubble.soon": "Live-Demo folgt in Kürze.",
-    "work.aria.coderr": "Coderr – GitHub-Repository",
-    "work.aria.kanmind": "KanMind – GitHub-Repository",
+    "work.aria.coderr": "Coderr: Live-Demo",
+    "work.aria.kanmind": "KanMind: Live-Demo",
     "work.coderr.meta": "Backend-Projekt · Freelancer-Plattform",
     "work.coderr.desc":
       "REST-API für einen Freelancer-Marktplatz: Business-Nutzer bieten Leistungen in drei Paketen an, Kunden bestellen und bewerten sie.",
