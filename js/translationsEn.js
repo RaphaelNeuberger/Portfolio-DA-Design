@@ -73,7 +73,6 @@ window.translations.en = {
     "work.filter.all": "All",
     "work.filter.ai": "AI &amp; automation",
     "work.badge.new": "New",
-    "work.badge.wip": "In progress",
     "work.aria.ic": "Join – Issue Collector: Live demo",
     "work.ic.kicker": "AI &amp; automation",
     "work.ic.meta": "Solo project · Kanban + n8n",
@@ -104,10 +103,6 @@ window.translations.en = {
     "work.pokedex.meta": "API project",
     "work.pokedex.desc":
       "A simple library based on the PokéAPI that loads, catalogues and displays Pokémon information.",
-    "work.bubble.meta": "Team project · Slack clone",
-    "work.bubble.desc":
-      "A Slack clone: real-time chat with channels, direct messages and threads, built in a team of three.",
-    "work.bubble.soon": "Live demo coming soon.",
     "work.aria.coderr": "Coderr: Live demo",
     "work.aria.kanmind": "KanMind: Live demo",
     "work.coderr.meta": "Backend project · Freelancer platform",
