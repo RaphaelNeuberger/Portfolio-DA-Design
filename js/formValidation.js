@@ -1,209 +1,210 @@
-// Form validation for contact form (onBlur, button enable, feedback)
+/**
+ * Contact form: validation on blur, submit button state, sending and feedback.
+ */
 
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".contact-form");
-  if (!form) return;
+const EMAIL_PATTERN = /^[^\s@]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;
+const SUCCESS_VISIBLE_MS = 4000;
+const ERROR_VISIBLE_MS = 6000;
 
-  const nameInput = form.querySelector('input[name="name"]');
-  const emailInput = form.querySelector('input[name="email"]');
-  const messageInput = form.querySelector('textarea[name="message"]');
-  const privacyInput = form.querySelector('input[name="privacy"]');
-  const submitBtn = form.querySelector('button[type="submit"]');
+const FIELD_RULES = {
+  name: { isValid: (v) => v.length >= 2, errorKey: "contact.form.error.name" },
+  email: { isValid: (v) => EMAIL_PATTERN.test(v), errorKey: "contact.form.error.email" },
+  message: { isValid: (v) => v.length >= 5, errorKey: "contact.form.error.message" },
+};
 
-  const touched = { name: false, email: false, message: false };
+const contactForm = { form: null, touched: { name: false, email: false, message: false } };
 
-  addEventListeners();
-  checkForm();
 
-  function getTranslation(key) {
-    const lang = document.documentElement.lang === "de" ? "de" : "en";
-    if (!window.translations || !window.translations[lang]) return key;
-    return window.translations[lang][key] || key;
+/**
+ * Returns the translated text for a key in the current page language.
+ * @param {string} key
+ * @returns {string}
+ */
+function getTranslation(key) {
+  const lang = document.documentElement.lang === "de" ? "de" : "en";
+  const dict = window.translations && window.translations[lang];
+  return (dict && dict[key]) || key;
+}
+
+
+/**
+ * Returns a form field by its name.
+ * @param {string} name
+ * @returns {HTMLInputElement|HTMLTextAreaElement}
+ */
+function getField(name) {
+  return contactForm.form.elements[name];
+}
+
+
+/**
+ * Checks a single field against its rule (whitespace is trimmed first).
+ * @param {string} name - field name (name, email, message)
+ * @returns {boolean}
+ */
+function isFieldValid(name) {
+  return FIELD_RULES[name].isValid(getField(name).value.trim());
+}
+
+
+/**
+ * Shows or clears the error text below a field once it has been touched.
+ * @param {string} name - field name
+ */
+function validateField(name) {
+  if (!contactForm.touched[name]) return;
+  const valid = isFieldValid(name);
+  getField(name).setAttribute("aria-invalid", String(!valid));
+  const feedback = document.getElementById("feedback-" + name);
+  if (feedback) feedback.textContent = valid ? "" : getTranslation(FIELD_RULES[name].errorKey);
+}
+
+
+/**
+ * Enables the submit button only when all fields and the privacy checkbox are valid.
+ * @returns {boolean} whether the form is valid
+ */
+function updateSubmitState() {
+  const valid = Object.keys(FIELD_RULES).every(isFieldValid) && getField("privacy").checked;
+  const submitBtn = contactForm.form.querySelector('button[type="submit"]');
+  submitBtn.disabled = !valid;
+  submitBtn.classList.toggle("active", valid);
+  return valid;
+}
+
+
+/**
+ * Validates a field when it is left and keeps validating it while typing afterwards.
+ * @param {string} name - field name
+ */
+function bindField(name) {
+  getField(name).addEventListener("blur", () => {
+    contactForm.touched[name] = true;
+    validateField(name);
+    updateSubmitState();
+  });
+  getField(name).addEventListener("input", () => {
+    validateField(name);
+    updateSubmitState();
+  });
+}
+
+
+/**
+ * Collects the trimmed form values including the honeypot field.
+ * @returns {{name: string, email: string, message: string, website: string}}
+ */
+function getFormData() {
+  return {
+    name: getField("name").value.trim(),
+    email: getField("email").value.trim().toLowerCase(),
+    message: getField("message").value.trim(),
+    website: getField("website") ? getField("website").value : "",
+  };
+}
+
+
+/**
+ * Shows a success or error message below the form for a few seconds.
+ * @param {boolean} isError
+ */
+function showFormMessage(isError) {
+  let msg = contactForm.form.querySelector(".form-success-message");
+  if (!msg) {
+    msg = document.createElement("div");
+    msg.className = "form-success-message";
+    contactForm.form.appendChild(msg);
   }
+  msg.textContent = getTranslation(isError ? "contact.form.error" : "contact.form.success");
+  msg.classList.toggle("is-error", isError);
+  msg.setAttribute("role", isError ? "alert" : "status");
+  msg.classList.add("visible");
+  setTimeout(() => msg.classList.remove("visible"), isError ? ERROR_VISIBLE_MS : SUCCESS_VISIBLE_MS);
+}
 
-  function isNameValid() {
-    return nameInput.value.trim().length >= 2;
+
+/**
+ * Resets the form, the touched state and all error texts.
+ */
+function resetContactForm() {
+  contactForm.form.reset();
+  Object.keys(contactForm.touched).forEach((name) => (contactForm.touched[name] = false));
+  contactForm.form.querySelectorAll(".input-feedback").forEach((el) => (el.textContent = ""));
+  contactForm.form.querySelectorAll("[aria-invalid]").forEach((el) => el.removeAttribute("aria-invalid"));
+}
+
+
+/**
+ * Evaluates the server response and shows the matching feedback.
+ * @param {Response} response
+ * @returns {Promise<void>}
+ */
+async function handleResponse(response) {
+  const json = await response.json();
+  if (response.ok && json.success) {
+    resetContactForm();
+    showFormMessage(false);
+  } else {
+    showFormMessage(true);
   }
+}
 
-  function isEmailValid() {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(emailInput.value.trim());
-  }
 
-  function isMessageValid() {
-    return messageInput.value.trim().length >= 5;
-  }
+/**
+ * Sends the form data to the mailer and restores the button afterwards.
+ * @param {Object} data - form values
+ */
+function sendForm(data) {
+  fetch("phpMailer.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+    .then(handleResponse)
+    .catch(() => showFormMessage(true))
+    .finally(resetSubmitButton);
+}
 
-  function showFeedback(input, isValid, errorKey) {
-    input.setAttribute("aria-invalid", String(!isValid));
-    const el = document.getElementById("feedback-" + input.name);
-    if (!el) return;
-    el.textContent = isValid ? "" : getTranslation(errorKey);
-  }
 
-  function validateName() {
-    if (!touched.name) return;
-    showFeedback(nameInput, isNameValid(), "contact.form.error.name");
-  }
+/**
+ * Restores the label of the submit button and its enabled state.
+ */
+function resetSubmitButton() {
+  const submitBtn = contactForm.form.querySelector('button[type="submit"]');
+  submitBtn.textContent = getTranslation("contact.form.btn");
+  updateSubmitState();
+}
 
-  function validateEmail() {
-    if (!touched.email) return;
-    showFeedback(emailInput, isEmailValid(), "contact.form.error.email");
-  }
 
-  function validateMessage() {
-    if (!touched.message) return;
-    showFeedback(messageInput, isMessageValid(), "contact.form.error.message");
-  }
+/**
+ * Validates all fields and sends the form; the button stays disabled while sending.
+ * @param {SubmitEvent} e
+ */
+function handleSubmit(e) {
+  e.preventDefault();
+  Object.keys(FIELD_RULES).forEach((name) => {
+    contactForm.touched[name] = true;
+    validateField(name);
+  });
+  if (!updateSubmitState()) return;
+  const submitBtn = contactForm.form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = getTranslation("contact.form.sending");
+  sendForm(getFormData());
+}
 
-  function checkForm() {
-    const valid =
-      isNameValid() && isEmailValid() && isMessageValid() && privacyInput.checked;
-    submitBtn.disabled = !valid;
-    if (valid) {
-      submitBtn.classList.add("active");
-    } else {
-      submitBtn.classList.remove("active");
-    }
-    return valid;
-  }
 
-  function addEventListeners() {
-    nameInput.addEventListener("blur", function () {
-      touched.name = true;
-      validateName();
-      checkForm();
-    });
-    emailInput.addEventListener("blur", function () {
-      touched.email = true;
-      validateEmail();
-      checkForm();
-    });
-    messageInput.addEventListener("blur", function () {
-      touched.message = true;
-      validateMessage();
-      checkForm();
-    });
-    privacyInput.addEventListener("change", checkForm);
+/**
+ * Initializes the contact form if it exists on the page.
+ */
+function initContactForm() {
+  contactForm.form = document.querySelector(".contact-form");
+  if (!contactForm.form) return;
+  Object.keys(FIELD_RULES).forEach(bindField);
+  getField("privacy").addEventListener("change", updateSubmitState);
+  contactForm.form.addEventListener("submit", handleSubmit);
+  updateSubmitState();
+}
 
-    nameInput.addEventListener("input", function () {
-      if (touched.name) validateName();
-      checkForm();
-    });
-    emailInput.addEventListener("input", function () {
-      if (touched.email) validateEmail();
-      checkForm();
-    });
-    messageInput.addEventListener("input", function () {
-      if (touched.message) validateMessage();
-      checkForm();
-    });
 
-    form.addEventListener("submit", handleSubmit);
-  }
-
-  function getFormData() {
-    const honeypot = form.querySelector('input[name="website"]');
-    return {
-      name: nameInput.value.trim(),
-      email: emailInput.value.trim(),
-      message: messageInput.value.trim(),
-      website: honeypot ? honeypot.value : "",
-    };
-  }
-
-  function showSuccessMessage() {
-    let msg = form.querySelector(".form-success-message");
-    if (!msg) {
-      msg = document.createElement("div");
-      msg.className = "form-success-message";
-      form.appendChild(msg);
-    }
-    msg.textContent = getTranslation("contact.form.success");
-    msg.classList.remove("is-error");
-    msg.setAttribute("role", "status");
-    msg.classList.add("visible");
-    setTimeout(function () { msg.classList.remove("visible"); }, 4000);
-  }
-
-  function showErrorMessage() {
-    let msg = form.querySelector(".form-success-message");
-    if (!msg) {
-      msg = document.createElement("div");
-      msg.className = "form-success-message";
-      form.appendChild(msg);
-    }
-    msg.textContent = getTranslation("contact.form.error");
-    msg.classList.add("is-error");
-    msg.setAttribute("role", "alert");
-    msg.classList.add("visible");
-    setTimeout(function () {
-      msg.classList.remove("visible");
-    }, 6000);
-  }
-
-  function handleSuccess() {
-    form.reset();
-    touched.name = false;
-    touched.email = false;
-    touched.message = false;
-    clearAllFeedback();
-    showSuccessMessage();
-    checkForm();
-  }
-
-  function clearAllFeedback() {
-    form.querySelectorAll(".input-feedback").forEach(function (el) {
-      el.textContent = "";
-    });
-    form.querySelectorAll("[aria-invalid]").forEach(function (el) {
-      el.removeAttribute("aria-invalid");
-    });
-  }
-
-  function resetButton() {
-    submitBtn.textContent = getTranslation("contact.form.btn");
-    submitBtn.disabled = false;
-    checkForm();
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    touched.name = true;
-    touched.email = true;
-    touched.message = true;
-    validateName();
-    validateEmail();
-    validateMessage();
-    if (!checkForm()) return;
-    submitBtn.disabled = true;
-    submitBtn.textContent = getTranslation("contact.form.sending");
-    sendForm(getFormData());
-  }
-
-  function sendForm(data) {
-    fetch("phpMailer.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then(parseResponse)
-      .then(handleResponse)
-      .catch(showErrorMessage)
-      .finally(resetButton);
-  }
-
-  function parseResponse(response) {
-    return response.json().then(function (json) {
-      return { ok: response.ok, json: json };
-    });
-  }
-
-  function handleResponse(result) {
-    if (result.ok && result.json.success) {
-      handleSuccess();
-    } else {
-      showErrorMessage();
-    }
-  }
-});
+document.addEventListener("DOMContentLoaded", initContactForm);
