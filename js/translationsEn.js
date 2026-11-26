@@ -94,6 +94,10 @@ window.translations.en = {
     "work.pollo.meta": "Browser game · OOP",
     "work.pollo.desc":
       "Jump, run and throw game based on an object-oriented approach. Help Pepe find coins and tabasco salsa to fight the crazy hen.",
+    "work.aria.memory": "Memory: Live demo",
+    "work.memory.meta": "Game · TypeScript & SCSS",
+    "work.memory.desc":
+      "Memory game for two players with three board sizes and two themes, built with TypeScript, SCSS and Vite.",
     "work.pokedex.meta": "API project",
     "work.pokedex.desc":
       "A simple library based on the PokéAPI that loads, catalogues and displays Pokémon information.",

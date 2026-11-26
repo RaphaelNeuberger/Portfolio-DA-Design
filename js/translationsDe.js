@@ -94,6 +94,10 @@ window.translations.de = {
     "work.pollo.meta": "Browserspiel · OOP",
     "work.pollo.desc":
       "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu sammeln, um gegen das verrückte Huhn zu kämpfen.",
+    "work.aria.memory": "Memory: Live-Demo",
+    "work.memory.meta": "Spiel · TypeScript & SCSS",
+    "work.memory.desc":
+      "Memory-Spiel für zwei Spieler mit drei Spielfeldgrößen und zwei Themes, umgesetzt mit TypeScript, SCSS und Vite.",
     "work.pokedex.meta": "API-Projekt",
     "work.pokedex.desc":
       "Eine Bibliothek auf Basis der PokéAPI, die Pokémon-Informationen lädt, katalogisiert und darstellt.",
