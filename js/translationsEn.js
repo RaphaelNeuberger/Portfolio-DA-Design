@@ -82,6 +82,9 @@ window.translations.en = {
     "work.ic.h1": "AI extracts title, subtasks and due date",
     "work.ic.h2": "AI gate processes only real requests",
     "work.ic.h3": "Contact form instead of mailto – fully testable",
+    "work.dabubble.meta": "Team project · Messenger",
+    "work.dabubble.desc":
+      "Slack-inspired team messenger with channels, direct messages, threads, reactions, @/# mentions, search and drafts – synced in real time.",
     "work.join.meta": "Team project · Kanban",
     "work.join.desc":
       "Task manager inspired by the Kanban system. Create and organize tasks via drag and drop, assign users and categories.",

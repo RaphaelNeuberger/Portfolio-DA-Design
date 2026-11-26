@@ -82,6 +82,9 @@ window.translations.de = {
     "work.ic.h1": "KI extrahiert Titel, Subtasks und Fälligkeitsdatum",
     "work.ic.h2": "KI-Gate verarbeitet nur echte Anfragen",
     "work.ic.h3": "Kontaktformular statt mailto – vollständig testbar",
+    "work.dabubble.meta": "Teamprojekt · Messenger",
+    "work.dabubble.desc":
+      "Team-Messenger nach Slack-Vorbild mit Channels, Direktnachrichten, Threads, Reaktionen, @/#-Erwähnungen, Suche und Entwürfen – in Echtzeit synchronisiert.",
     "work.join.meta": "Teamprojekt · Kanban",
     "work.join.desc":
       "Aufgabenmanager nach dem Kanban-Prinzip. Aufgaben per Drag-and-drop erstellen und organisieren, Nutzer und Kategorien zuweisen.",
