@@ -1,57 +1,64 @@
-// Simple JS include for header and footer
 /**
- * Loads external HTML into a specified element and executes a callback when done.
- * @param {string} selector - CSS selector for the target element.
- * @param {string} url - URL of the HTML file to load.
- * @param {function} [callback] - Optional callback function to execute after loading.
+ * Loads the shared header and footer into every page.
  */
 
-function includeHTML(selector, url, callback) {
-  fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${url}: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then((data) => {
-      const element = document.querySelector(selector);
-      if (element) {
-        element.innerHTML = data;
-        const isSubpage = !window.location.pathname.endsWith("index.html") &&
-          !window.location.pathname.endsWith("/");
-        if (isSubpage) {
-          element.querySelectorAll('a[href^="#"]').forEach((link) => {
-            link.setAttribute("href", "index.html" + link.getAttribute("href"));
-          });
-          const headerLogo = element.querySelector("#header .logo img");
-          if (headerLogo) {
-            headerLogo.src = "assets/img/logo-rn-dark.webp";
-          }
-        }
-        if (callback) callback();
-      }
-    })
-    .catch((error) => {
-      console.error("Error loading HTML include:", error);
-    });
+const INCLUDE_VERSION = "20261126e";
+
+
+/**
+ * Checks whether the current page is a subpage (legal notice, privacy policy).
+ * @returns {boolean}
+ */
+function isSubpage() {
+  const path = window.location.pathname;
+  return !path.endsWith("index.html") && !path.endsWith("/");
 }
 
+
 /**
- * Initializes header and footer includes on DOMContentLoaded.
- * Triggers custom events when header and footer are loaded.
+ * Points anchor links to the start page and uses the dark logo on subpages.
+ * @param {Element} element - container holding the included HTML
  */
-document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector("#header-include")) {
-    includeHTML("#header-include", "header.html?v=20261126d", function () {
-      // Trigger custom event when header is loaded
-      window.dispatchEvent(new CustomEvent("headerLoaded"));
-    });
-  }
-  if (document.querySelector("#footer-include")) {
-    includeHTML("#footer-include", "footer.html?v=20261126d", function () {
-      // Trigger custom event when footer is loaded
-      window.dispatchEvent(new CustomEvent("footerLoaded"));
-    });
-  }
+function adjustForSubpage(element) {
+  element.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.setAttribute("href", "index.html" + link.getAttribute("href"));
+  });
+  const headerLogo = element.querySelector("#header .logo img");
+  if (headerLogo) headerLogo.src = "assets/img/logo-rn-dark.webp";
+}
+
+
+/**
+ * Inserts the loaded HTML and announces it with a custom event.
+ * @param {Element} element - target element
+ * @param {string} html - loaded markup
+ * @param {string} eventName - event dispatched on window afterwards
+ */
+function injectInclude(element, html, eventName) {
+  element.innerHTML = html;
+  if (isSubpage()) adjustForSubpage(element);
+  window.dispatchEvent(new CustomEvent(eventName));
+}
+
+
+/**
+ * Loads an HTML file into an element. On failure the page simply stays
+ * without the include, so no error is shown in the console.
+ * @param {string} selector - CSS selector of the target element
+ * @param {string} url - HTML file to load
+ * @param {string} eventName - event dispatched after loading
+ */
+function includeHTML(selector, url, eventName) {
+  const element = document.querySelector(selector);
+  if (!element) return;
+  fetch(url)
+    .then((response) => (response.ok ? response.text() : ""))
+    .then((html) => html && injectInclude(element, html, eventName))
+    .catch(() => {});
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML("#header-include", `header.html?v=${INCLUDE_VERSION}`, "headerLoaded");
+  includeHTML("#footer-include", `footer.html?v=${INCLUDE_VERSION}`, "footerLoaded");
 });
