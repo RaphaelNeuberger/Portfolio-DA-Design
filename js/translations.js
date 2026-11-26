@@ -101,6 +101,17 @@ window.translations = {
     "work.bubble.desc":
       "A Slack clone: real-time chat with channels, direct messages and threads, built in a team of three.",
     "work.bubble.soon": "Live demo coming soon.",
+    "work.aria.coderr": "Coderr – GitHub repository",
+    "work.aria.kanmind": "KanMind – GitHub repository",
+    "work.coderr.meta": "Backend project · Freelancer platform",
+    "work.coderr.desc":
+      "REST API for a freelancer marketplace: business users offer services in three packages, customers order and review them.",
+    "work.coderr.h1": "Token auth with customer and business roles",
+    "work.coderr.h2": "Object-level permissions, filtering, search and pagination",
+    "work.coderr.h3": "Automated tests with coverage report",
+    "work.kanmind.meta": "Backend project · Kanban API",
+    "work.kanmind.desc":
+      "REST API for a kanban app: boards with members, tasks with status, priority, assignee and reviewer, plus comments.",
     "work.empty": "No projects in this category yet.",
     "work.more.title": "More practice projects",
     "clients.eyebrow": "Client work",
@@ -255,6 +266,17 @@ window.translations = {
     "work.bubble.desc":
       "Ein Slack-Klon: Echtzeit-Chat mit Channels, Direktnachrichten und Threads, entwickelt im Dreierteam.",
     "work.bubble.soon": "Live-Demo folgt in Kürze.",
+    "work.aria.coderr": "Coderr – GitHub-Repository",
+    "work.aria.kanmind": "KanMind – GitHub-Repository",
+    "work.coderr.meta": "Backend-Projekt · Freelancer-Plattform",
+    "work.coderr.desc":
+      "REST-API für einen Freelancer-Marktplatz: Business-Nutzer bieten Leistungen in drei Paketen an, Kunden bestellen und bewerten sie.",
+    "work.coderr.h1": "Token-Authentifizierung mit Kunden- und Business-Rollen",
+    "work.coderr.h2": "Objektbezogene Berechtigungen, Filter, Suche und Pagination",
+    "work.coderr.h3": "Automatisierte Tests mit Coverage-Report",
+    "work.kanmind.meta": "Backend-Projekt · Kanban-API",
+    "work.kanmind.desc":
+      "REST-API für eine Kanban-App: Boards mit Mitgliedern, Tasks mit Status, Priorität, Bearbeiter und Reviewer sowie Kommentare.",
     "work.empty": "In dieser Kategorie gibt es noch keine Projekte.",
     "work.more.title": "Weitere Übungsprojekte",
     "clients.eyebrow": "Kundenprojekte",
