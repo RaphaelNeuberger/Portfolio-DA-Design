@@ -16,6 +16,7 @@ function safeGetItem(key) {
   }
 }
 
+
 /**
  * Writes a value to localStorage without throwing.
  * @param {string} key
@@ -28,6 +29,7 @@ function safeSetItem(key, value) {
     /* storage unavailable – language simply isn't remembered */
   }
 }
+
 
 /**
  * Determines the initial language: saved choice, otherwise browser language.
@@ -55,6 +57,7 @@ function translateAll(dict, attr, apply) {
   });
 }
 
+
 /**
  * Marks the active language button in all toggles.
  * @param {string} lang
@@ -68,6 +71,7 @@ function updateToggles(lang) {
       btn.setAttribute("aria-pressed", String(isActive));
     });
 }
+
 
 /**
  * Sets the page language and updates all i18n texts.
@@ -102,6 +106,7 @@ function initLanguageToggle() {
     });
   });
 }
+
 
 window.addEventListener("headerLoaded", () => {
   initLanguageToggle();
