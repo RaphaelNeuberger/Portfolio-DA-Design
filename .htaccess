@@ -19,4 +19,7 @@ Options -Indexes
   RewriteEngine On
   RewriteCond %{HTTP_HOST} ^www\.raphael-neuberger\.de$ [NC]
   RewriteRule ^(.*)$ https://raphael-neuberger.de/$1 [R=301,L]
+
+  # Live-Demos liegen auf eigenen Subdomains (alte Pfade umleiten)
+  RewriteRule ^(coderr|kanmind)(/(.*))?$ https://$1.raphael-neuberger.de/$3 [R=301,L]
 </IfModule>
