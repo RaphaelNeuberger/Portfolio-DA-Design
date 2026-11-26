@@ -134,7 +134,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-  transition: color 150ms ease;
+  transition: color 100ms ease;
 }
 
 ul {
@@ -251,7 +251,7 @@ h2 em,
   color: var(--white);
   font-weight: 600;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  transition: top 0.2s ease;
+  transition: top 100ms ease;
 }
 
 .skip-link:focus {

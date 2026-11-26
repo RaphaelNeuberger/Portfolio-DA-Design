@@ -15,8 +15,8 @@
   border-radius: var(--radius-sm);
   border: 2px solid transparent;
   cursor: pointer;
-  transition: background-color 150ms ease, color 150ms ease,
-    border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+  transition: background-color 100ms ease, color 100ms ease,
+    border-color 100ms ease, transform 100ms ease, box-shadow 100ms ease;
   white-space: nowrap;
 }
 
@@ -127,8 +127,8 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 1px 2px rgba(0, 16, 63, 0.04);
-  transition: transform 200ms ease, box-shadow 200ms ease,
-    border-color 200ms ease;
+  transition: transform 100ms ease, box-shadow 100ms ease,
+    border-color 100ms ease;
 }
 
 .card:hover {
@@ -159,7 +159,7 @@
   visibility: hidden;
   transform: translateY(12px);
   transition: opacity 200ms ease, transform 200ms ease, visibility 200ms,
-    background-color 150ms ease;
+    background-color 100ms ease;
 }
 
 .to-top-arrow.visible {

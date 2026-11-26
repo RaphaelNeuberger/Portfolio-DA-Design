@@ -61,7 +61,7 @@
   padding: 8px 14px;
   font-weight: 600;
   border-radius: var(--radius-pill);
-  transition: background-color 150ms ease, color 150ms ease;
+  transition: background-color 100ms ease, color 100ms ease;
 }
 
 .nav-links a:hover {
@@ -116,7 +116,7 @@
   color: inherit;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition: background-color 100ms ease, color 100ms ease;
 }
 
 .lang-toggle button.active,

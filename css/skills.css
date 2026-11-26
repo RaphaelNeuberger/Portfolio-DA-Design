@@ -52,7 +52,7 @@
   place-items: center;
   border-radius: 16px;
   background: var(--navy);
-  transition: background 200ms ease, transform 200ms ease;
+  transition: background 100ms ease, transform 100ms ease;
 }
 
 .skill-item:hover .skill-icon {

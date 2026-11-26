@@ -153,7 +153,7 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  transition: background-color 150ms ease;
+  transition: background-color 100ms ease;
 }
 
 .hero-socials a:hover {

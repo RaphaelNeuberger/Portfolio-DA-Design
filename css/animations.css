@@ -129,8 +129,8 @@
 .project-grid .project-card {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 600ms ease, transform 600ms ease, box-shadow 200ms ease,
-    border-color 200ms ease;
+  transition: opacity 600ms ease, transform 600ms ease, box-shadow 100ms ease,
+    border-color 100ms ease;
 }
 .project-grid .project-card.visible,
 .no-js .project-grid .project-card {
@@ -167,7 +167,7 @@
    ============================================= */
 .btn .btn-icon,
 .more-item svg {
-  transition: transform 200ms ease;
+  transition: transform 100ms ease;
 }
 .btn:hover .btn-icon,
 .more-item:hover svg {
@@ -211,7 +211,7 @@
   background: var(--grad);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 250ms ease;
+  transition: transform 100ms ease;
 }
 .nav-links a:hover::after,
 .nav-links a[aria-current="page"]::after {
@@ -224,5 +224,5 @@
   transform: rotate(-8deg) scale(1.05);
 }
 .testimonial-avatar {
-  transition: transform 250ms ease, background 250ms ease;
+  transition: transform 100ms ease, background 100ms ease;
 }

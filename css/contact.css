@@ -55,7 +55,7 @@
   color: var(--white);
   font-weight: 600;
   text-decoration: none !important;
-  transition: background-color 150ms ease;
+  transition: background-color 100ms ease;
 }
 
 .contact-channel:hover {
@@ -92,8 +92,8 @@
   background: var(--bg-alt);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  transition: border-color 150ms ease, background-color 150ms ease,
-    box-shadow 150ms ease;
+  transition: border-color 100ms ease, background-color 100ms ease,
+    box-shadow 100ms ease;
 }
 
 .contact-form textarea {
