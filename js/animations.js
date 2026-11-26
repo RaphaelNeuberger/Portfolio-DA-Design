@@ -26,6 +26,21 @@ function initToTop() {
   update();
 }
 
+
+/**
+ * Reveals an element once and stops observing it.
+ * @param {IntersectionObserverEntry[]} entries
+ * @param {IntersectionObserver} observer
+ */
+function revealOnIntersect(entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("visible");
+    observer.unobserve(entry.target);
+  });
+}
+
+
 /**
  * Adds the class "visible" to .fade-in elements once they enter the viewport.
  */
@@ -35,18 +50,10 @@ function initFadeIn() {
     els.forEach((el) => el.classList.add("visible"));
     return;
   }
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("visible");
-        obs.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.12 },
-  );
+  const observer = new IntersectionObserver(revealOnIntersect, { threshold: 0.12 });
   els.forEach((el) => observer.observe(el));
 }
+
 
 /**
  * Keeps the copyright year in the footer current.
