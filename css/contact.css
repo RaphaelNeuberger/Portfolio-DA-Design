@@ -109,6 +109,16 @@
   box-shadow: 0 0 0 4px rgba(46, 163, 242, 0.18);
 }
 
+/* Browser-Autofill (Webkit) darf das Design nicht verändern */
+.contact-form input:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover,
+.contact-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--ink);
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-alt) inset;
+  caret-color: var(--ink);
+  transition: background-color 9999s ease-out;
+}
+
 .contact-form input[aria-invalid="true"],
 .contact-form textarea[aria-invalid="true"] {
   border-color: #c0262d;

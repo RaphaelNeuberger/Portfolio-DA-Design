@@ -4,7 +4,8 @@
 #hero {
   position: relative;
   overflow: hidden;
-  min-height: min(100svh, 980px);
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   padding: calc(var(--header-h) + 48px) var(--gutter) 96px;
