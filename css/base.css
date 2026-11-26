@@ -127,11 +127,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Widescreen-Begrenzung: Inhalte inkl. Header/Footer max. 1920px */
-body > *:not(.menu-overlay):not(.skip-link) {
-  max-width: 1920px;
-  margin-inline: auto;
-}
+/* Widescreen: Hintergründe laufen über die volle Breite, die Inhalte
+   begrenzen die Container (.container, .header-container, .hero-content,
+   .footer-container) auf var(--container). */
 
 a {
   text-decoration: none;
